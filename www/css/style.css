@@ -1,0 +1,5 @@
+input::-webkit-input-placeholder{color:#fff;}
+input:focus::-webkit-input-placeholder{color:#EEEEEE;}
+.pull-right {
+    float: right;
+}
