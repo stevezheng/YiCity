@@ -16,3 +16,15 @@ input.grey::-webkit-input-placeholder{color:#737373;}
 .full {
     width: 100%;
 }
+
+.grey {
+    color: #737373;
+}
+
+.category-all .icon:before {
+    font-size: 26px;
+}
+
+.category-all .item-icon-left {
+    padding-left: 38px;
+}

@@ -74,6 +74,11 @@ angular.module('starter', ['ionic', 'gps', 'starter.controllers', 'starter.servi
         }
       })
 
+      .state('category-all', {
+        url: '/category-all',
+        templateUrl: 'templates/category-all.html'
+      })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html',
