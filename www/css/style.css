@@ -3,3 +3,11 @@ input:focus::-webkit-input-placeholder{color:#EEEEEE;}
 .pull-right {
     float: right;
 }
+
+.list-home .item-thumbnail-left > img:first-child, .item-thumbnail-left .item-image, .item-thumbnail-left .item-content > img:first-child, .item-thumbnail-left .item-content .item-image {
+    max-width: 120px;
+}
+
+.list-home .item-thumbnail-left {
+    padding-left: 146px;
+}
