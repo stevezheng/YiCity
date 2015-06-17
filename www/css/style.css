@@ -1,5 +1,6 @@
 input::-webkit-input-placeholder{color:#fff;}
-input:focus::-webkit-input-placeholder{color:#EEEEEE;}
+input.black::-webkit-input-placeholder{color:#000;}
+input.grey::-webkit-input-placeholder{color:#737373;}
 .pull-right {
     float: right;
 }
@@ -10,4 +11,8 @@ input:focus::-webkit-input-placeholder{color:#EEEEEE;}
 
 .list-home .item-thumbnail-left {
     padding-left: 146px;
+}
+
+.full {
+    width: 100%;
 }
