@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'gps', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'starter.services'])
 
   .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -77,6 +77,11 @@ angular.module('starter', ['ionic', 'gps', 'starter.controllers', 'starter.servi
       .state('category-list', {
         url: '/category-list',
         templateUrl: 'templates/category-list.html'
+      })
+
+      .state('shop-list', {
+        url: '/shop-list',
+        templateUrl: 'templates/shop-list.html'
       })
 
       .state('gps', {

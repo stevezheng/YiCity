@@ -1,6 +1,7 @@
 input::-webkit-input-placeholder{color:#fff;}
 input.black::-webkit-input-placeholder{color:#000;}
 input.grey::-webkit-input-placeholder{color:#737373;}
+
 .pull-right {
     float: right;
 }
@@ -27,4 +28,33 @@ input.grey::-webkit-input-placeholder{color:#737373;}
 
 .category-all .item-icon-left {
     padding-left: 38px;
+}
+
+
+.shop-button-bar .button .icon:before, .button.icon:before, .button.icon-left:before, .button.icon-right:before {
+    display: inline-block;
+    padding: 0 0 1px 0;
+    vertical-align: inherit;
+    font-size: 16px;
+    line-height: 41px;
+    pointer-events: none;
+}
+
+.shop-list .enter {
+    font-size: 14px;
+    color: #737373;
+}
+
+.shop-list .price {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.shop-list .origin-price {
+    text-decoration:line-through;
+    color: #737373;
+}
+
+.shop-list {
+    margin-bottom: 0;
 }
