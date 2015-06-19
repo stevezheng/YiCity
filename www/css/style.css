@@ -58,3 +58,51 @@ input.grey::-webkit-input-placeholder{color:#737373;}
 .shop-list {
     margin-bottom: 0;
 }
+
+.tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated {
+    margin-top: -2px;
+    border-style: solid;
+    border-width: 2px 0 0 0;
+    border-color: #f88701;
+}
+
+.tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated{
+    font-size: 15px;
+    color: #fe9315;
+}
+
+.tabs-top.tabs-striped .tab-item{
+    font-size: 15px;
+    color: #a2a2a2;
+}
+
+.item-divider{
+    background-color: #e4e5e7;
+}
+
+.shop-list .enter{
+    color: #fe9315;
+    font-size: 15px;
+}
+
+.item p {
+    font-size: 15px;
+    color: #a2a2a2;
+}
+
+.button.button-royal {
+    border-color: #e42112;
+    background-color: #FF0030;
+    color: #fff;
+    width: 40%;
+}
+
+.assertive, a.assertive {
+    color: #ff0011;
+}
+
+p {
+    margin: -2px 0 -21px;
+}
+
+

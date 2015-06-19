@@ -56,6 +56,17 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
         }
       })
 
+        //.state('tab.indent', {
+        //  url: '/indent',
+        //  views: {
+        //    'tab-shop': {
+        //      templateUrl: 'templates/indent.html'
+        //    }
+        //  }
+        //})
+
+
+
       .state('tab.account', {
         url: '/account',
         views: {
@@ -84,7 +95,27 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
         templateUrl: 'templates/shop-list.html'
       })
 
-      .state('gps', {
+        .state('indent', {
+          url: '/indent',
+          templateUrl: 'templates/indent.html'
+        })
+
+        .state('indent-all', {
+          url: '/indent-all',
+          templateUrl: 'templates/indent-all.html'
+        })
+
+        .state('indent-Waiting-payment', {
+          url: '/indent-Waiting-payment',
+          templateUrl: 'templates/indent-Waiting-payment.html'
+        })
+
+        .state('indent-Waiting-get', {
+          url: '/indent-Waiting-get',
+          templateUrl: 'templates/indent-Waiting-get.html'
+        })
+
+        .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html',
         controller: 'GPSListCtrl'
