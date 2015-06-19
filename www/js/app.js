@@ -84,6 +84,16 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
         templateUrl: 'templates/shop-list.html'
       })
 
+        .state('product-search', {
+          url: '/product-search',
+          templateUrl: 'templates/product-search.html'
+        })
+
+        .state('shop-search', {
+          url: '/shop-search',
+          templateUrl: 'templates/shop-search.html'
+        })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html',

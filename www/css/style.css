@@ -58,3 +58,18 @@ input.grey::-webkit-input-placeholder{color:#737373;}
 .shop-list {
     margin-bottom: 0;
 }
+
+.product-search .price {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.product-search .origin-price {
+    text-decoration:line-through;
+    color: #737373;
+}
+.tabs-top.tabs-striped .tab-item.tab-item-active, .tabs-top.tabs-striped .tab-item.active, .tabs-top.tabs-striped .tab-item.activated{
+    color: #f88701;
+    border-color: #f88701;
+
+}
