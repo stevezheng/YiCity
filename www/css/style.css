@@ -105,4 +105,59 @@ p {
     margin: -2px 0 -21px;
 }
 
+.card, .list-inset {
+    overflow: hidden;
+    margin: 24px 75px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.item-thumbnail-left, .item-thumbnail-left .item-content {
+    padding-top: 8px;
+    padding-left: 9px;
+    min-height: 100px;
+}
+
+.assertive, a.assertive {
+    color: #ff0011;
+    font-size: 47px;
+    padding-right: 5px;
+}
+
+.pull-right-price {
+    float: right;
+    font-size: 25px;
+    color: #ff0322;
+    padding-right: 10px;
+    padding-top: 7px;
+}
+
+.item {
+    font-size: 17px;
+}
+
+.pull-right {
+    float: right;
+    color: rgb(156, 156, 158);
+    font-size: 15px;
+    padding-top: 3px;
+}
+.commodity-s{
+    color: #fe9315;
+    font-size: 19px;
+}
+
+.commodity-TY{
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 300px;
+}
+
+.commodity-time{
+    font-size: 20px;
+    color: rgba(14, 8, 15, 0.39);
+}
+
+.box,.div-a{
+}
 
