@@ -71,5 +71,10 @@ input.grey::-webkit-input-placeholder{color:#737373;}
 .tabs-top.tabs-striped .tab-item.tab-item-active, .tabs-top.tabs-striped .tab-item.active, .tabs-top.tabs-striped .tab-item.activated{
     color: #f88701;
     border-color: #f88701;
-
 }
+
+.mc-homepage-NoCart .price {
+    font-size: 24px;
+    margin-right: 10px;
+}
+

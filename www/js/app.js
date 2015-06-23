@@ -94,6 +94,16 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
           templateUrl: 'templates/shop-search.html'
         })
 
+        .state('mc-homepage-NoCart', {
+          url: '/mc-homepage-NoCart',
+          templateUrl: 'templates/mc-homepage-NoCart.html'
+        })
+
+        .state('mc-evaluation', {
+          url: '/mc-evaluation',
+          templateUrl: 'templates/mc-evaluation.html'
+        })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html',
