@@ -1,21 +1,21 @@
-<ion-view view-title="我的订单">
+<ion-view view-title="我的订单" id="indent">
     <ion-nav-buttons side="primary">
         <div class="bar bar-header">
             <button class="button button-clear ion-chevron-left pull-left" ui-sref="tab.home"></button>
         </div>
     </ion-nav-buttons>
-    <div class="tabs-striped tabs-top tabs-background-{#ffffff} tabs-color-#737373">
-        <div class="tabs">
-            <a class="tab-item active " href="#" >
+    <div class="tabs-striped tabs-top ">
+        <div class="tabs" style="border: none">
+            <a class="tab-item active " ui-sref="indent-all"  style="color: #fe9315">
                 全部
             </a>
-            <a class="tab-item" href="#">
+            <a class="tab-item" ui-sref="indent-waiting-payment">
                 待付款
             </a>
             <a class="tab-item" href="#">
                 待发货
             </a>
-            <a class="tab-item" href="#">
+            <a class="tab-item" ui-sref="indent-waiting-get">
                 待收货
             </a>
             <a class="tab-item" href="#">
@@ -31,13 +31,13 @@
                 <span class="pull-left ion-chevron-right"></span>
                 <span class="pull-right enter ">已完成</span>
             </div>
-            <p>&nbsp;</p>
+            <div class="line"></div>
             <div class="item item-thumbnail-left ">
                 <img src="img/indent/bishengke.jpg">
                 <h2>必胜客情侣套餐情人节新品推荐</h2>
                 <p>&nbsp;</p>
                 <p>双人份    到店消费</p>
-                <p><span class="assertive price">￥129</span><span class="pull-right">共1件</span></p>
+                <p><span class="price">￥129</span><span class="pull-right">共1件</span></p>
             </div>
 
             <div class="item text-left">
@@ -58,6 +58,7 @@
                 <p>黑红格子   39码</p>
                 <p><span class="assertive price">￥629</span><span class="pull-right">共1件</span></p>
             </div>
+            <div class="line"></div>
             <div class="item item-thumbnail-left">
                 <img src="img/indent/bishengke2.jpg">
                 <h2>阿迪达斯2015春夏新款潮流高帮鞋</h2>

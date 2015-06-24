@@ -105,14 +105,14 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
           templateUrl: 'templates/indent-all.html'
         })
 
-        .state('indent-Waiting-payment', {
-          url: '/indent-Waiting-payment',
-          templateUrl: 'templates/indent-Waiting-payment.html'
+        .state('indent-waiting-payment', {
+          url: '/indent-waiting-payment',
+          templateUrl: 'templates/indent-waiting-payment.html'
         })
 
-        .state('indent-Waiting-get', {
-          url: '/indent-Waiting-get',
-          templateUrl: 'templates/indent-Waiting-get.html'
+        .state('indent-waiting-get', {
+          url: '/indent-waiting-get',
+          templateUrl: 'templates/indent-waiting-get.html'
         })
 
         .state('gps', {

@@ -1,21 +1,21 @@
-<ion-view view-title="我的订单">
+<ion-view view-title="我的订单" id="indent">
     <ion-nav-buttons side="primary">
         <div class="bar bar-header">
             <button class="button button-clear ion-chevron-left pull-left" ui-sref="tab.home"></button>
         </div>
     </ion-nav-buttons>
-    <div class="tabs-striped tabs-top tabs-background-{#ffffff} tabs-color-#737373">
-        <div class="tabs">
-            <a class="tab-item " href="#">
+    <div class="tabs-striped tabs-top ">
+        <div class="tabs" style="border: none">
+            <a class="tab-item " ui-sref="indent-all">
                 全部
             </a>
-            <a class="tab-item " href="#">
+            <a class="tab-item " ui-sref="indent-waiting-payment">
                 待付款
             </a>
             <a class="tab-item" href="#">
                 待发货
             </a>
-            <a class="tab-item active " href="#" >
+            <a class="tab-item active " ui-sref="indent-waiting-get"  style="color: #fe9315">
                 待收货
             </a>
             <a class="tab-item" href="#">
@@ -24,14 +24,14 @@
         </div>
     </div>
     <ion-content>
-        <div class="list shop-list has-header">
+        <div class="list has-header">
             <div class="item-divider" style="min-height: 20px;"></div>
 
             <div class="item">必胜客餐饮
                 <span class="pull-left ion-chevron-right"></span>
                 <span class="pull-right enter ">待付款</span>
             </div>
-            <p>&nbsp;</p>
+            <div class="line"></div>
             <div class="item item-thumbnail-left ">
                 <img src="img/indent/bishengke.jpg">
                 <h2>必胜客情侣套餐情人节新品推荐</h2>
@@ -54,6 +54,7 @@
                 <span class="pull-left ion-chevron-right"></span>
                 <span class="pull-right enter ">待付款</span>
             </div>
+            <div class="line"></div>
             <div class="item item-thumbnail-left">
                 <img src="img/indent/bishengke1.jpg">
                 <h2>阿迪达斯2015春夏新款潮流高帮鞋</h2>
@@ -61,6 +62,8 @@
                 <p>黑红格子   39码</p>
                 <p><span class="assertive price">￥629</span><span class="pull-right">共1件</span></p>
             </div>
+
+            <div class="line"></div>
             <div class="item item-thumbnail-left">
                 <img src="img/indent/bishengke2.jpg">
                 <h2>阿迪达斯2015春夏新款潮流高帮鞋</h2>
@@ -68,6 +71,7 @@
                 <p>黑红格子   39码</p>
                 <p><span class="assertive price">￥729</span><span class="pull-right">共1件</span></p>
             </div>
+            <div class="line"></div>
             <div class="item text-left">
                 <span class="sizep">总额：￥129</span>
                 <i class="icon ion-ios-down"></i>
