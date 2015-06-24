@@ -99,6 +99,12 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
           templateUrl: 'templates/mc-homepage-NoCart.html'
         })
 
+        .state('mc-homepage', {
+          url: '/mc-homepage',
+          templateUrl: 'templates/mc-homepage.html'
+        })
+
+
         .state('mc-evaluation', {
           url: '/mc-evaluation',
           templateUrl: 'templates/mc-evaluation.html'
