@@ -1,4 +1,4 @@
-<ion-view view-title="商家主页">
+<ion-view view-title="商家主页" id="mc-homepage-nocart">
     <ion-nav-buttons side="primary">
         <div class="bar bar-header">
             <button class="button button-clear ion-ios-arrow-left pull-left" ui-sref="tab.home"></button>
@@ -27,42 +27,65 @@
 
 
         <div class="row">
-            <img src="\img\tmp\images\DangQianWeiZi2.png" width="45" height="60"/>
-            <span>厦门思明区中山路（近名汇广场）</span>
-            <img class="pull-right" src="\img\tmp\images\DianHua2.png" width="70" height="50"/>
+            <div class="col col-25">
+                <img src="img/tmp/images/dangqianweizi2.png" width="45" height="60"/>
+            </div>
+            <div class="col col-50">
+                <span>厦门思明区中山路（近名汇广场）</span>
+            </div>
+            <div class="col col-25">
+                <img class="pull-right" src="/img/tmp/images/dianhua2.png" width="70" height="50"/>
+            </div>
         </div>
 
-        <div class="item-divider" style="min-height: 0px;background-color: #ededed"></div>
+        <div class="gray-wide-line" ></div>
         <div class="row">
-            <div class="col"> <button class="button button-small button-block button-energized">商品列表</button></div>
-            <div class="col"><button class="button button-small button-block" style="background-color: #b9b9b9; color:#ffffff">商家介绍</button></div>
-            <div class="col"> <button class="button button-small button-block" style="background-color: #b9b9b9; color:#ffffff">评价详情</button></div>
+            <div class="col">
+                <button class="button button-small button-block button-energized">商品列表</button>
+            </div>
+            <div class="col">
+                <button class="button button-small button-block" style="background-color: #b9b9b9; color:#ffffff">商家介绍
+                </button>
+            </div>
+            <div class="col">
+                <button class="button button-small button-block" style="background-color: #b9b9b9; color:#ffffff">评价详情
+                </button>
+            </div>
         </div>
 
 
         <div style="height: 35px; margin: 5px; padding: 5px;border-radius:5px;
 border: solid 1px #b6b6b6; background-color:#cbcbcb;">
-               <b><span>团购</span>&nbsp;
-                   <span style="color: red">热销菜品</span>&nbsp;
-                   <span>特价菜品</span>&nbsp;
-                   <span>到店消费</span>&nbsp;
-                   <span>套餐</span>
-                </b>
+            <b><span>团购</span>&nbsp;
+                <span style="color: red">热销菜品</span>&nbsp;
+                <span>特价菜品</span>&nbsp;
+                <span>到店消费</span>&nbsp;
+                <span>套餐</span>
+                <img class="pull-right" src="img/tmp/images/gray-right.png" width="20" height="20"/>
+            </b>
         </div>
 
-        <div class="list mc-homepage-NoCart">
+        <div class="list mc-homepage-nocart">
             <div class="item item-thumbnail-left">
                 <img src="img/tab-home/dezhuang.png">
+
                 <h2>德庄火锅美味 6人套餐</h2>
+
                 <p>五一特惠套餐，快约上几个好友来分享吧！</p>
+
                 <p>&nbsp;</p>
+
                 <p><span class="assertive price">￥168</span><span class="pull-right">已售 316</span></p>
             </div>
             <div class="item item-thumbnail-left">
                 <img src="img/tab-home/dezhuang.png">
+
                 <h2>德庄火锅美味 6人套餐</h2>
+
                 <p>五一特惠套餐，快约上几个好友来分享吧！</p>
+
                 <p>&nbsp;</p>
+
                 <p><span class="assertive price">￥168</span><span class="pull-right">已售 316</span></p>
             </div>
         </div>

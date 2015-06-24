@@ -94,9 +94,9 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
           templateUrl: 'templates/shop-search.html'
         })
 
-        .state('mc-homepage-NoCart', {
-          url: '/mc-homepage-NoCart',
-          templateUrl: 'templates/mc-homepage-NoCart.html'
+        .state('mc-homepage-nocart', {
+          url: '/mc-homepage-nocart',
+          templateUrl: '../templates/mc-homepage-nocart.html'
         })
 
         .state('mc-homepage', {
