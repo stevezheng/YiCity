@@ -110,6 +110,11 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
           templateUrl: 'templates/mc-evaluation.html'
         })
 
+        .state('submit-orders', {
+          url: '/submit-orders',
+          templateUrl: 'templates/submit-orders.html'
+        })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html',

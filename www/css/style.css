@@ -1,6 +1,14 @@
-input::-webkit-input-placeholder{color:#fff;}
-input.black::-webkit-input-placeholder{color:#000;}
-input.grey::-webkit-input-placeholder{color:#737373;}
+input::-webkit-input-placeholder {
+    color: #fff;
+}
+
+input.black::-webkit-input-placeholder {
+    color: #000;
+}
+
+input.grey::-webkit-input-placeholder {
+    color: #737373;
+}
 
 .pull-right {
     float: right;
@@ -30,7 +38,6 @@ input.grey::-webkit-input-placeholder{color:#737373;}
     padding-left: 38px;
 }
 
-
 .shop-button-bar .button .icon:before, .button.icon:before, .button.icon-left:before, .button.icon-right:before {
     display: inline-block;
     padding: 0 0 1px 0;
@@ -51,7 +58,7 @@ input.grey::-webkit-input-placeholder{color:#737373;}
 }
 
 .shop-list .origin-price {
-    text-decoration:line-through;
+    text-decoration: line-through;
     color: #737373;
 }
 
@@ -65,10 +72,11 @@ input.grey::-webkit-input-placeholder{color:#737373;}
 }
 
 .product-search .origin-price {
-    text-decoration:line-through;
+    text-decoration: line-through;
     color: #737373;
 }
-#product-search .tabs-top.tabs-striped .tab-item.tab-item-active,#product-search  .tabs-top.tabs-striped .tab-item.active,#product-search  .tabs-top.tabs-striped .tab-item.activated{
+
+#product-search .tabs-top.tabs-striped .tab-item.tab-item-active, #product-search .tabs-top.tabs-striped .tab-item.active, #product-search .tabs-top.tabs-striped .tab-item.activated {
     color: #f88701;
     border-color: #f88701;
 }
@@ -77,18 +85,61 @@ input.grey::-webkit-input-placeholder{color:#737373;}
     font-size: 24px;
     margin-right: 10px;
 }
- .gray-line{
+
+.gray-line {
     height: 1px;
-    background-color:#ededed;
+    background-color: #ededed;
 }
-.gray-wide-line{
+
+.gray-wide-line {
     height: 10px;
     background-color: #ededed;
 }
 
-#shop-search button.button-block,#shop-search button.button-full{
+#shop-search button.button-block, #shop-search button.button-full {
     margin-bottom: -10px;
 }
 
+#submit-orders div li {
+    font-size: 86%;
+}
 
+#submit-orders label.checkbox input, #submit-orders label .checkbox-icon {
+    width: 20px;
+    height: 20px;
+.
+}
 
+#submit-orders label.checkbox input:checked:before, #submit-orders label .checkbox input:checked + .checkbox-icon:before {
+    background: #fc9215;
+    border-color: #fc9215;
+}
+
+#submit-orders .item {
+    border-width: 0px;
+}
+
+#submit-orders .item-checkbox .checkbox {
+    top: 58%;
+    left: 16px;
+}
+
+#submit-orders .item-checkbox {
+    padding-left: 52px;
+}
+
+#submit-orders .item.line {
+    border-width: 1px;
+}
+
+#submit-orders .bar.bar-assertive.bar-footer {
+    background-color: #fd0033;
+}
+
+#submit-orders .row {
+    background-color: #ffffff;
+}
+
+#submit-orders {
+    background-color: #ededed;
+}
