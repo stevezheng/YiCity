@@ -101,9 +101,7 @@ input.grey::-webkit-input-placeholder{color:#737373;}
     color: #ff0011;
 }
 
-p {
-    margin: -2px 0 -21px;
-}
+
 
 .card, .list-inset {
     overflow: hidden;
@@ -142,22 +140,64 @@ p {
     font-size: 15px;
     padding-top: 3px;
 }
-.commodity-s{
+#commodity .commodity-s{
     color: #fe9315;
     font-size: 19px;
 }
 
-.commodity-TY{
+#commodity .commodity-TY{
     font-size: 20px;
     padding-left: 20px;
     padding-top: 300px;
 }
 
-.commodity-time{
+#commodity .commodity-time{
     font-size: 20px;
     color: rgba(14, 8, 15, 0.39);
 }
 
-.box,.div-a{
+#commodity .size{
+    padding-left: 10px;
+    color: #363636;
+    font-size: 17px;
 }
 
+#commodity .white-line{
+    height: 5px;
+    color: #ffffff;
+}
+
+.line{
+    height: 2px;
+    color: #b2b2b2;
+}
+#commodity .item p{
+    font-size: 17px;
+    color: rgba(20, 17, 21, 0.93);
+}
+#commodity .slider-pager {
+    float:right;
+}
+
+#commodity .start-pull-right{
+    float: right;
+}
+#commodity .slider-pager .slider-pager-page {
+    float: right;
+    color: #ffffff;
+}
+
+#commodity .pull-right {
+    float: right;
+    color: #bdbdbd;
+    font-size: 17px;
+    padding-top: 3px;
+    border-color: #000000;
+}
+#commodity .line{
+    color: #444444;
+    height: 5px;
+}
+#commodity .row{
+    border-color: #111111;
+}
