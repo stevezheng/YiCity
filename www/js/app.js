@@ -115,6 +115,11 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
           templateUrl: 'templates/commodity-choose.html'
         })
 
+        .state('commodity-buy', {
+          url: '/commodity-buy',
+          templateUrl: 'templates/commodity-buy.html'
+        })
+
         .state('register', {
           url: '/register',
           templateUrl: 'templates/register.html'

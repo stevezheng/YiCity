@@ -1,4 +1,4 @@
-<ion-view view-title id="commodity">
+<ion-view view-title id="commodity-buy">
     <ion-nav-buttons side="primary">
         <div class="bar bar-header">
             <button class="button button-clear ion-chevron-left pull-left" ui-sref="tab.home" ></button>
@@ -8,7 +8,7 @@
     </ion-nav-buttons>
     <ion-content >
         <ion-slide-box>
-            <ion-slide>
+            <ion-slide class="buy" style="width: 50%">
                 <div class="box" style="background-color: #c1bac6">
                     <img src="img/commodity/trade-name.png" width="100%" height="150"/>
                 </div>
@@ -25,6 +25,7 @@
             </ion-slide>
         </ion-slide-box>
         <div style="position: absolute;top: 140px;left:10px;z-index:20"><img src="img/commodity/choose-chose.png" width="110px" height="100px" ></div>
+        <div style="position: absolute;top: 115px;left:230px;z-index:20"><img src="img/commodity/rebate10.png" width="90%" height="90%" ></div>
         <div class="item " style="border: none">
             <span class="ion-ios-close-outline pull-right"></span>
             <span class="pull-left" style="color: #ff0011;padding-left: 120px">￥418</span><br>
@@ -57,7 +58,7 @@
         </div>
 
         <div class="line"></div>
-        <div class="pull-left" style="padding-left: 10px;font-size: 15px;color: #9d9e9f;position: relative;top: 5px"">颜色</div>
+        <div class="pull-left" style="padding-left: 10px;font-size: 15px;color: #9d9e9f;position: relative;top: 5px">颜色</div>
         <div class="row" style="background-color: #ffffff">
             <div class="col col-20">
                 <button class="button-block button-small button-light" style="background-color: #fbfbff">黑色</button>
@@ -93,10 +94,8 @@
 
         <div class="line"></div>
 
-
-        <div class="button-bar button-full" style="height: 55px">
-            <a class="button button-energized">加入购物车</a>
-            <a class="button button-royal">立即购买</a>
+        <div class="button-bar">
+            <a class="button button-royal" style="height: 55px">立即购买</a>
         </div>
 
     </ion-content>

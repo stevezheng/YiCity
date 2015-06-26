@@ -168,8 +168,8 @@ input.grey::-webkit-input-placeholder{color:#737373;}
 }
 
 .line{
-    height: 2px;
-    color: #b2b2b2;
+    height: 20px;
+    color: #868686;
 }
 #commodity .item p{
     font-size: 17px;
@@ -181,6 +181,7 @@ input.grey::-webkit-input-placeholder{color:#737373;}
 
 #commodity .start-pull-right{
     float: right;
+
 }
 #commodity .slider-pager .slider-pager-page {
     float: right;
@@ -192,12 +193,101 @@ input.grey::-webkit-input-placeholder{color:#737373;}
     color: #bdbdbd;
     font-size: 17px;
     padding-top: 3px;
-    border-color: #000000;
+    border-color: #d2d2d2;
 }
 #commodity .line{
-    color: #444444;
+    background-color: #e4dbe4;
+    height: 1px;
+}
+#commodity button{
+    font-size: 16px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+}
+
+#commodity .ion-ios-close-outline:before {
+    font-size: 40px;
+    color: #000000;
+    position: relative;
+    top: -10px;
+}
+
+#commodity-buy .commodity-s{
+    color: #fe9315;
+    font-size: 19px;
+}
+
+#commodity-buy .commodity-TY{
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 300px;
+}
+
+#commodity-buy .commodity-time{
+    font-size: 20px;
+    color: rgba(14, 8, 15, 0.39);
+}
+
+#commodity-buy .size{
+    padding-left: 10px;
+    color: #363636;
+    font-size: 17px;
+}
+
+#commodity-buy .white-line{
     height: 5px;
+    color: #ffffff;
 }
-#commodity .row{
-    border-color: #111111;
+
+#commodity-buy .item p{
+    font-size: 17px;
+    color: rgba(20, 17, 21, 0.93);
 }
+#commodity-buy .slider-pager {
+    float:right;
+}
+
+#commodity-buy .start-pull-right{
+
+
+}
+#commodity-buy .slider-pager .slider-pager-page {
+    float: right;
+    color: #ffffff;
+}
+
+#commodity-buy .pull-right {
+    float: right;
+    color: #bdbdbd;
+    font-size: 17px;
+    padding-top: 3px;
+    border-color: #d2d2d2;
+}
+#commodity-buy .line{
+    background-color: #e4dbe4;
+    height: 1px;
+}
+#commodity-buy button{
+    font-size: 16px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+}
+
+#commodity-buy .ion-ios-close-outline:before {
+    font-size: 40px;
+    color: #000000;
+    position: relative;
+    top: -10px;
+}
+
+#commodity-buy .slider-pager {
+    position: absolute;
+    bottom: 20px;
+    z-index: 1;
+    width: 61%;
+    height: 15px;
+    text-align: center;
+}
+
