@@ -180,3 +180,6 @@ input.grey::-webkit-input-placeholder {
     width: 80%;
     border-radius: 5px;
 }
+#add-address .bar.bar-assertive.bar-footer {
+    background-color: #fd0033;
+}
