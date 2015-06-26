@@ -107,12 +107,22 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
 
         .state('indent-waiting-payment', {
           url: '/indent-waiting-payment',
-          templateUrl: 'templates/indent-waiting-payment.html'
+          templateUrl: '../templates/indent-waiting-payment.html'
         })
 
         .state('indent-waiting-get', {
           url: '/indent-waiting-get',
-          templateUrl: 'templates/indent-waiting-get.html'
+          templateUrl: '../templates/indent-waiting-get.html'
+        })
+
+        .state('forget-password', {
+          url: '/forget-password',
+          templateUrl: '../templates/forget-password.html'
+        })
+
+        .state('draw-cash-apply', {
+          url: '/draw-cash-apply',
+          templateUrl: '../templates/draw-cash-apply.html'
         })
 
         .state('gps', {

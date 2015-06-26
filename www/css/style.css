@@ -117,3 +117,17 @@ input.grey::-webkit-input-placeholder{color:#737373;}
     font-size: 19px;
 }
 
+#password .line{
+    height: 1px;
+    background-color: #e06769;
+}
+
+#apply .item-input{
+    width: 80%;
+    height: 32px;
+}
+
+#password .item-input{
+    width: 80%;
+    height: 32px;
+}
