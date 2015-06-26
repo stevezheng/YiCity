@@ -125,6 +125,10 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
             .state('online-payment', {
                 url: '/online-payment',
                 templateUrl: 'templates/online-payment.html'
+            })
+            .state('cash-payment', {
+                url: '/cash-payment',
+                templateUrl: 'templates/cash-payment.html'
             });
 
 

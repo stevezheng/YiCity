@@ -168,3 +168,15 @@ input.grey::-webkit-input-placeholder {
 #online-payment{
     background-color: #ededed;
 }
+#cash-payment{
+    background-color: #ededed;
+}
+
+#cash-payment .bar.bar-assertive.bar-footer {
+    background-color: #fd0033;
+}
+#cash-payment .item-input{
+    height: 32px;
+    width: 80%;
+    border-radius: 5px;
+}
