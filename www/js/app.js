@@ -134,6 +134,10 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
             .state('add-address', {
                 url: '/add-address',
                 templateUrl: 'templates/add-address.html'
+            })
+            .state('area', {
+                url: '/area',
+                templateUrl: 'templates/area.html'
             });
 
 
