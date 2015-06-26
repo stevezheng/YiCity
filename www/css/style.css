@@ -143,3 +143,28 @@ input.grey::-webkit-input-placeholder {
 #submit-orders {
     background-color: #ededed;
 }
+#online-payment .item.item-thumbnail-left{
+    font-size: 12px;
+}
+#online-payment .item-thumbnail-left,#online-payment .item-thumbnail-left .item-content{
+    padding-left:76px;
+}
+#online-payment label.checkbox{
+    position: absolute;
+    top: 8px;
+    right: 12px;
+}
+#online-payment .bar.bar-assertive.bar-footer {
+    background-color: #fd0033;
+}
+#online-payment .checkbox input:checked:before,#online-payment .checkbox input:checked + .checkbox-icon:before{
+    background: #83af2c;
+    border-color: #83af2c;
+}
+#online-payment .item-thumbnail-left,#online-payment .item-thumbnail-left .item-content{
+    min-height: 40px;
+    height: 54px;
+}
+#online-payment{
+    background-color: #ededed;
+}
