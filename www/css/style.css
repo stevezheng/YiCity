@@ -131,3 +131,41 @@ input.grey::-webkit-input-placeholder{color:#737373;}
     width: 80%;
     height: 32px;
 }
+
+#back-benefit .item{
+    border: none;
+    margin-top: 11px;
+    padding-top: 8px;
+}
+#back-benefit{
+    background-color: #ececec;
+}
+
+#back-benefit .ion-record{
+    font-size: 10px;
+    color: #ececec;
+}
+#back-benefit .time{
+    font-size: 14px;
+    color: #b2b2b2;
+}
+
+#back-benefit .id-name{
+    font-size: 16px;
+}
+#back-benefit .indent-number{
+    color: #a2a2a2;
+    font-size: 14px;
+}
+#back-benefit .line{
+    background-color: #e6e8eb;
+    height: 1px;
+}
+#back-benefit .white-line{
+    height: 8px;
+    color: #ffffff;
+}
+#back-benefit .money{
+    color: #e42112;
+    font-size: 14px;
+}

@@ -125,6 +125,11 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
           templateUrl: '../templates/draw-cash-apply.html'
         })
 
+        .state('back-benefit', {
+          url: '/back-benefit',
+          templateUrl: '../templates/back-benefit.html'
+        })
+
         .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html',
