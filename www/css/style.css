@@ -183,3 +183,9 @@ input.grey::-webkit-input-placeholder {
 #add-address .bar.bar-assertive.bar-footer {
     background-color: #fd0033;
 }
+#receiving-address .item.wide{
+    height: 80px;
+}
+#receiving-address span.wide{
+    padding-bottom: 17px;
+}

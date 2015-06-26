@@ -138,6 +138,10 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
             .state('area', {
                 url: '/area',
                 templateUrl: 'templates/area.html'
+            })
+            .state('receiving-address', {
+                url: '/receiving-address',
+                templateUrl: 'templates/receiving-address.html'
             });
 
 
