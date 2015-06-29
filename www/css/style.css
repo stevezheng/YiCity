@@ -252,3 +252,14 @@ input.grey::-webkit-input-placeholder {
     bottom: -87px;
     left: 75%;
 }
+#more{
+    background-color: #ededed;
+}
+#more .new{
+    height: 20px;
+    position: absolute;
+    left: 90px;
+}
+#more ion-content{
+    color: #737373;
+}
