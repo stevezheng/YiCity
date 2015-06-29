@@ -122,7 +122,7 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
 
         .state('shopping-cart', {
           url: '/shopping-cart',
-          templateUrl: '../templates/shopping-cart.html'
+          templateUrl: '../templates/edit-shopping-cart.html'
         })
 
         .state('commodity-details', {
