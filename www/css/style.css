@@ -263,3 +263,41 @@ input.grey::-webkit-input-placeholder {
 #more ion-content{
     color: #737373;
 }
+#register .item-input{
+    width: 80%;
+    height: 40px;
+}
+#register .padding-more{
+    padding-left: 20px;
+}
+#register .padding-less{
+    padding-left: 5px;
+}
+#register .button-blue{
+    width: 30%;
+    height: 32px;
+    background-color: #14c28a;
+    border-radius: 5px;
+    min-height: 32px
+}
+#register .font{
+    color: #ffffff;
+    font-size: 10px;
+    position: relative;
+    top: -8px;
+}
+#register .bar.bar-footer.bar-assertive{
+    background-color: #fd0033;
+}
+#register .font-bottom{
+    position: absolute;
+    top:372px;
+    left: 5%;
+}
+#register .auto-linefeed{
+    width: 100%;
+    display:block;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: normal
+}
