@@ -56,16 +56,6 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
         }
       })
 
-        //.state('tab.indent', {
-        //  url: '/indent',
-        //  views: {
-        //    'tab-shop': {
-        //      templateUrl: 'templates/indent.html'
-        //    }
-        //  }
-        //})
-
-
 
       .state('tab.account', {
         url: '/account',
@@ -133,6 +123,26 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
         .state('shopping-cart', {
           url: '/shopping-cart',
           templateUrl: '../templates/shopping-cart.html'
+        })
+
+        .state('commodity-details', {
+          url: '/commodity-details',
+          templateUrl: 'templates/commodity-details.html'
+        })
+
+        .state('commodity-choose', {
+          url: '/commodity-choose',
+          templateUrl: 'templates/commodity-choose.html'
+        })
+
+        .state('commodity-buy', {
+          url: '/commodity-buy',
+          templateUrl: 'templates/commodity-buy.html'
+        })
+
+        .state('register', {
+          url: '/register',
+          templateUrl: 'templates/register.html'
         })
 
         .state('gps', {
