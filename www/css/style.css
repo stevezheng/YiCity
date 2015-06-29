@@ -116,7 +116,7 @@ input.grey::-webkit-input-placeholder {
 }
 
 #submit-orders .item {
-    border-width: 0px;
+    border-width: 0;
 }
 
 #submit-orders .item-checkbox .checkbox {
@@ -188,4 +188,52 @@ input.grey::-webkit-input-placeholder {
 }
 #receiving-address span.wide{
     padding-bottom: 17px;
+}
+#receiving-address-management span.top{
+    position: absolute;
+    top: 24px;
+}
+#receiving-address-management .item.wide{
+    /*height: 150px;*/
+    border: none;
+}
+#receiving-address-management .line{
+
+    height: 5px;
+}
+#receiving-address-management{
+    font-size: 16px;
+}
+#receiving-address-management label.checkbox input:checked:before, #receiving-address-management label .checkbox input:checked + .checkbox-icon:before {
+    background: #83af2c;
+    border-color: #83af2c;
+
+}
+#receiving-address-management div span img{
+    width: 22px;
+    height: 22px;
+}
+#receiving-address-management .item.narrow{
+    height: 46px;
+    /*border: none;*/
+}
+#receiving-address-management .checkbox input:before,#receiving-address-management  .checkbox-icon:before{
+    width: 90%;
+    height: 90%;
+}
+#receiving-address-management .checkbox{
+    padding: 0 0;
+}
+#receiving-address-management .move-up{
+    position: absolute;
+    padding: 4px 0;
+}
+#receiving-address-management .white{
+    background-color: #ffffff;
+}
+#receiving-address-management{
+    background-color: #ededed;
+}
+#receiving-address-management span .gray{
+    color: #737373;
 }
