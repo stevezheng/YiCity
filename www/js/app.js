@@ -151,6 +151,10 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
             .state('register', {
                 url: '/register',
                 templateUrl: 'templates/register.html'
+            })
+            .state('registered-success', {
+                url: '/registered-success',
+                templateUrl: 'templates/registered-success.html'
             });
 
 
