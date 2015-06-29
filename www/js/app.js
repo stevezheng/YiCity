@@ -120,8 +120,8 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
           templateUrl: '../templates/back-benefit.html'
         })
 
-        .state('shopping-cart', {
-          url: '/shopping-cart',
+        .state('edit-shopping-cart', {
+          url: '/edit-shopping-cart',
           templateUrl: '../templates/edit-shopping-cart.html'
         })
 
