@@ -143,6 +143,10 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
             .state('receiving-address-management', {
                 url: '/receiving-address-management',
                 templateUrl: 'templates/receiving-address-management.html'
+            })
+            .state('login', {
+                url: '/login',
+                templateUrl: 'templates/login.html'
             });
 
 

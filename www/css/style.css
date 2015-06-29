@@ -207,7 +207,6 @@ input.grey::-webkit-input-placeholder {
 #receiving-address-management label.checkbox input:checked:before, #receiving-address-management label .checkbox input:checked + .checkbox-icon:before {
     background: #83af2c;
     border-color: #83af2c;
-
 }
 #receiving-address-management div span img{
     width: 22px;
@@ -236,4 +235,20 @@ input.grey::-webkit-input-placeholder {
 }
 #receiving-address-management span .gray{
     color: #737373;
+}
+#login{
+    background-color: #ededed;
+}
+#login input[type="text"]{
+
+    padding-left: 6px;
+}
+#login .item-input{
+    width: 70%;
+}
+#login .font{
+    color: #ee8102;
+    position: absolute;
+    bottom: -87px;
+    left: 75%;
 }
