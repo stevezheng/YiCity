@@ -130,6 +130,11 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
           templateUrl: '../templates/back-benefit.html'
         })
 
+        .state('shopping-cart', {
+          url: '/shopping-cart',
+          templateUrl: '../templates/shopping-cart.html'
+        })
+
         .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html',
