@@ -145,6 +145,11 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
           templateUrl: 'templates/commodity-buy.html'
         })
 
+        .state('information-details', {
+          url: '/information-details',
+          templateUrl: 'templates/information-details.html'
+        })
+
         .state('register', {
           url: '/register',
           templateUrl: 'templates/register.html'
