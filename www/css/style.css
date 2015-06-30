@@ -104,7 +104,6 @@ input.grey::-webkit-input-placeholder{color:#737373;}
     color: #ff0011;
 }
 
-<<<<<<< HEAD
 #indent .line{
     height: 2px;
     background-color: #b2b2b2;
@@ -407,19 +406,21 @@ input.grey::-webkit-input-placeholder{color:#737373;}
 #shopping-cart .list .item .new-price{
     font-size: 16px;
     color: #d0253b;
+    padding-top: 0;
 }
 #shopping-cart .list .item .old-price{
     font-size: 14px;
     margin-top: 2px;
     color: #b2b2b2;
     text-decoration: line-through;
+    padding-top: 0;
 }
 #shopping-cart ul li .item{
     border: none;
     padding-left: 80px;
     margin-left: -15px;
     padding-bottom: 10px;
-    padding-right: 0px;
+    padding-right: 0;
 }
 #shopping-cart .checkbox input:after, .checkbox-icon:after {
     top: 21%;
@@ -477,15 +478,39 @@ input.grey::-webkit-input-placeholder{color:#737373;}
     border: none;
     padding: 0 0 0 0;
 }
-#shopping-cart .final .get-out{
-    margin: -20px
+#shopping-cart .final .settle-account{
+    position: relative;
+    top: -6px;
 ;
 }
 #shopping-cart .final .all{
-   position: relative;
+    position: relative;
     top: 8px;
     left: -20px;
+    color: #898989;
 }
 #shopping-cart .final{
     margin-top: 100%;
 }
+#shopping-cart .final .total{
+    font-size: 12px;
+    position: relative;
+    top: 0;
+    left: 15px;
+    color: #898989;
+}
+#shopping-cart .final .total .total-price{
+    font-size: 12px;
+    position: relative;
+    top: 0;
+    left: 15px;
+    color: #cc004e;
+}
+#shopping-cart .final .total .freight{
+    font-size: 12px;
+    position: relative;
+    top: 15px;
+    left: -24px;
+    color: #898989;
+}
+

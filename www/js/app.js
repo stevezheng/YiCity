@@ -125,6 +125,11 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
           templateUrl: '../templates/edit-shopping-cart.html'
         })
 
+        .state('shopping-cart', {
+          url: '/shopping-cart',
+          templateUrl: '../templates/shopping-cart.html'
+        })
+
         .state('commodity-details', {
           url: '/commodity-details',
           templateUrl: 'templates/commodity-details.html'
