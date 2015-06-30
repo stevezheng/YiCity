@@ -358,3 +358,31 @@ input.grey::-webkit-input-placeholder {
 #registered-success .move-right {
     padding-left: 18%;
 }
+#account .account-font{
+   color: white;
+}
+#account .button-bar .button{
+    border: none;
+    background-color: white;
+}
+#account .images1{
+    height: 18px;
+    width: auto;
+}
+#account .icon{
+    color: #cbcbcb;
+}
+#personal-center .account-font{
+    color: white;
+}
+#personal-center .button-bar .button{
+    border: none;
+    background-color: white;
+}
+#personal-center .images1{
+    height: 18px;
+    width: auto;
+}
+#personal-center .icon{
+    color: #cbcbcb;
+}
