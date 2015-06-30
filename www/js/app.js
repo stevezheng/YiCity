@@ -159,6 +159,10 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
             .state('personal-center', {
                 url: '/personal-center',
                 templateUrl: '/templates/personal-center.html'
+            })
+            .state('data-editing', {
+                url: '/data-editing',
+                templateUrl: '/templates/data-editing.html'
             });
 
 

@@ -386,3 +386,20 @@ input.grey::-webkit-input-placeholder {
 #personal-center .icon{
     color: #cbcbcb;
 }
+#data-editing .gray-middle{
+    position: absolute;
+    top: 31px;
+}
+#data-editing .item{
+    color: #737373;
+}
+#data-editing .i{
+    position: absolute;
+    top:32px;
+}
+#data-editing{
+    background-color: #ededed;
+}
+#data-editing .bar.bar-footer.bar-assertive {
+    background-color: #fd0033;
+}
