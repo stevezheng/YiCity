@@ -581,6 +581,65 @@ input.grey::-webkit-input-placeholder{color:#737373;}
 
 
 
+#my-information .item {
+    border: none;
+    margin-top: 11px;
+    padding-top: 8px;
+    background:url(../img/my-information/radian.png) #ffffff repeat-x bottom;
+}
+#my-information{
+    background-color: #ececec;
+}
+
+#my-information .ion-record{
+    font-size: 10px;
+    color: #ececec;
+}
+#my-information .time{
+    font-size: 14px;
+    color: #b2b2b2;
+
+}
+
+#my-information .id-name{
+    font-size: 14px;
+}
+#my-information .indent-number{
+    color: #a2a2a2;
+    font-size: 14px;
+    margin-top: 0;
+    width: 100%;
+    display: block;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: normal;
+    line-height:150%
+}
+#my-information .line{
+    background-color: #e6e8eb;
+    height: 1px;
+}
+#my-information .white-line,.indent-number .white-line{
+    height: 8px;
+    color: #ffffff;
+}
+#my-information .money{
+    color: #e42112;
+    font-size: 14px;
+    margin-top: -61px;
+}
+
+
+#my-information img{
+    width: 4px;
+    height: 15px;
+    position: relative;
+    top: 2px;
+}
+
+
+
+
 
 
 
