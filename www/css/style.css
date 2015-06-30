@@ -259,7 +259,6 @@ input.grey::-webkit-input-placeholder{color:#737373;}
 #commodity .slider-pager .slider-pager-page {
     float: right;
     color: #ffffff;
->>>>>>> commodity-details
 }
 
 #commodity .pull-right {
@@ -540,10 +539,45 @@ input.grey::-webkit-input-placeholder{color:#737373;}
     color: #928b97;
 }
 
+#my-recommend .item{
+    border: none;
+    margin-top: 11px;
+    padding-top: 8px;
+}
+#my-recommend{
+    background-color: #ececec;
+}
 
+#my-recommend .ion-record{
+    font-size: 10px;
+    color: #ececec;
+}
+#my-recommend .time{
+    font-size: 14px;
+    color: #b2b2b2;
+}
 
-
-
+#my-recommend .id-name{
+    font-size: 16px;
+}
+#my-recommend .indent-number{
+    color: #a2a2a2;
+    font-size: 14px;
+    margin-top: 0;
+}
+#my-recommend .line{
+    background-color: #e6e8eb;
+    height: 1px;
+}
+#my-recommend .white-line,.indent-number .white-line{
+    height: 8px;
+    color: #ffffff;
+}
+#my-recommend .money{
+    color: #e42112;
+    font-size: 14px;
+    margin-top: -61px;
+}
 
 
 

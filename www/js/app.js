@@ -150,6 +150,11 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
           templateUrl: 'templates/information-details.html'
         })
 
+        .state('my-recommend', {
+          url: '/my-recommend',
+          templateUrl: 'templates/my-recommend.html'
+        })
+
         .state('register', {
           url: '/register',
           templateUrl: 'templates/register.html'
