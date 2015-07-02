@@ -175,6 +175,11 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
           templateUrl: '../templates/merchant-classify.html'
         })
 
+        .state('collect', {
+          url: '/collect',
+          templateUrl: '../templates/collect.html'
+        })
+
 
         .state('register', {
           url: '/register',

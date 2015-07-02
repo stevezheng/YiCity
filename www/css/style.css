@@ -796,10 +796,38 @@ input.grey::-webkit-input-placeholder{color:#737373;}
 
 
 
+#collect .bar .button-bar{
+    border-color: #ffffff;
+}
 
-
-
-
+#collect h2,#collect p{
+    margin-left: 110px;
+    font-size: 10px;
+}
+#collect .assertive-price{
+    font-size: 18px;
+    color: #ff0c16;
+}
+#collect .origin-price{
+    color: #d0c3c9;
+}
+#collect .item{
+    margin-top: 8px;
+}
+#collect .origin-price {
+    color: #d0c3c9;
+    margin-left: 10px;
+}
+#collect .pull-right {
+    float: right;
+    color: rgb(156, 156, 158);
+    font-size: 13px;
+    padding-top: 3px;
+}
+#collect img{
+    width: 100px;
+    max-width: 100px;
+}
 
 
 
