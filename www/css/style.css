@@ -628,8 +628,6 @@ input.grey::-webkit-input-placeholder{color:#737373;}
     font-size: 14px;
     margin-top: -61px;
 }
-
-
 #my-information img{
     width: 4px;
     height: 15px;
@@ -638,6 +636,51 @@ input.grey::-webkit-input-placeholder{color:#737373;}
 }
 
 
+
+
+
+#merchant-sort .item {
+    padding-top: 8px;
+    padding-bottom: 10px;
+    margin-bottom: -5px;
+    border: 1px solid rgba(246, 233, 241, 0.53);
+}
+#merchant-sort .list{
+    margin-bottom: 0;
+}
+#merchant-sort .line{
+    height: 10px;
+    color: #b20819;
+}
+#merchant-sort .button{
+    font-size: 15px;
+}
+#merchant-sort h2,p{
+    margin-left: 90px;
+}
+#merchant-sort .button-bar{
+    z-index: 0;
+}
+#merchant-sort .all-list{
+    position: absolute;
+    top: 92px;
+    z-index: 2;
+}
+#merchant-sort .gray-lucency-coverage{
+    width: 100%;
+    height: 500px;
+    z-index: 5555;
+    background-repeat: repeat-y;
+    background-color: #484048;
+    margin-top: 28px;
+    filter:alpha(opacity=50); /*IE滤镜，透明度50%!*/
+    -moz-opacity:0.5; /*Firefox私有，透明度50%!*/
+    opacity:0.5;/*其他，透明度50%!*/
+}
+#merchant-sort li .gray-coverage{
+    width: 500%;
+    height: 100px;
+}
 
 
 

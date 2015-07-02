@@ -51,7 +51,7 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
         url: '/shop',
         views: {
           'tab-shop': {
-            templateUrl: 'templates/tab-shop.html'
+            templateUrl: '../templates/tab-shop.html'
           }
         }
       })
@@ -159,6 +159,12 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
           url: '/my-information',
           templateUrl: 'templates/my-information.html'
         })
+
+        .state('merchant-sort', {
+          url: '/merchant-sort',
+          templateUrl: '../templates/merchant-sort.html'
+        })
+
 
         .state('register', {
           url: '/register',
