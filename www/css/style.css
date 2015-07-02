@@ -388,7 +388,7 @@ input.grey::-webkit-input-placeholder{color:#737373;}
     padding-left: 8px;
 }
 
-#shopping-cart .checkbox input:before, .checkbox-icon:before {
+#shopping-cart .checkbox input:before, #shopping-cart .checkbox-icon:before {
     width: 80%;
     height: 80%;
 }
@@ -421,13 +421,13 @@ input.grey::-webkit-input-placeholder{color:#737373;}
     padding-bottom: 10px;
     padding-right: 0;
 }
-#shopping-cart .checkbox input:after, .checkbox-icon:after {
+#shopping-cart .checkbox input:after, #shopping-cart .checkbox-icon:after {
     top: 21%;
     left: 0;
     width: 13px;
     height: 7px;
 }
-#shopping-cart .checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before {
+#shopping-cart .checkbox input:checked:before, #shopping-cart .checkbox input:checked + .checkbox-icon:before {
     background: #f07200;
     border-color: #e76a00;
 }
@@ -436,7 +436,7 @@ input.grey::-webkit-input-placeholder{color:#737373;}
     font-size: 12px;
     font-weight: normal;
 }
-#shopping-cart .checkbox input:before, .checkbox-icon:before {
+#shopping-cart .checkbox input:before, #shopping-cart .checkbox-icon:before {
     width: 80%;
     height: 80%;
     margin-left: -5px;
@@ -655,7 +655,7 @@ input.grey::-webkit-input-placeholder{color:#737373;}
 #merchant-sort .button{
     font-size: 15px;
 }
-#merchant-sort h2,p{
+#merchant-sort h2,#merchant-sort p{
     margin-left: 90px;
 }
 #merchant-sort .button-bar{
@@ -682,8 +682,116 @@ input.grey::-webkit-input-placeholder{color:#737373;}
     height: 100px;
 }
 
+#business-district .item {
+    padding-top: 8px;
+    padding-bottom: 10px;
+    margin-bottom: -5px;
+    border: 1px solid rgba(246, 233, 241, 0.53);
+}
+#business-district .list{
+    margin-bottom: 0;
+}
+#business-district .line{
+    height: 10px;
+    color: #b20819;
+}
+#business-district .button{
+    font-size: 15px;
+}
+#business-district h2,#business-district p{
+    margin-left: 90px;
+}
+#business-district .button-bar{
+    z-index: 0;
+}
+#business-district .all-list{
+    position: absolute;
+    top: 92px;
+    z-index: 2;
+}
+#business-district .gray-lucency-coverage{
+    width: 100%;
+    height: 500px;
+    z-index: 5555;
+    background-repeat: repeat-y;
+    background-color: #484048;
+    margin-top: 28px;
+    filter:alpha(opacity=50); /*IE滤镜，透明度50%!*/
+    -moz-opacity:0.5; /*Firefox私有，透明度50%!*/
+    opacity:0.5;/*其他，透明度50%!*/
+}
+#business-district li .gray-coverage{
+    width: 500%;
+    height: 100px;
+}
+#business-district ul{
+    max-width: 50%;
+}
+#business-district ul li h5 .ion-chevron-right{
+    font-size: 12px;
+    margin-top: -3px;
+    color: #d3c3ce;
+}
 
 
+
+
+#merchant-classify .item {
+    padding-top: 8px;
+    padding-bottom: 10px;
+    margin-bottom: -5px;
+    border: 1px solid rgba(246, 233, 241, 0.53);
+    padding-left: 6px;
+}
+#merchant-classify .list{
+    margin-bottom: 0;
+}
+#merchant-classify .line{
+    height: 10px;
+    color: #b20819;
+}
+#merchant-classify .button{
+    font-size: 15px;
+}
+#merchant-classify h2,#merchant-classify p{
+    margin-left: 90px;
+}
+#merchant-classify .button-bar{
+    z-index: 0;
+}
+#merchant-classify .all-list{
+    position: absolute;
+    top: 92px;
+    z-index: 2;
+}
+#merchant-classify .gray-lucency-coverage{
+    width: 100%;
+    height: 500px;
+    z-index: 5555;
+    background-repeat: repeat-y;
+    background-color: #484048;
+    margin-top: 28px;
+    filter:alpha(opacity=50); /*IE滤镜，透明度50%!*/
+    -moz-opacity:0.5; /*Firefox私有，透明度50%!*/
+    opacity:0.5;/*其他，透明度50%!*/
+}
+#merchant-classify li .gray-coverage{
+    width: 500%;
+    height: 100px;
+}
+#merchant-classify ul{
+    max-width: 50%;
+}
+#merchant-classify ul li h5 .ion-chevron-right{
+    font-size: 12px;
+    margin-top: -3px;
+    color: #d3c3ce;
+}
+#merchant-classify ul li h5 img{
+    width: 13px;
+    height: 12px;
+    margin-left: 2px;
+}
 
 
 

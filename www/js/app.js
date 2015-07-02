@@ -165,6 +165,16 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
           templateUrl: '../templates/merchant-sort.html'
         })
 
+        .state('business-district', {
+          url: '/business-district',
+          templateUrl: '../templates/business-district.html'
+        })
+
+        .state('merchant-classify', {
+          url: '/merchant-classify',
+          templateUrl: '../templates/merchant-classify.html'
+        })
+
 
         .state('register', {
           url: '/register',
