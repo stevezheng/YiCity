@@ -163,6 +163,10 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
             .state('data-editing', {
                 url: '/data-editing',
                 templateUrl: '/templates/data-editing.html'
+            })
+            .state('commodity-preview', {
+                url: '/commodity-preview',
+                templateUrl: '/templates/commodity-preview.html'
             });
 
 

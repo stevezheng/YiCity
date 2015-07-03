@@ -214,7 +214,7 @@ input.grey::-webkit-input-placeholder {
 
 #receiving-address-management .line {
 
-    height: 5px;
+
 }
 
 #receiving-address-management {
@@ -402,4 +402,38 @@ input.grey::-webkit-input-placeholder {
 }
 #data-editing .bar.bar-footer.bar-assertive {
     background-color: #fd0033;
+}
+#commodity-preview .transparent{
+    background:#000;
+    width:100%;
+    height: 100%;
+    filter:alpha(Opacity=60);
+    -moz-opacity:0.6;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+#commodity-preview .white-bg{
+    background-color: #fff;
+    position: absolute;
+    height: 276px;
+    width: 80%;
+    z-index: 11;
+    left: 10%;
+    top: 93px;
+}
+
+#commodity-preview .line{
+    height: 5px;
+}
+#commodity-preview .auto-linefeed{
+    width: 100%;
+    display: block;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: normal;
+    color: #737373;
+    padding-left: 8px;
+    font-size: smaller;
 }
