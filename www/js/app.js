@@ -47,6 +47,7 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
         }
       })
 
+      //todo
       .state('tab.shop', {
         url: '/shop',
         views: {
@@ -74,33 +75,37 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
         }
       })
 
+      //todo: 自助餐几个字太大了
       .state('category-list', {
         url: '/category-list',
         templateUrl: 'templates/category-list.html'
       })
 
-      .state('gps', {
-        url: '/gps',
-        templateUrl: 'templates/gps.html',
-        controller: 'GPSListCtrl'
-      })
+      //.state('gps', {
+      //  url: '/gps',
+      //  templateUrl: 'templates/gps.html',
+      //  controller: 'GPSListCtrl'
+      //})
 
-      .
-      state('shop-list', {
+      //todo: 布局有点问题
+      .state('shop-list', {
         url: '/shop-list',
         templateUrl: 'templates/shop-list.html'
       })
 
+      //todo: 跟效果图有出入
       .state('product-search', {
         url: '/product-search',
         templateUrl: 'templates/product-search.html'
       })
 
+      //todo: 跟效果图有出入
       .state('shop-search', {
         url: '/shop-search',
         templateUrl: 'templates/shop-search.html'
       })
 
+      //todo: 跟效果图有出入
       .state('mc-homepage-nocart', {
         url: '/mc-homepage-nocart',
         templateUrl: '../templates/mc-homepage-nocart.html'
@@ -111,12 +116,13 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
         templateUrl: 'templates/mc-homepage.html'
       })
 
-
+      //todo: 跟效果图有出入
       .state('mc-evaluation', {
         url: '/mc-evaluation',
         templateUrl: 'templates/mc-evaluation.html'
       })
 
+      //todo: 跟效果图有出入
       .state('submit-orders', {
         url: '/submit-orders',
         templateUrl: 'templates/submit-orders.html'
@@ -131,6 +137,7 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
         templateUrl: 'templates/cash-payment.html'
       })
 
+      //todo: 跟效果图有出入
       .state('add-address', {
         url: '/add-address',
         templateUrl: 'templates/add-address.html'
@@ -144,14 +151,15 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
         url: '/receiving-address-management',
         templateUrl: 'templates/receiving-address-management.html'
       })
+      //todo: 跟效果图有出入
       .state('login', {
         url: '/login',
         templateUrl: 'templates/login.html'
       })
-      .state('register', {
-        url: '/register',
-        templateUrl: 'templates/register.html'
-      })
+      //.state('register', {
+      //  url: '/register',
+      //  templateUrl: 'templates/register.html'
+      //})
       .state('registered-success', {
         url: '/registered-success',
         templateUrl: 'templates/registered-success.html'
@@ -161,15 +169,15 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
         templateUrl: '/templates/personal-center.html'
       })
 
-      .state('category-list', {
-        url: '/category-list',
-        templateUrl: 'templates/category-list.html'
-      })
+      //.state('category-list', {
+      //  url: '/category-list',
+      //  templateUrl: 'templates/category-list.html'
+      //})
 
-      .state('shop-list', {
-        url: '/shop-list',
-        templateUrl: 'templates/shop-list.html'
-      })
+      //.state('shop-list', {
+      //  url: '/shop-list',
+      //  templateUrl: 'templates/shop-list.html'
+      //})
 
       .state('indent', {
         url: '/indent',
@@ -261,6 +269,7 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
         templateUrl: '../templates/merchant-classify.html'
       })
 
+      //todo: 跟效果图有一定出入
       .state('collect', {
         url: '/collect',
         templateUrl: '../templates/collect.html'
@@ -276,15 +285,15 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
         url: '/register',
         templateUrl: 'templates/register.html'
       })
+      .state('data-editing', {
+        url: '/data-editing',
+        templateUrl: '/templates/data-editing.html'
+      })
 
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html',
-        controller: 'GPSListCtrl'
-          .state('data-editing', {
-            url: '/data-editing',
-            templateUrl: '/templates/data-editing.html'
-          })
+        //controller: 'GPSListCtrl'
       });
 
 

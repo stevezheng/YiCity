@@ -458,9 +458,9 @@ input.grey::-webkit-input-placeholder {
     background-color: #fff;
 }
 
-.item-thumbnail-left, .item-thumbnail-left .item-content {
+#product-search .item-thumbnail-left, .item-thumbnail-left .item-content {
     padding-top: 8px;
-    padding-left: 9px;
+    padding-left: 100px;
     min-height: 100px;
 }
 
@@ -515,10 +515,10 @@ input.grey::-webkit-input-placeholder {
     color: #ffffff;
 }
 
-.line{
-    height: 20px;
-    color: #868686;
-}
+/*.line{*/
+    /*height: 20px;*/
+    /*color: #868686;*/
+/*}*/
 #commodity .item p{
     font-size: 17px;
     color: rgba(20, 17, 21, 0.93);
@@ -1226,4 +1226,10 @@ input.grey::-webkit-input-placeholder {
     width: 60px;
     height: 55px;
     margin-left: 9px;
+}
+
+.item-thumbnail-left, .item-thumbnail-left .item-content {
+    padding-top: 8px;
+    padding-left: 10px;
+    min-height: 100px;
 }
