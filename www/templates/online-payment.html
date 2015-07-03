@@ -1,0 +1,47 @@
+<ion-view view-title="支付订单" id="online-payment">
+    <ion-nav-buttons side="primary">
+        <div class="bar bar-header">
+            <button class="button button-clear ion-ios-arrow-left pull-left" ui-sref="tab.home"></button>
+        </div>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="item">
+            <div>
+                <span>订单名称:</span>
+                <span>德庄火锅美味6人套餐</span>
+            </div>
+            <div>
+                <span><br/>订单总价：</span>
+                <span class="assertive">￥168</span>
+            </div>
+        </div>
+        <div class="gray-wide-line"></div>
+        <div class="item item-thumbnail-left">
+            <img src="img/tmp/images/alipay.png" style="width: 53px;height: 30px">
+            <h2>支付宝支付</h2>
+            <span>推荐有支付宝帐号的用户使用</span>
+            <label class="checkbox">
+                    <input type="checkbox">
+            </label>
+        </div>
+        <div class="item item-thumbnail-left">
+            <img src="img/tmp/images/bankcard.png" style="width: 53px;height: 30px">
+            <h2>银行卡支付</h2>
+            <span>支持储蓄卡信用卡</span>
+            <label class="checkbox">
+                <input type="checkbox">
+            </label>
+        </div>
+        <div class="item item-thumbnail-left">
+            <img src="img/tmp/images/weixin.png" style="width: 53px;height: 30px">
+            <h2>微信支付</h2>
+            <span>推荐微信5.0及以上的用户使用</span>
+            <label class="checkbox">
+                <input type="checkbox">
+            </label>
+        </div>
+        <div class="bar bar-footer bar-assertive " style="position: absolute;bottom: -60px;width: 90%;left: 5%">
+            <div class="title">提交订单</div>
+        </div>
+    </ion-content>
+</ion-view>
