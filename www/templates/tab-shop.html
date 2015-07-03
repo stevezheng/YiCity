@@ -1,16 +1,11 @@
-<ion-view view-title="商家">
+<ion-view view-title="商家"  id="merchant-sort">
+  <ion-nav-buttons side="primary">
+    <div class="bar bar-header">
+      <button class="button button-clear ion-ios-search pull-right"></button>
+    </div>
+  </ion-nav-buttons>
   <ion-content>
-    <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
-        <img ng-src="{{chat.face}}">
-        <h2>{{chat.name}}</h2>
-        <p>{{chat.lastText}}</p>
-        <i class="icon ion-chevron-right icon-accessory"></i>
 
-        <ion-option-button class="button-assertive" ng-click="remove(chat)">
-          Delete
-        </ion-option-button>
-      </ion-item>
-    </ion-list>
-  </ion-content>
+  </ion-content >
+
 </ion-view>
