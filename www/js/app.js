@@ -180,6 +180,11 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
           templateUrl: '../templates/collect.html'
         })
 
+        .state('evaluate-detail', {
+          url: '/evaluate-detail',
+          templateUrl: '../templates/evaluate-detail.html'
+        })
+
 
         .state('register', {
           url: '/register',

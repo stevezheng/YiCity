@@ -832,6 +832,64 @@ input.grey::-webkit-input-placeholder{color:#737373;}
 
 
 
+#evaluate-detail .line{
+    height: 10px;
+    color: #007aff;
+    z-index: 33333;
+    margin-left: 10px;
+}
+#evaluate-detail .all-evaluate{
+    margin-top: 10px;
+
+}
+#evaluate-detail .all-evaluate p{
+    font-size: 16px;
+    margin-left: 13px;
+}
+#evaluate-detail .all-evaluate p img{
+    width: 15px;
+    height: 15px;
+}
+#evaluate-detail .all-evaluate p .score{
+    font-size: 17px;
+    color: #e76a00;
+}
+#evaluate-detail .concreteness-evaluate{
+
+    border-top: 1px solid #e8e8e8;
+    padding-top: 4px;
+}
+#evaluate-detail .concreteness-evaluate .title{
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 13px;
+}
+#evaluate-detail .concreteness-evaluate .date{
+    font-size: 15px;
+    margin-left: 12px;
+    color: #b1aeae;
+}
+#evaluate-detail .concreteness-evaluate .start img{
+    width: 13px;
+    height: 13px;
+}
+#evaluate-detail .concreteness-evaluate .start{
+    margin-left: 77px;
+}
+#evaluate-detail .concreteness-evaluate p{
+    font-size: 12px;
+    color: #b2b2b2;
+    margin-top: 10px;
+    margin-left: 13px;
+}
+#evaluate-detail .concreteness-evaluate .date .pull-right {
+    margin-right: 15px;
+}
+#evaluate-detail .concreteness-evaluate .detail-picture img{
+    width: 60px;
+    height: 55px;
+    margin-left: 9px;
+}
 
 
 
