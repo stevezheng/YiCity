@@ -47,7 +47,6 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
         }
       })
 
-      //todo
       .state('tab.shop', {
         url: '/shop',
         views: {

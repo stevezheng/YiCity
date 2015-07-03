@@ -458,7 +458,13 @@ input.grey::-webkit-input-placeholder {
     background-color: #fff;
 }
 
-#product-search .item-thumbnail-left, .item-thumbnail-left .item-content {
+#product-search .item-thumbnail-left, #product-search .item-thumbnail-left .item-content {
+    padding-top: 8px;
+    padding-left: 100px;
+    min-height: 100px;
+}
+
+#tab-shop .item-thumbnail-left, #tab-shop .item-thumbnail-left .item-content {
     padding-top: 8px;
     padding-left: 100px;
     min-height: 100px;
@@ -1232,4 +1238,18 @@ input.grey::-webkit-input-placeholder {
     padding-top: 8px;
     padding-left: 10px;
     min-height: 100px;
+}
+
+/*商家*/
+#tab-shop .button {
+    font-size: 14px;
+}
+
+#tab-shop .shop-name {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+#tab-shop img {
+    vertical-align:middle;
 }
