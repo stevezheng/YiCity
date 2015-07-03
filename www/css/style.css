@@ -921,10 +921,8 @@ input.grey::-webkit-input-placeholder{color:#737373;}
 }
 #indent-details .bottom-background{
      background:url(../img/indent-details/blue-red.png)#ffffff repeat-x bottom;
+    background-size: 69px 2px;
  }
-#indent-details .top-background{
-      background:url(../img/indent-details/blue-red.png)#ffffff repeat-x top;
-  }
 #indent-details .person-details img{
     width: 23px;
     height: 23px;
@@ -939,6 +937,7 @@ input.grey::-webkit-input-placeholder{color:#737373;}
 }
 #indent-details .person-details{
     background:url(../img/indent-details/red-blue.png)#ffffff repeat-x top;
+    background-size: 69px 2px;
 }
 #indent-details .person-details-text .bottom-background{
     margin-top: 11px;
