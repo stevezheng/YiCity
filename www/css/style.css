@@ -894,11 +894,89 @@ input.grey::-webkit-input-placeholder{color:#737373;}
 
 
 
-
-
-
-
-
-
-
-
+#indent-details .details{
+    height: 100px;
+    background-color: rgba(12, 0, 78, 0.71);
+    z-index: 1;
+}
+#indent-details .details img{
+    width: 16px;
+    height: 14px;
+    margin-top: 12px;
+    margin-left: 10px;
+}
+#indent-details .details .details-text p{
+    font-size: 13px;
+    color: #868686;
+    margin-top: -9px;
+    margin-left: 37px;
+    color: rgba(228, 228, 228, 0.88);
+}
+#indent-details .details .details-text{
+    margin-top: -25px;
+    margin-left: 8px;;
+}
+#indent-details .person-details-text{
+    margin-top: -27px;
+}
+#indent-details .bottom-background{
+     background:url(../img/indent-details/blue-red.png)#ffffff repeat-x bottom;
+ }
+#indent-details .top-background{
+      background:url(../img/indent-details/blue-red.png)#ffffff repeat-x top;
+  }
+#indent-details .person-details img{
+    width: 23px;
+    height: 23px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#indent-details .person-details p{
+    margin-top: -12px;
+    margin-left: 42px;
+    font-size: 13px;
+    color: #898989;
+}
+#indent-details .person-details{
+    background:url(../img/indent-details/red-blue.png)#ffffff repeat-x top;
+}
+#indent-details .person-details-text .bottom-background{
+    margin-top: 11px;
+    padding-bottom: 2px;
+}
+#indent-details .pull-right{
+    padding-top: 0;
+}
+#indent-details .shoes{
+    background-color: #ffffff;
+    margin-top: 10px;
+}
+#indent-details .shoes-img img{
+    width: 100px;
+    height: 75px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#indent-details .shoes .shoes-style{
+    font-size: 15px;
+    color: rgba(105, 101, 107, 0.72);
+    margin-left: 125px;
+    margin-top: -79px;
+}
+#indent-details .shoes .shoes-size{
+    font-size: 10px;
+    color: #8f8b8e;
+    margin-left: 125px;
+    margin-top: 15px;
+    padding-right: 10px;
+    padding-bottom: 1px;
+}
+#indent-details .shoes .shoes-size .pull-right{
+    font-size: 5px;
+    color: #bab0b5
+}
+#indent-details .shoes .shoes-style p .shoes-price{
+    color: #ff0028;
+    font-size: 14px;
+    padding-right: 10px;
+}

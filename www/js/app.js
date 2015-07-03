@@ -186,6 +186,12 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
         })
 
 
+        .state('indent-details', {
+          url: '/indent-details',
+          templateUrl: '../templates/indent-details.html'
+        })
+
+
         .state('register', {
           url: '/register',
           templateUrl: 'templates/register.html'
