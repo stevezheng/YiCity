@@ -105,7 +105,7 @@ angular.module('starter', ['ionic', 'user', 'gps', 'shop', 'yike.utils', 'starte
       //todo: 跟效果图有出入
       .state('mc-homepage-nocart', {
         url: '/mc-homepage-nocart',
-        templateUrl: '../templates/mc-homepage-nocart.html'
+        templateUrl: 'templates/mc-homepage-nocart.html'
       })
 
       .state('mc-homepage', {
@@ -187,37 +187,38 @@ angular.module('starter', ['ionic', 'user', 'gps', 'shop', 'yike.utils', 'starte
 
       .state('indent-waiting-payment', {
         url: '/indent-waiting-payment',
-        templateUrl: '../templates/indent-waiting-payment.html'
+        templateUrl: 'templates/indent-waiting-payment.html'
       })
 
       .state('indent-waiting-get', {
         url: '/indent-waiting-get',
-        templateUrl: '../templates/indent-waiting-get.html'
+        templateUrl: 'templates/indent-waiting-get.html'
       })
 
       .state('forget-password', {
         url: '/forget-password',
-        templateUrl: '../templates/forget-password.html'
+        templateUrl: 'templates/forget-password.html',
+        controller: 'UserForgetPasswordCtrl'
       })
 
       .state('draw-cash-apply', {
         url: '/draw-cash-apply',
-        templateUrl: '../templates/draw-cash-apply.html'
+        templateUrl: 'templates/draw-cash-apply.html'
       })
 
       .state('back-benefit', {
         url: '/back-benefit',
-        templateUrl: '../templates/back-benefit.html'
+        templateUrl: 'templates/back-benefit.html'
       })
 
       .state('edit-shopping-cart', {
         url: '/edit-shopping-cart',
-        templateUrl: '../templates/edit-shopping-cart.html'
+        templateUrl: 'templates/edit-shopping-cart.html'
       })
 
       .state('shopping-cart', {
         url: '/shopping-cart',
-        templateUrl: '../templates/shopping-cart.html'
+        templateUrl: 'templates/shopping-cart.html'
       })
 
       .state('commodity-details', {
@@ -252,28 +253,28 @@ angular.module('starter', ['ionic', 'user', 'gps', 'shop', 'yike.utils', 'starte
 
       .state('merchant-sort', {
         url: '/merchant-sort',
-        templateUrl: '../templates/merchant-sort.html'
+        templateUrl: 'templates/merchant-sort.html'
       })
 
       .state('business-district', {
         url: '/business-district',
-        templateUrl: '../templates/business-district.html'
+        templateUrl: 'templates/business-district.html'
       })
 
       .state('merchant-classify', {
         url: '/merchant-classify',
-        templateUrl: '../templates/merchant-classify.html'
+        templateUrl: 'templates/merchant-classify.html'
       })
 
       //todo: 跟效果图有一定出入
       .state('collect', {
         url: '/collect',
-        templateUrl: '../templates/collect.html'
+        templateUrl: 'templates/collect.html'
       })
 
       .state('evaluate-detail', {
         url: '/evaluate-detail',
-        templateUrl: '../templates/evaluate-detail.html'
+        templateUrl: 'templates/evaluate-detail.html'
       })
 
 
