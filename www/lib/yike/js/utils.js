@@ -36,6 +36,8 @@
         'title': title
         , 'template': template
         , 'okType': 'button-energized'
+        , 'cancelText': '取消'
+        , 'okText': '确认'
       });
     }
 

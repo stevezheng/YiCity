@@ -59,7 +59,8 @@ angular.module('starter', ['ionic', 'user', 'gps', 'shop', 'yike.utils', 'starte
             templateUrl: 'templates/tab-account.html',
             controller: 'UserCtrl'
           }
-        }
+        },
+        cache: false
       })
 
       .state('tab.more', {

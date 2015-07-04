@@ -1,7 +1,7 @@
 <ion-view view-title="个人中心" id="account">
     <ion-nav-buttons side="primary">
         <div class="bar bar-header">
-            <span class="button button-clear pull-right">注销</span>
+            <span ng-show="cUser" class="button button-clear pull-right" ng-click="logout()">注销</span>
         </div>
     </ion-nav-buttons>
     <ion-content>
