@@ -278,7 +278,8 @@ angular.module('starter', ['ionic', 'user', 'gps', 'shop', 'yike.utils', 'starte
 
       .state('register', {
         url: '/register',
-        templateUrl: 'templates/register.html'
+        templateUrl: 'templates/register.html',
+        controller: 'UserRegCtrl'
       })
       .state('data-editing', {
         url: '/data-editing',

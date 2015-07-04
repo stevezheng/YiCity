@@ -2,5 +2,5 @@
   'use strict';
 
   angular
-    .module('user', ['user.common', 'user.factory']);
+    .module('user', ['user.common', 'user.factory', 'user.reg']);
 })();
