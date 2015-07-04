@@ -27,7 +27,7 @@
       return $ionicPopup.alert({
         title: title,
         template: template,
-        okType: 'button-balanced'
+        'okType': 'button-energized'
       });
     }
 
@@ -35,7 +35,7 @@
       return $ionicPopup.confirm({
         'title': title
         , 'template': template
-        , 'okType': 'button-balanced'
+        , 'okType': 'button-energized'
       });
     }
 
@@ -48,7 +48,7 @@
       });
     }
 
-    function loginModal(template, cb) {
+    function loginModal(template, cb, closeCallback) {
       // Create the login modal that we will use later
       //$ionicModal.fromTemplateUrl('templates/login.html', {
       $ionicModal.fromTemplateUrl(template, {
@@ -60,6 +60,9 @@
 
       // Triggered in the login modal to close it
       $rootScope.closeLogin = function () {
+        if (closeCallback) {
+          closeCallback();
+        }
         $rootScope.modal.hide();
       };
 
