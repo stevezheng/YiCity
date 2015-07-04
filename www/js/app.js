@@ -147,7 +147,6 @@ angular.module('starter', ['ionic', 'user', 'gps', 'shop', 'yike.utils', 'starte
         url: '/receiving-address-management',
         templateUrl: 'templates/receiving-address-management.html'
       })
-      //todo: 跟效果图有出入
       .state('login', {
         url: '/login',
         templateUrl: 'templates/login.html'
