@@ -7,11 +7,15 @@
     <ion-content>
         <div class="row" style="background-color: #fc9215;min-height: 210px">
             <div class="col col-25"></div>
-            <div class="col col-50" style="text-align: center;">
+            <div class="col col-50" style="text-align: center;" ng-if="cUser">
                 <img class="beauty" src="img/tmp/images/head-edit.png" width="100%"/>
-                <span class="account-font">ID：TK98LS</span>
+                <span class="account-font">ID：{{cUser.get('username')}}</span>
                 <br/>
-                <span class="account-font">积分：6512</span>
+                <span class="account-font">积分：{{cUser.get('point')}}</span>
+            </div>
+            <div class="col col-50" style="text-align: center; font-size: 12px; color: #fff" ng-if="!cUser">
+                <button class="button button-light button-small" style="padding: 5px 40px">登录</button>
+                <p>新用户注册即可享受各种优惠，<span class="assertive" style="font-size: 12px;">注册账号</span></p>
             </div>
             <div class="col col-25"></div>
         </div>

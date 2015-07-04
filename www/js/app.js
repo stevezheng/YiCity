@@ -1,11 +1,6 @@
-// Ionic Starter App
+AV.initialize('ry3vkr5qo327u3zxk62ifezixglq2lqfmutkthm0c050z9j9', 'abhpp7rycpzbsbvzikr4vsv6giq39z15lk009b7j2ti7z55h');
 
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-// 'starter.services' is found in services.js
-// 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'user', 'gps', 'shop', 'starter.controllers', 'starter.services'])
 
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -60,7 +55,8 @@ angular.module('starter', ['ionic', 'gps', 'shop', 'starter.controllers', 'start
         url: '/account',
         views: {
           'tab-account': {
-            templateUrl: 'templates/tab-account.html'
+            templateUrl: 'templates/tab-account.html',
+            controller: 'UserCtrl'
           }
         }
       })
