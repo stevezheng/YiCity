@@ -1259,3 +1259,15 @@ input.grey::-webkit-input-placeholder {
     white-space: normal;
     overflow: hidden;
 }
+
+#mc-homepage .item-thumbnail-left,#mc-homepage .item-thumbnail-left .item-content {
+    padding-top: 8px;
+    padding-left: 100px;
+    min-height: 100px;
+}
+
+#mc-homepage .assertive, a.assertive {
+    color: #ff0011;
+    font-size: 18px;
+    padding-right: 5px;
+}
