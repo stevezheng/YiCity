@@ -11,100 +11,23 @@
             <a class="button button-clear icon-right ion-arrow-down-b">全城</a>
             <a class="button button-clear icon-right ion-arrow-down-b">销量最高</a>
         </div>
-        <div class="item-divider" style="min-height: 10px;"></div>
-        <div class="list shop-list">
+        <div ng-repeat="shop in shops">
+            <div class="item-divider" style="min-height: 10px;"></div>
+            <div class="list shop-list">
 
-            <div class="item" ui-sref="mc-homepage">
-                <img src="img/tab-shop/shop-icon.png" alt="" height="24px"/>
+                <div class="item" ui-sref="mc-homepage">
+                    <img src="img/tab-shop/shop-icon.png" alt="" height="24px"/>
         <span class="shop-name">
-        德庄火锅（万达店）
+            {{shop.get('name')}}
         </span>
-                <span class="pull-right enter">进入店铺 <i class="icon ion-ios-arrow-right"></i></span>
-            </div>
-            <div class="item item-thumbnail-left">
-                <img src="img/tab-home/dezhuang.png">
-                <h2>德庄火锅美味 6人套餐</h2>
-                <p class="intro">五一特惠套餐，快约上几个好友来分享吧！</p>
-                <p><span class="assertive price">￥168</span><span class="origin-price">￥208</span><span class="pull-right">已售 316</span></p>
-            </div>
-            <div class="item item-thumbnail-left">
-                <img src="img/tab-home/dezhuang.png">
-                <h2>德庄火锅美味 6人套餐</h2>
-                <p class="intro">五一特惠套餐，快约上几个好友来分享吧！</p>
-                <p><span class="assertive price">￥168</span><span class="origin-price">￥208</span><span class="pull-right">已售 316</span></p>
-            </div>
-            <div class="item item-thumbnail-left">
-                <img src="img/tab-home/dezhuang.png">
-                <h2>德庄火锅美味 6人套餐</h2>
-                <p class="intro">五一特惠套餐，快约上几个好友来分享吧！</p>
-                <p><span class="assertive price">￥168</span><span class="origin-price">￥208</span><span class="pull-right">已售 316</span></p>
-            </div>
-            <div class="item text-center">
-                查看其他3个商品 <i class="icon ion-ios-arrow-down"></i>
-            </div>
-        </div>
-        <div class="item-divider" style="min-height: 10px;"></div>
-        <div class="list shop-list">
-
-            <div class="item" ui-sref="mc-homepage">
-                <img src="img/tab-shop/shop-icon.png" alt="" height="24px"/>
-        <span class="shop-name">
-        德庄火锅（万达店）
-        </span>
-                <span class="pull-right enter">进入店铺 <i class="icon ion-ios-arrow-right"></i></span>
-            </div>
-            <div class="item item-thumbnail-left">
-                <img src="img/tab-home/dezhuang.png">
-                <h2>德庄火锅美味 6人套餐</h2>
-                <p class="intro">五一特惠套餐，快约上几个好友来分享吧！</p>
-                <p><span class="assertive price">￥168</span><span class="origin-price">￥208</span><span class="pull-right">已售 316</span></p>
-            </div>
-            <div class="item item-thumbnail-left">
-                <img src="img/tab-home/dezhuang.png">
-                <h2>德庄火锅美味 6人套餐</h2>
-                <p class="intro">五一特惠套餐，快约上几个好友来分享吧！</p>
-                <p><span class="assertive price">￥168</span><span class="origin-price">￥208</span><span class="pull-right">已售 316</span></p>
-            </div>
-            <div class="item item-thumbnail-left">
-                <img src="img/tab-home/dezhuang.png">
-                <h2>德庄火锅美味 6人套餐</h2>
-                <p class="intro">五一特惠套餐，快约上几个好友来分享吧！</p>
-                <p><span class="assertive price">￥168</span><span class="origin-price">￥208</span><span class="pull-right">已售 316</span></p>
-            </div>
-            <div class="item text-center">
-                查看其他3个商品 <i class="icon ion-ios-arrow-down"></i>
-            </div>
-        </div>
-        <div class="item-divider" style="min-height: 10px;"></div>
-        <div class="list shop-list">
-
-            <div class="item" ui-sref="mc-homepage">
-                <img src="img/tab-shop/shop-icon.png" alt="" height="24px"/>
-        <span class="shop-name">
-        德庄火锅（万达店）
-        </span>
-                <span class="pull-right enter">进入店铺 <i class="icon ion-ios-arrow-right"></i></span>
-            </div>
-            <div class="item item-thumbnail-left">
-                <img src="img/tab-home/dezhuang.png">
-                <h2>德庄火锅美味 6人套餐</h2>
-                <p class="intro">五一特惠套餐，快约上几个好友来分享吧！</p>
-                <p><span class="assertive price">￥168</span><span class="origin-price">￥208</span><span class="pull-right">已售 316</span></p>
-            </div>
-            <div class="item item-thumbnail-left">
-                <img src="img/tab-home/dezhuang.png">
-                <h2>德庄火锅美味 6人套餐</h2>
-                <p class="intro">五一特惠套餐，快约上几个好友来分享吧！</p>
-                <p><span class="assertive price">￥168</span><span class="origin-price">￥208</span><span class="pull-right">已售 316</span></p>
-            </div>
-            <div class="item item-thumbnail-left">
-                <img src="img/tab-home/dezhuang.png">
-                <h2>德庄火锅美味 6人套餐</h2>
-                <p class="intro">五一特惠套餐，快约上几个好友来分享吧！</p>
-                <p><span class="assertive price">￥168</span><span class="origin-price">￥208</span><span class="pull-right">已售 316</span></p>
-            </div>
-            <div class="item text-center">
-                查看其他3个商品 <i class="icon ion-ios-arrow-down"></i>
+                    <span class="pull-right enter">进入店铺 <i class="icon ion-ios-arrow-right"></i></span>
+                </div>
+                <div class="item item-thumbnail-left" ng-repeat="item in shop.items">
+                    <img src="img/tab-home/dezhuang.png">
+                    <h2>{{item.get('name')}}</h2>
+                    <p class="intro">{{item.get('spec')}}</p>
+                    <p><span class="assertive price">￥{{item.get('price')}}</span><span class="origin-price">￥{{item.get('price') * 1.2 | number: 2}}</span><span class="pull-right">已售 {{item.get('salenum')}}</span></p>
+                </div>
             </div>
         </div>
     </ion-content>

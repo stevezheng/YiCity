@@ -84,10 +84,10 @@ angular.module('starter', ['ionic', 'user', 'gps', 'shop', 'yike.utils', 'starte
       //  controller: 'GPSListCtrl'
       //})
 
-      //todo: 布局有点问题
       .state('shop-list', {
-        url: '/shop-list',
-        templateUrl: 'templates/shop-list.html'
+        url: '/shop-list/:categoryId',
+        templateUrl: 'templates/shop-list.html',
+        controller: 'ShopListCtrl'
       })
 
       //todo: 跟效果图有出入
