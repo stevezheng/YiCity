@@ -1,7 +1,7 @@
 AV.initialize('ry3vkr5qo327u3zxk62ifezixglq2lqfmutkthm0c050z9j9', 'abhpp7rycpzbsbvzikr4vsv6giq39z15lk009b7j2ti7z55h');
 var LOGIN_TEMPLATE = '/templates/login.html';
 
-angular.module('starter', ['ionic', 'user', 'gps', 'shop', 'yike.utils', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'user', 'gps', 'item', 'shop', 'yike.utils', 'starter.controllers', 'starter.services'])
 
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -223,8 +223,9 @@ angular.module('starter', ['ionic', 'user', 'gps', 'shop', 'yike.utils', 'starte
       })
 
       .state('commodity-details', {
-        url: '/commodity-details',
-        templateUrl: 'templates/commodity-details.html'
+        url: '/commodity-details/:itemId',
+        templateUrl: 'templates/commodity-details.html',
+        controller: 'ItemDetailsCtrl'
       })
 
       .state('commodity-choose', {

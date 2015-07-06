@@ -29,9 +29,9 @@
             </ion-slide>
         </ion-slide-box>
         <div class="item" style="border: none">
-            <span class="pull-right-price" style="font-size: 23px">￥418</span>
-            <p>弟哥2015新款漆皮圆头领结</p>
-            <p>平底豆豆鞋 910133</p>
+            <span class="pull-right-price" style="font-size: 23px">￥{{item.get('price')}}</span>
+            <p>{{item.get('name')}}</p>
+            <p>{{item.get('title')}}</p>
 
         </div>
 
@@ -39,15 +39,19 @@
 
         <div class="item-divider" style="min-height: 0px;"></div>
 
-        <div class="item">
+        <div class="item" ui-sref="mc-homepage({shopId: shop.id})">
             <img src="../img/commodity/shop.png" width="30" style="padding-left: 10px">&nbsp;
-            <span class style="font-size: 20px; color: #222222">哥弟服装</span>
+            <span class style="font-size: 20px; color: #222222">{{shop.get('name')}}</span>
             <span class="pull-right enter ">进入店铺 <span class="pull-right ion-chevron-right"></span></span>
         </div>
         <div class="row">
             <div class="col col-25 "><img src="../img/commodity/DangQianWeiZi2.png" width="45" height="60"></div>
-            <div class="col col-50 " style="font-size: 15px"> 厦门湖里区仙岳路4666号万达广场（近金山路)</div>
-            <div class="col col-25 "><img src="../img/commodity/DianHua2.png" width="70" height="50"></div>
+            <div class="col col-50 " style="font-size: 15px">{{shop.get('address')}}</div>
+            <div class="col col-25 ">
+                <a href="tel:0592-58886666">
+                    <img src="../img/commodity/DianHua2.png" width="70" height="50">
+                </a>
+            </div>
         </div>
 
         <div class="item-divider" style="min-height: 0px;"></div>
@@ -67,18 +71,25 @@
         </div>
         <br>
         <div class="commodity">
-            <span class="commodity-TY">TY95k</span>&nbsp;&nbsp;
-            <span class="commodity-time">2015-06-20</span>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <span class="start-pull-right" style="padding-right: 5px">
-                <img src="../img/evaluate-detail/star.png" width="16px" height="16px">
-                <img src="../img/evaluate-detail/star.png" width="16px" height="16px">
-                <img src="../img/evaluate-detail/star.png" width="16px" height="16px">
-                <img src="../img/evaluate-detail/star.png" width="16px" height="16px">
-                <img src="../img/commodity/gray-star.png" width="16px" height="16px">
-            </span>
-            <div class="commodity-time" style="padding-left: 20px">环境很棒，味道很 赞，服务热情，套餐实惠，下次再来。</div>
+            <div class="row">
+                <div class="col">
+                    暂无评价
+                </div>
+            </div>
         </div>
+        <!--<div class="commodity">-->
+            <!--<span class="commodity-TY">TY95k</span>&nbsp;&nbsp;-->
+            <!--<span class="commodity-time">2015-06-20</span>-->
+            <!--&nbsp;&nbsp;&nbsp;&nbsp;-->
+            <!--<span class="start-pull-right" style="padding-right: 5px">-->
+                <!--<img src="../img/evaluate-detail/star.png" width="16px" height="16px">-->
+                <!--<img src="../img/evaluate-detail/star.png" width="16px" height="16px">-->
+                <!--<img src="../img/evaluate-detail/star.png" width="16px" height="16px">-->
+                <!--<img src="../img/evaluate-detail/star.png" width="16px" height="16px">-->
+                <!--<img src="../img/commodity/gray-star.png" width="16px" height="16px">-->
+            <!--</span>-->
+            <!--<div class="commodity-time" style="padding-left: 20px">环境很棒，味道很 赞，服务热情，套餐实惠，下次再来。</div>-->
+        <!--</div>-->
         <br>
         <div class="button-bar">
             <a class="button button-energized">加入购物车</a>
