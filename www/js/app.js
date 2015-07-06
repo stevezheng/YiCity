@@ -47,7 +47,8 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'shop', 'yike.utils',
         url: '/shop',
         views: {
           'tab-shop': {
-            templateUrl: 'templates/tab-shop.html'
+            templateUrl: 'templates/tab-shop.html',
+            controller: 'ShopListCtrl'
           }
         }
       })

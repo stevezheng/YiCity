@@ -29,6 +29,7 @@
         .find()
         .then(function(shop) {
           $scope.shop = shop;
+          $scope.$digest();
         });
 
       D('Item')
@@ -36,6 +37,7 @@
         .select()
         .then(function(items) {
           $scope.items = items;
+          $scope.$digest();
         })
     }
   }

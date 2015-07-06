@@ -22,8 +22,12 @@
     }
 
     function query(categoryId) {
+      var condition = {};
+      if (categoryId) {
+        condition.categoryId = categoryId;
+      }
       D('Shop')
-        .where({categoryId: categoryId})
+        .where(condition)
         .select()
         .then(function(shops) {
           $scope.shops = shops;

@@ -33,6 +33,7 @@
             .find()
             .then(function(shop) {
               $scope.shop = shop;
+              $scope.$digest();
             });
         });
     }
