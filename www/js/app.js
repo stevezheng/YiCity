@@ -109,8 +109,9 @@ angular.module('starter', ['ionic', 'user', 'gps', 'shop', 'yike.utils', 'starte
       })
 
       .state('mc-homepage', {
-        url: '/mc-homepage',
-        templateUrl: 'templates/mc-homepage.html'
+        url: '/mc-homepage/:shopId',
+        templateUrl: 'templates/mc-homepage.html',
+        controller: 'ShopDetailsCtrl'
       })
 
       //todo: 跟效果图有出入

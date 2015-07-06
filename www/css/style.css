@@ -1271,3 +1271,8 @@ input.grey::-webkit-input-placeholder {
     font-size: 18px;
     padding-right: 5px;
 }
+
+.tip-title {
+    font-size: 0.3rem;
+    color: #ff9900;
+}

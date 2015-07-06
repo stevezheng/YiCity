@@ -1,11 +1,15 @@
+<ion-nav-bar>
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+</ion-nav-bar>
 <ion-view view-title="商家主页" id="mc-homepage">
-    <ion-nav-buttons side="primary">
-        <div class="bar bar-header">
-            <button class="button button-clear ion-ios-arrow-left pull-left" ui-sref="tab.home"></button>
-            <!--<button class="button button-clear ion-ios-heart-outline"></button>-->
-            <button class="button button-clear ion-android-share-alt pull-left"></button>
-        </div>
-    </ion-nav-buttons>
+    <!--<ion-nav-buttons side="primary">-->
+        <!--<div class="bar bar-header">-->
+            <!--<button class="button button-clear ion-ios-arrow-left pull-left" ui-sref="tab.home"></button>-->
+            <!--&lt;!&ndash;<button class="button button-clear ion-ios-heart-outline"></button>&ndash;&gt;-->
+            <!--<button class="button button-clear ion-android-share-alt pull-left"></button>-->
+        <!--</div>-->
+    <!--</ion-nav-buttons>-->
     <ion-content>
         <ion-slide-box>
             <ion-slide>
@@ -28,10 +32,12 @@
 
         <div class="row">
             <div class="col col-25">
-                <img src="img/tmp/images/dangqianweizi2.png" width="45" height="60"/>
+                <a href="tel:10086">
+                    <img src="img/tmp/images/dangqianweizi2.png" width="45" height="60"/>
+                </a>
             </div>
             <div class="col col-50">
-                <span>厦门思明区中山路（近名汇广场）</span>
+                <span>{{shop.get('address')}}</span>
             </div>
             <div class="col col-25">
                 <img class="pull-right" src="/img/tmp/images/dianhua2.png" width="70" height="50"/>
@@ -41,65 +47,86 @@
         <!--<div class="item-divider" style="min-height: 0px;background-color: #ededed;"></div>-->
         <div class="row">
             <div class="col">
-                <button class="button button-small button-block button-energized">商品列表</button>
+                <button class="button button-small button-block button-energized" ng-click="tabStatus='商品列表'">商品列表</button>
             </div>
             <div class="col">
-                <button class="button button-small button-block" style="background-color: #b9b9b9; color:#ffffff">商家介绍
+                <button class="button button-small button-block" style="background-color: #b9b9b9; color:#ffffff" ng-click="tabStatus='商家介绍'">商家介绍
                 </button>
             </div>
             <div class="col">
-                <button class="button button-small button-block" style="background-color: #b9b9b9; color:#ffffff">评价详情
+                <button class="button button-small button-block" style="background-color: #b9b9b9; color:#ffffff" ng-click="tabStatus='评价详情'">评价详情
                 </button>
             </div>
         </div>
 
+        <div ng-show="tabStatus == '评价详情'">
+            <div class="row">
+                <div class="col">
+                    暂无评价
+                </div>
+            </div>
+        </div>
 
-        <div style="height: 35px; margin: 5px; padding: 5px;border-radius:5px;
+        <div ng-show="tabStatus == '商家介绍'" >
+            <div class="row">
+                <div class="col">
+                    <ul>
+                        <li>
+                            <div class="tip-title">有效期</div>
+                            <div class="tip-des">2014.8.24 至 2015.7.21</div>
+                        </li>
+                        <li>
+                            <div class="tip-title">不可用日期</div>
+                            <div class="tip-des">2015年2月18日至2月20日</div>
+                        </li>
+                        <li>
+                            <div class="tip-title">使用规则</div>
+                            <ul class="ul">
+                                <li>无需预约，消费高峰时可能需要等位</li>
+                                <li>每张美团券最多1位成人使用，身高1米以上儿童计入人数</li>
+                                <li>身高1.0米（含）以下小朋友免费，1.0米（不含）到1.2米（含）收费为32元/位，1.2米（不含）到1.4米（含）小朋友收费为49元/位，1.4米（不含）以上按成人收费
+                                    团购用户不可同时享受商家其他优惠
+                                    部分菜品因时令原因有所不同，请以店内当日实际供应为准</li>
+                                <li>提供免费WiFi
+                                    免费提供50个停车位</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div ng-show="tabStatus == '商品列表'">
+            <div style="height: 35px; margin: 5px; padding: 5px;border-radius:5px;
 border: solid 1px #b6b6b6; background-color:#cbcbcb;">
-            <b><span>团购</span>&nbsp;
-                <span style="color: red">热销菜品</span>&nbsp;
-                <span>特价菜品</span>&nbsp;
-                <span>到店消费</span>&nbsp;
-                <span>套餐</span>
-            </b>
-        </div>
+                <b><span>团购</span>&nbsp;
+                    <span style="color: red">热销菜品</span>&nbsp;
+                    <span>特价菜品</span>&nbsp;
+                    <span>到店消费</span>&nbsp;
+                    <span>套餐</span>
+                </b>
+            </div>
 
-        <div class="list mc-homepage-NoCart">
-            <div class="item item-thumbnail-left" ui-sref="commodity-details">
-                <img src="img/tab-home/dezhuang.png">
+            <div class="list mc-homepage-NoCart">
+                <div class="item item-thumbnail-left" ui-sref="commodity-details" ng-repeat="item in items">
+                    <img src="img/tab-home/dezhuang.png">
 
-                <h2>德庄火锅美味 6人套餐</h2>
+                    <h2>{{item.get('name')}}</h2>
 
-                <p>已售 316</p>
+                    <p>已售 {{item.get('salenum')}}</p>
 
-                <p>&nbsp;</p>
+                    <p>&nbsp;</p>
 
-                <p><span class="assertive price">￥168</span>
+                    <p><span class="assertive price">￥{{item.get('price')}}</span>
                     <span class="pull-right">
                     <img src="/img/tmp/images/minus.png" width="16px" height="16px">
                     <span style="font-weight: bold;font-size:16px">&nbsp;0&nbsp;</span>
                     <img src="/img/tmp/images/add.png" width="16px" height="16px">
                     </span>
-                </p>
+                    </p>
+                </div>
             </div>
-            <div class="item item-thumbnail-left" ui-sref="commodity-details">
-                <img src="img/tab-home/dezhuang.png">
 
-                <h2>德庄火锅美味 6人套餐</h2>
-
-                <p>已售 316</p>
-
-                <p>&nbsp;</p>
-
-                <p><span class="assertive price">￥168</span>
-                 <span class="pull-right">
-                    <img src="/img/tmp/images/minus.png" width="16px" height="16px">
-                    <span style="font-weight: bold;font-size:16px">&nbsp;0&nbsp;</span>
-                    <img src="/img/tmp/images/add.png" width="16px" height="16px">
-                 </span>
-                </p>
-            </div>
         </div>
-
     </ion-content>
 </ion-view>
