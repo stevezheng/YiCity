@@ -28,14 +28,17 @@
         .find()
         .then(function(item) {
           $scope.item =item;
-          D('Shop')
+          return D('Shop')
             .where({objectId: item.get('shopId')})
             .find()
-            .then(function(shop) {
-              $scope.shop = shop;
-              $scope.$digest();
-            });
-        });
+        })
+        .then(function(shop) {
+            $scope.shop = shop;
+            $scope.$digest();
+        })
+        .catch(function(err) {
+          console.error(err);
+        })
     }
   }
 })();
