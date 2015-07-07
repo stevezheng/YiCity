@@ -17,6 +17,7 @@
     ////////////////
 
     function init() {
+      console.log('shop.list');
       var categoryId = $state.params.categoryId;
       query(categoryId);
     }

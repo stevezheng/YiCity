@@ -58,6 +58,32 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'shop', 'yike.utils',
         }
       })
 
+      //todo: 跟效果图有出入
+      .state('mc-homepage-nocart', {
+        url: '/mc-homepage-nocart',
+        templateUrl: 'templates/mc-homepage-nocart.html'
+      })
+
+      .state('tab.homepage', {
+        url: '/homepage/:shopId',
+        views: {
+          'tab-shop': {
+            templateUrl: 'templates/mc-homepage.html',
+            controller: 'ShopDetailsCtrl'
+          }
+        }
+      })
+
+      .state('tab.commodity-details', {
+        url: '/commodity-details/:itemId',
+        views: {
+          'tab-shop': {
+            templateUrl: 'templates/commodity-details.html',
+            controller: 'ItemDetailsCtrl'
+          }
+        }
+      })
+
       .state('tab.account', {
         url: '/account',
         views: {
@@ -109,22 +135,6 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'shop', 'yike.utils',
       })
 
       //todo: 跟效果图有出入
-      .state('mc-homepage-nocart', {
-        url: '/mc-homepage-nocart',
-        templateUrl: 'templates/mc-homepage-nocart.html'
-      })
-
-      .state('tab.homepage', {
-        url: '/homepage/:shopId',
-        views: {
-          'tab-shop': {
-            templateUrl: 'templates/mc-homepage.html',
-            controller: 'ShopDetailsCtrl'
-          }
-        }
-      })
-
-      //todo: 跟效果图有出入
       .state('mc-evaluation', {
         url: '/mc-evaluation',
         templateUrl: 'templates/mc-evaluation.html'
@@ -163,10 +173,7 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'shop', 'yike.utils',
         url: '/login',
         templateUrl: 'templates/login.html'
       })
-      //.state('register', {
-      //  url: '/register',
-      //  templateUrl: 'templates/register.html'
-      //})
+
       .state('registered-success', {
         url: '/registered-success',
         templateUrl: 'templates/registered-success.html'
@@ -175,16 +182,6 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'shop', 'yike.utils',
         url: '/personal-center',
         templateUrl: '/templates/personal-center.html'
       })
-
-      //.state('category-list', {
-      //  url: '/category-list',
-      //  templateUrl: 'templates/category-list.html'
-      //})
-
-      //.state('shop-list', {
-      //  url: '/shop-list',
-      //  templateUrl: 'templates/shop-list.html'
-      //})
 
       .state('indent', {
         url: '/indent',
@@ -231,17 +228,6 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'shop', 'yike.utils',
         url: '/shopping-cart',
         templateUrl: 'templates/shopping-cart.html'
       })
-
-      .state('tab.commodity-details', {
-        url: '/commodity-details/:itemId',
-        views: {
-          'tab-shop': {
-            templateUrl: 'templates/commodity-details.html',
-            controller: 'ItemDetailsCtrl'
-          }
-        }
-      })
-
       .state('commodity-choose', {
         url: '/commodity-choose',
         templateUrl: 'templates/commodity-choose.html'
