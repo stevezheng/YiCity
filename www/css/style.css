@@ -274,14 +274,10 @@ input.grey::-webkit-input-placeholder {
     padding-left: 6px;
 }
 
-#login .item-input {
-    width: 70%;
-}
 
 #login .font {
     color: #ee8102;
     position: absolute;
-    bottom: -87px;
     left: 75%;
 }
 
@@ -306,6 +302,7 @@ input.grey::-webkit-input-placeholder {
 
 #register .padding-more {
     padding-left: 20px;
+    width: 100px;
 }
 
 #register .padding-less {

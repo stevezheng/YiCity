@@ -27,12 +27,9 @@
                 </label>
             </div>
          </div>
-        <br/>
-        <div class="bar bar-footer bar-assertive " style="position: absolute;bottom: -60px;width: 90%;left: 5%">
-            <div class="title" ng-click="doLogin(user.phone, user.password)">登录</div>
-        </div>
-        <span class="font" ui-sref="forget-password">忘记密码？</span>
 
+        <div class="button button-assertive button-block" ng-click="doLogin(user.phone, user.password)">登录</div>
+        <span class="font" ui-sref="forget-password">忘记密码？</span>
     </ion-content>
 </ion-view>
 

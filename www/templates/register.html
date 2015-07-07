@@ -12,13 +12,13 @@
             </label>
         </div>
         <div class="item item-input-inset">
-            <span class="padding-less">登录密码 </span>&nbsp;&nbsp;&nbsp;
+            <span class="padding-more">登录密码 </span>&nbsp;&nbsp;&nbsp;
             <label class="item item-input">
                 <input type="password" class="grey" placeholder="请输入登录密码" ng-model="user.password" >
             </label>
         </div>
         <div class="item item-input-inset">
-            <span class="padding-less">确认密码 </span>&nbsp;&nbsp;&nbsp;
+            <span class="padding-more">确认密码 </span>&nbsp;&nbsp;&nbsp;
             <label class="item item-input">
                 <input type="password" class="grey" placeholder="请再次确认密码"  ng-model="user.rePassword">
             </label>
@@ -30,18 +30,15 @@
             </label>
         </div>
         <div class="item item-input-inset">
-            <span class="padding-more">验证码 </span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="padding-more">验证码 </span>
             <label class="item item-input" style="width: 40%">
                 <input type="text" placeholder="验证码" ng-model="user.code">
             </label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="button button-light button-blue" ng-click="reg(user.phone, user.password, user.rePassword, user.inviteCode)">
                 <span class="font">获取验证码</span>
             </button>
         </div>
-        <div class="bar bar-footer bar-assertive " style="position: absolute;bottom: -60px;width: 90%;left: 5%">
-            <div class="title" ng-click="submit(user.phone, user.password, user.rePassword, user.code)">提交</div>
-        </div>
+        <div class="button button-assertive button-block" ng-click="submit(user.phone, user.password, user.rePassword, user.code)">提交</div>
         <div class="font-bottom">
             <span>温馨提示：<br/></span>
             <span class="auto-linefeed">
