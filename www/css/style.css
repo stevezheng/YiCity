@@ -305,6 +305,10 @@ input.grey::-webkit-input-placeholder {
     width: 100px;
 }
 
+.all-list .active{
+  background-color: #e6e6e6;
+}
+
 #register .padding-less {
     padding-left: 5px;
 }
