@@ -1,9 +1,13 @@
+<ion-nav-bar>
+  <ion-nav-back-button>
+  </ion-nav-back-button>
+</ion-nav-bar>
 <ion-view view-title="商家" id="tab-shop">
-  <ion-nav-buttons side="primary">
-    <div class="bar bar-header">
-      <button class="button button-clear ion-ios-search pull-right" ui-sref="tab.home"></button>
-    </div>
-  </ion-nav-buttons>
+  <!--<ion-nav-buttons side="primary">-->
+    <!--<div class="bar bar-header">-->
+      <!--<button class="button button-clear ion-ios-search pull-right" ui-sref="tab.home"></button>-->
+    <!--</div>-->
+  <!--</ion-nav-buttons>-->
   <ion-content>
     <div class="button-bar shop-button-bar">
       <a class="button button-clear icon-right ion-arrow-down-b" href="#">全部分类</a>
@@ -14,14 +18,14 @@
       <div class="item-divider" style="min-height: 10px;"></div>
       <div class="list shop-list">
 
-        <div class="item" ui-sref="mc-homepage({shopId: shop.id})">
+        <div class="item" ui-sref="tab.homepage({shopId: shop.id})">
           <img src="img/tab-shop/shop-icon.png" alt="" height="24px"/>
         <span class="shop-name">
             {{shop.get('name')}}
         </span>
           <span class="pull-right enter">进入店铺 <i class="icon ion-ios-arrow-right"></i></span>
         </div>
-        <div class="item item-thumbnail-left" ng-repeat="item in shop.items" ui-sref="commodity-details({itemId: item.id})">
+        <div class="item item-thumbnail-left" ng-repeat="item in shop.items" ui-sref="tab.commodity-details({itemId: item.id})">
           <img src="img/tab-home/dezhuang.png">
           <h2>{{item.get('name')}}</h2>
           <p class="intro">{{item.get('spec')}}</p>

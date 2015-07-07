@@ -20,6 +20,7 @@
     ////////////////
 
     function init() {
+      console.log('shop.details');
       query(shopId);
     }
 

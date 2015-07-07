@@ -1,15 +1,11 @@
-<ion-nav-bar>
-    <ion-nav-back-button>
-    </ion-nav-back-button>
-</ion-nav-bar>
 <ion-view view-title="商家主页" id="mc-homepage">
-    <!--<ion-nav-buttons side="primary">-->
-        <!--<div class="bar bar-header">-->
-            <!--<button class="button button-clear ion-ios-arrow-left pull-left" ui-sref="tab.home"></button>-->
-            <!--&lt;!&ndash;<button class="button button-clear ion-ios-heart-outline"></button>&ndash;&gt;-->
-            <!--<button class="button button-clear ion-android-share-alt pull-left"></button>-->
-        <!--</div>-->
-    <!--</ion-nav-buttons>-->
+    <ion-nav-buttons side="primary">
+        <div class="bar bar-header">
+            <button class="button button-clear ion-ios-arrow-left pull-left" ui-sref="tab.shop"></button>
+            <!--<button class="button button-clear ion-ios-heart-outline"></button>-->
+            <button class="button button-clear ion-android-share-alt pull-left"></button>
+        </div>
+    </ion-nav-buttons>
     <ion-content>
         <ion-slide-box>
             <ion-slide>
@@ -40,7 +36,7 @@
                 <span>{{shop.get('address')}}</span>
             </div>
             <div class="col col-25">
-                <img class="pull-right" src="/img/tmp/images/dianhua2.png" width="70" height="50"/>
+                <img class="pull-right" src="img/tmp/images/dianhua2.png" width="70" height="50"/>
             </div>
         </div>
         <div class="gray-wide-line" ></div>
@@ -119,9 +115,9 @@ border: solid 1px #b6b6b6; background-color:#cbcbcb;">
 
                     <p><span class="assertive price">￥{{item.get('price')}}</span>
                     <span class="pull-right">
-                    <img src="/img/tmp/images/minus.png" width="16px" height="16px">
+                    <img src="img/tmp/images/minus.png" width="16px" height="16px">
                     <span style="font-weight: bold;font-size:16px">&nbsp;0&nbsp;</span>
-                    <img src="/img/tmp/images/add.png" width="16px" height="16px">
+                    <img src="img/tmp/images/add.png" width="16px" height="16px">
                     </span>
                     </p>
                 </div>

@@ -17,7 +17,12 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'shop', 'yike.utils',
     });
   })
 
-  .config(function ($stateProvider, $urlRouterProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+    //这里对android进行一些配置,为了保证ios和安卓平台显示效果一致
+    $ionicConfigProvider.tabs.position('bottom');
+    $ionicConfigProvider.tabs.style('standard');
+    $ionicConfigProvider.navBar.alignTitle('center');
+    $ionicConfigProvider.backButton.icon('ion-ios-arrow-left');
 
     // Ionic uses AngularUI Router which uses the concept of states
     // Learn more here: https://github.com/angular-ui/ui-router
@@ -44,7 +49,7 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'shop', 'yike.utils',
       })
 
       .state('tab.shop', {
-        url: '/shop',
+        url: '/shop/:categoryId',
         views: {
           'tab-shop': {
             templateUrl: 'templates/tab-shop.html',
@@ -109,10 +114,14 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'shop', 'yike.utils',
         templateUrl: 'templates/mc-homepage-nocart.html'
       })
 
-      .state('mc-homepage', {
-        url: '/mc-homepage/:shopId',
-        templateUrl: 'templates/mc-homepage.html',
-        controller: 'ShopDetailsCtrl'
+      .state('tab.homepage', {
+        url: '/homepage/:shopId',
+        views: {
+          'tab-shop': {
+            templateUrl: 'templates/mc-homepage.html',
+            controller: 'ShopDetailsCtrl'
+          }
+        }
       })
 
       //todo: 跟效果图有出入
@@ -223,10 +232,14 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'shop', 'yike.utils',
         templateUrl: 'templates/shopping-cart.html'
       })
 
-      .state('commodity-details', {
+      .state('tab.commodity-details', {
         url: '/commodity-details/:itemId',
-        templateUrl: 'templates/commodity-details.html',
-        controller: 'ItemDetailsCtrl'
+        views: {
+          'tab-shop': {
+            templateUrl: 'templates/commodity-details.html',
+            controller: 'ItemDetailsCtrl'
+          }
+        }
       })
 
       .state('commodity-choose', {

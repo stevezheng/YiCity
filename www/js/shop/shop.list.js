@@ -17,8 +17,8 @@
     ////////////////
 
     function init() {
-      var cateogyrId = $state.params.categoryId;
-      query(cateogyrId);
+      var categoryId = $state.params.categoryId;
+      query(categoryId);
     }
 
     function query(categoryId) {
