@@ -33,6 +33,7 @@
     }
 
     function query(categoryId) {
+      var _shops = [];
       var condition = {};
       if (categoryId) {
         condition.categoryId = categoryId;
@@ -41,19 +42,21 @@
         .where(condition)
         .select()
         .then(function(shops) {
-          $scope.shops = shops;
-          for (var i = 0; i < shops.length; i++) {
-            var shop = $scope.shops[i];
-            var id = shop.id;
-            var _i = i;
-            D('Item')
-              .where({shopId: id})
+          _shops = shops;
+          return Promise.all(_.each(_shops, function(shop) {
+            return D('Item')
+              .where({shopId: shop.id})
+              .limit(0, 3)
               .select()
               .then(function(items) {
-                $scope.shops[_i].items = items;
-                $scope.$digest();
+                if (items.length > 0) {
+                  shop.items = items;
+                }
               })
-          }
+          }))
+        })
+        .then(function() {
+          $scope.shops = _shops;
         })
     }
   }
