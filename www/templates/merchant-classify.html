@@ -42,11 +42,11 @@
                 查看其他3个商品 <i class="icon ion-ios-arrow-down"></i>
             </div>
         </div>
-        <div class="gray-lucency-coverage">
-        </div>
+        <!--<div class="gray-lucency-coverage">-->
+        <!--</div>-->
     </ion-content>
 
-    <ion-content class="all-list">
+    <ion-content class="all-list" ng-show="selectType == 'category'">
         <ul class="list">
             <li class="item">
                 <h5><img src="../img/merchant-classify/all.png">&nbsp;&nbsp;&nbsp;全部分类</h5>
@@ -112,7 +112,7 @@
 
 
     </ion-content>
-    <ion-content>&nbsp;
+    <ion-content ng-show="selectType">&nbsp;
         <div class="gray-lucency-coverage">
         </div>
     </ion-content >

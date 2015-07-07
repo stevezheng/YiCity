@@ -253,16 +253,19 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'shop', 'yike.utils',
         templateUrl: 'templates/my-information.html'
       })
 
+      //商家排序
       .state('merchant-sort', {
         url: '/merchant-sort',
         templateUrl: 'templates/merchant-sort.html'
       })
 
+      //商圈选择
       .state('business-district', {
         url: '/business-district',
         templateUrl: 'templates/business-district.html'
       })
 
+      //商家分类
       .state('merchant-classify', {
         url: '/merchant-classify',
         templateUrl: 'templates/merchant-classify.html'

@@ -1,16 +1,7 @@
-<ion-nav-bar>
-  <ion-nav-back-button>
-  </ion-nav-back-button>
-</ion-nav-bar>
 <ion-view view-title="商家" id="tab-shop">
-  <!--<ion-nav-buttons side="primary">-->
-    <!--<div class="bar bar-header">-->
-      <!--<button class="button button-clear ion-ios-search pull-right" ui-sref="tab.home"></button>-->
-    <!--</div>-->
-  <!--</ion-nav-buttons>-->
   <ion-content>
     <div class="button-bar shop-button-bar">
-      <a class="button button-clear icon-right ion-arrow-down-b" href="#">全部分类</a>
+      <a class="button button-clear icon-right ion-arrow-down-b" ng-click="setSelectType('category')">全部分类</a>
       <a class="button button-clear icon-right ion-arrow-down-b">全城</a>
       <a class="button button-clear icon-right ion-arrow-down-b">销量最高</a>
     </div>
@@ -34,6 +25,77 @@
       </div>
     </div>
   </ion-content>
+
+  <ion-content class="all-list" ng-show="selectType == 'category'">
+    <ul class="list">
+      <li class="item">
+        <h5><img src="../img/merchant-classify/all.png">&nbsp;&nbsp;&nbsp;全部分类</h5>
+      </li>
+      <li class="item">
+        <h5><img src="../img/merchant-classify/movie.png">&nbsp;&nbsp;&nbsp;电影</h5>
+      </li>
+      <li class="item">
+        <h5><img src="../img/merchant-classify/food.png">&nbsp;&nbsp;&nbsp;美食<span class="ion-chevron-right pull-right"></span></h5>
+      </li>
+      <li class="item"  style="background-color: #e6e6e6">
+        <h5 style="color: #f07200"><img src="../img/merchant-classify/grogshop.png">&nbsp;&nbsp;&nbsp;酒店<span class="ion-chevron-right pull-right"></span></h5>
+      </li>
+      <li class="item">
+        <h5><img src="../img/merchant-classify/hairdressing.png">&nbsp;&nbsp;&nbsp;美容<span class="ion-chevron-right pull-right"></span></h5>
+      </li>
+      <li class="item">
+        <h5><img src="../img/merchant-classify/take-out.png">&nbsp;&nbsp;&nbsp;外卖<span class="ion-chevron-right pull-right"></span></h5>
+      </li>
+      <li class="item">
+        <h5><img src="../img/merchant-classify/ktv.png">&nbsp;&nbsp;&nbsp;KTV</h5>
+      </li>
+      <li class="item">
+        <h5><img src="../img/merchant-classify/travel.png">&nbsp;&nbsp;&nbsp;旅游<span class="ion-chevron-right pull-right"></span></h5>
+      </li>
+      <li class="item">
+        <h5><img src="../img/merchant-classify/relaxation.png">&nbsp;&nbsp;&nbsp;休闲娱乐<span class="ion-chevron-right pull-right"></span></h5>
+      </li>
+      <li class="item">
+        <h5><img src="../img/merchant-classify/local-life.png">&nbsp;&nbsp;&nbsp;本地生活<span class="ion-chevron-right pull-right"></span></h5>
+      </li>
+      <li class="item"  style="padding-bottom: 0">
+        <h5></h5>
+      </li>
+    </ul>
+
+    <ul class="list" style="top: -298px;left: 50%;background-color: #d1c5d0;">
+      <li class="item" style="background-color: #e6e6e6">
+        <h5>全部</h5>
+      </li>
+      <li class="item" style="background-color: #e6e6e6">
+        <h5>经济型酒店</h5>
+      </li>
+      <li class="item" style="background-color: #e6e6e6">
+        <h5>豪华酒店</h5>
+      </li>
+      <li class="item" style="background-color: #e6e6e6">
+        <h5>青年旅社</h5>
+      </li>
+      <li class="item" style="background-color: #e6e6e6">
+        <h5>主题酒店</h5>
+      </li>
+      <li class="item" style="background-color: #e6e6e6">
+        <h5>公寓型酒店</h5>
+      </li>
+      <li class="item" style="background-color: #e6e6e6">
+        <h5>度假酒店/度假村</h5>
+      </li>
+      <li class="item"  style="padding-bottom: 89px;background-color: #e6e6e6">
+        <h5></h5>
+      </li>
+    </ul>
+
+
+  </ion-content>
+  <!--<ion-content ng-show="selectType">&nbsp;-->
+    <!--<div class="gray-lucency-coverage">-->
+    <!--</div>-->
+  <!--</ion-content >-->
 
 </ion-view>
 

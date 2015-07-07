@@ -11,15 +11,25 @@
   function ShopListCtrl($scope, $state, Shop) {
     $scope.init = init;
     $scope.shops = null;
+    $scope.selectType = false;
+    $scope.setSelectType = setSelectType;
 
     init();
 
     ////////////////
 
     function init() {
-      console.log('shop.list');
       var categoryId = $state.params.categoryId;
       query(categoryId);
+    }
+
+    function setSelectType(selectType) {
+      console.log(selectType);
+      if ($scope.selectType == selectType) {
+        $scope.selectType = false;
+      } else {
+        $scope.selectType = selectType;
+      }
     }
 
     function query(categoryId) {
