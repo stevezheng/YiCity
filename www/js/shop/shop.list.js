@@ -51,12 +51,15 @@
               .then(function(items) {
                 if (items.length > 0) {
                   shop.items = items;
+                  $scope.shops = _shops;
+                  $scope.$digest();
                 }
-              })
+              });
           }))
         })
         .then(function() {
           $scope.shops = _shops;
+          $scope.$digest();
         })
     }
   }

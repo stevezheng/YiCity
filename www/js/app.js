@@ -43,13 +43,15 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'shop', 'yike.utils',
         url: '/home',
         views: {
           'tab-home': {
-            templateUrl: 'templates/tab-home.html'
+            templateUrl: 'templates/tab-home.html',
+            controller: 'HomeCtrl'
           }
         }
       })
 
       .state('tab.shop', {
         url: '/shop/:categoryId',
+        cache: false,
         views: {
           'tab-shop': {
             templateUrl: 'templates/tab-shop.html',
