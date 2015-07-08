@@ -24,7 +24,6 @@
     }
 
     function setSelectType(selectType) {
-      console.log(selectType);
       if ($scope.selectType == selectType) {
         $scope.selectType = false;
       } else {

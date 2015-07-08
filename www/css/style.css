@@ -1392,3 +1392,7 @@ input.grey::-webkit-input-placeholder {
     height: 12px;
     margin-left: 2px;
 }
+
+#tab-shop .all-list ul {
+    max-width: 100%;
+}

@@ -2,12 +2,12 @@
   <ion-content>
     <div class="button-bar shop-button-bar">
       <a class="button button-clear icon-right ion-arrow-down-b" ng-click="setSelectType('category')">全部分类</a>
-      <a class="button button-clear icon-right ion-arrow-down-b">全城</a>
-      <a class="button button-clear icon-right ion-arrow-down-b">销量最高</a>
+      <a class="button button-clear icon-right ion-arrow-down-b" ng-click="setSelectType('area')">全城</a>
+      <a class="button button-clear icon-right ion-arrow-down-b" ng-click="setSelectType('sort')">销量最高</a>
     </div>
     <div ng-repeat="shop in shops" ng-show="shop.items">
       <div class="item-divider" style="min-height: 10px;"></div>
-      <div class="list shop-list">
+      <div class="list shop-list"ionic browser add crosswalk>
 
         <div class="item" ui-sref="tab.homepage({shopId: shop.id})">
           <img src="img/tab-shop/shop-icon.png" alt="" height="24px"/>
@@ -92,10 +92,92 @@
 
 
   </ion-content>
-  <!--<ion-content ng-show="selectType">&nbsp;-->
-    <!--<div class="gray-lucency-coverage">-->
-    <!--</div>-->
-  <!--</ion-content >-->
+  <ion-content class="all-list" ng-show="selectType == 'area'" scroll="false">
+    <ul class="list">
+      <li class="item">
+        <h5>全城</h5>
+      </li>
+      <li class="item">
+        <h5>热门<span class="ion-chevron-right pull-right"></span></h5>
+      </li>
+      <li class="item">
+        <h5>思明区<span class="ion-chevron-right pull-right"></span></h5>
+      </li>
+      <li class="item"  style="background-color: #e6e6e6">
+        <h5 style="color: #f07200">湖里区<span class="ion-chevron-right pull-right"></span></h5>
+      </li>
+      <li class="item">
+        <h5>集美区<span class="ion-chevron-right pull-right"></span></h5>
+      </li>
+      <li class="item">
+        <h5>同安区<span class="ion-chevron-right pull-right"></span></h5>
+      </li>
+      <li class="item">
+        <h5>海沧区<span class="ion-chevron-right pull-right"></span></h5>
+      </li>
+      <li class="item">
+        <h5>翔安区<span class="ion-chevron-right pull-right"></span></h5>
+      </li>
+      <li class="item"  style="padding-bottom: 60px">
+        <h5></h5>
+      </li>
+    </ul>
 
+    <ul class="list" style="top: -298px;left: 50%;background-color: #d1c5d0;">
+      <li class="item" style="background-color: #e6e6e6">
+        <h5>全部</h5>
+      </li>
+      <li class="item" style="background-color: #e6e6e6">
+        <h5>国际邮轮中心</h5>
+      </li>
+      <li class="item" style="background-color: #e6e6e6">
+        <h5>湖里公园</h5>
+      </li>
+      <li class="item" style="background-color: #e6e6e6">
+        <h5>江头</h5>
+      </li>
+      <li class="item" style="background-color: #e6e6e6">
+        <h5>万达广场</h5>
+      </li>
+      <li class="item" style="background-color: #e6e6e6">
+        <h5>五缘湾</h5>
+      </li>
+      <li class="item" style="background-color: #e6e6e6">
+        <h5>蔡塘广场</h5>
+      </li>
+      <li class="item"  style="padding-bottom: 89px;background-color: #e6e6e6">
+        <h5></h5>
+      </li>
+    </ul>
+
+
+  </ion-content>
+
+  <ion-content class="all-list" ng-show="selectType == 'sort'" scroll="false">
+    <ul class="list">
+      <li class="item">
+        <h5>销量最高</h5>
+      </li>
+      <li class="item" style="background-color: #e6e6e6">
+        <h5 style="color: #f07200">最新发布</h5>
+      </li>
+      <li class="item">
+        <h5>价格最低</h5>
+      </li>
+      <li class="item">
+        <h5>价格最高</h5>
+      </li>
+      <li class="item">
+        <h5>评价最高</h5>
+      </li>
+      <li class="item">
+        <h5>返利最高</h5>
+      </li>
+      <li class="item"  style="padding-bottom: 60px">
+        <h5></h5>
+      </li>
+    </ul>
+
+  </ion-content>
 </ion-view>
 
