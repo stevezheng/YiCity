@@ -1396,3 +1396,7 @@ input.grey::-webkit-input-placeholder {
 #tab-shop .all-list ul {
     max-width: 100%;
 }
+
+#mc-homepage .unactive {
+    background-color: #b9b9b9; color:#ffffff;
+}
