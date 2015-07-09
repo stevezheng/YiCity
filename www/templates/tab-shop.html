@@ -5,19 +5,25 @@
       <a class="button button-clear icon-right ion-arrow-down-b" ng-click="setSelectType('area')">全城</a>
       <a class="button button-clear icon-right ion-arrow-down-b" ng-click="setSelectType('sort')">销量最高</a>
     </div>
+    <div class="row" ng-show="shops == false">
+      <div class="col text-center">载入中</div>
+    </div>
+    <div class="row" ng-show="shops.length == 0">
+      <div class="col text-center">暂无数据</div>
+    </div>
     <div ng-repeat="shop in shops" ng-show="shop.items">
       <div class="item-divider" style="min-height: 10px;"></div>
       <div class="list shop-list"ionic browser add crosswalk>
 
         <div class="item" ui-sref="tab.homepage({shopId: shop.id})">
-          <img src="img/tab-shop/shop-icon.png" alt="" height="24px"/>
+          <img ng-src="img/tab-shop/shop-icon.png" alt="" height="24px"/>
         <span class="shop-name">
             {{shop.get('name')}}
         </span>
           <span class="pull-right enter">进入店铺 <i class="icon ion-ios-arrow-right"></i></span>
         </div>
         <div class="item item-thumbnail-left" ng-repeat="item in shop.items" ui-sref="tab.commodity-details({itemId: item.id})">
-          <img src="img/tab-home/dezhuang.png">
+          <img ng-src="{{item.get('image')}}" alt="" height="24px"/>
           <h2>{{item.get('name')}}</h2>
           <p class="intro">{{item.get('spec')}}</p>
           <p><span class="assertive price">￥{{item.get('price')}}</span><span class="origin-price">￥{{item.get('price') * 1.2 | number: 2}}</span><span class="pull-right">已售 {{item.get('salenum')}}</span></p>
@@ -28,34 +34,34 @@
 
   <ion-content scroll="false" class="all-list" ng-show="selectType == 'category'">
     <ul class="list">
-      <li class="item">
+      <li class="item" ui-sref="tab.shop({categoryName: 'all'})">
         <h5><img src="../img/merchant-classify/all.png">&nbsp;&nbsp;&nbsp;全部分类</h5>
       </li>
-      <li class="item">
+      <li class="item" ui-sref="tab.shop({categoryName: 'dianying'})">
         <h5><img src="../img/merchant-classify/movie.png">&nbsp;&nbsp;&nbsp;电影</h5>
       </li>
-      <li class="item">
+      <li class="item" ui-sref="tab.shop({categoryName: 'meishi'})">
         <h5><img src="../img/merchant-classify/food.png">&nbsp;&nbsp;&nbsp;美食<span class="ion-chevron-right pull-right"></span></h5>
       </li>
-      <li class="item">
-        <h5 style="color: #f07200"><img src="../img/merchant-classify/grogshop.png">&nbsp;&nbsp;&nbsp;酒店<span class="ion-chevron-right pull-right"></span></h5>
+      <li class="item" ui-sref="tab.shop({categoryName: 'jiudian'})">
+        <h5><img src="../img/merchant-classify/local-life.png">&nbsp;&nbsp;&nbsp;酒店<span class="ion-chevron-right pull-right"></span></h5>
       </li>
-      <li class="item">
+      <li class="item" ui-sref="tab.shop({categoryName: 'meirong'})">
         <h5><img src="../img/merchant-classify/hairdressing.png">&nbsp;&nbsp;&nbsp;美容<span class="ion-chevron-right pull-right"></span></h5>
       </li>
-      <li class="item">
+      <li class="item" ui-sref="tab.shop({categoryName: 'dingwaimai'})">
         <h5><img src="../img/merchant-classify/take-out.png">&nbsp;&nbsp;&nbsp;外卖<span class="ion-chevron-right pull-right"></span></h5>
       </li>
-      <li class="item">
+      <li class="item" ui-sref="tab.shop({categoryName: 'ktv'})">
         <h5><img src="../img/merchant-classify/ktv.png">&nbsp;&nbsp;&nbsp;KTV</h5>
       </li>
-      <li class="item">
+      <li class="item" ui-sref="tab.shop({categoryName: 'lvyou'})">
         <h5><img src="../img/merchant-classify/travel.png">&nbsp;&nbsp;&nbsp;旅游<span class="ion-chevron-right pull-right"></span></h5>
       </li>
-      <li class="item">
+      <li class="item" ui-sref="tab.shop({categoryName: 'xiuxianyule'})">
         <h5><img src="../img/merchant-classify/relaxation.png">&nbsp;&nbsp;&nbsp;休闲娱乐<span class="ion-chevron-right pull-right"></span></h5>
       </li>
-      <li class="item">
+      <li class="item" ui-sref="tab.shop({categoryName: 'bendishenghuo'})">
         <h5><img src="../img/merchant-classify/local-life.png">&nbsp;&nbsp;&nbsp;本地生活<span class="ion-chevron-right pull-right"></span></h5>
       </li>
       <li class="item"  style="padding-bottom: 0">
@@ -63,26 +69,26 @@
       </li>
     </ul>
 
-    <ul class="list" style="top: -298px;left: 50%;background-color: #d1c5d0;">
+    <ul class="list" style="top: -298px;left: 50%;background-color: #e6e6e6; z-index: 999;min-height: 296px">
       <li class="item" style="background-color: #e6e6e6">
         <h5>全部</h5>
       </li>
-      <li class="item" style="background-color: #e6e6e6">
+      <li class="item" style="background-color: #e6e6e6" ng-show="categoryName == 'jiudian'">
         <h5>经济型酒店</h5>
       </li>
-      <li class="item" style="background-color: #e6e6e6">
+      <li class="item" style="background-color: #e6e6e6" ng-show="categoryName == 'jiudian'">
         <h5>豪华酒店</h5>
       </li>
-      <li class="item" style="background-color: #e6e6e6">
+      <li class="item" style="background-color: #e6e6e6" ng-show="categoryName == 'jiudian'">
         <h5>青年旅社</h5>
       </li>
-      <li class="item" style="background-color: #e6e6e6">
+      <li class="item" style="background-color: #e6e6e6" ng-show="categoryName == 'jiudian'">
         <h5>主题酒店</h5>
       </li>
-      <li class="item" style="background-color: #e6e6e6">
+      <li class="item" style="background-color: #e6e6e6" ng-show="categoryName == 'jiudian'">
         <h5>公寓型酒店</h5>
       </li>
-      <li class="item" style="background-color: #e6e6e6">
+      <li class="item" style="background-color: #e6e6e6" ng-show="categoryName == 'jiudian'">
         <h5>度假酒店/度假村</h5>
       </li>
       <li class="item"  style="padding-bottom: 89px;background-color: #e6e6e6">

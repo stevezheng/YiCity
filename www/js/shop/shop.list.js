@@ -9,18 +9,33 @@
 
   /* @ngInject */
   function ShopListCtrl($scope, $state, Shop) {
+    var categoryMap = {
+      'meishi': '美食'
+      , 'dianying': '电影'
+      , 'jiudian': '酒店'
+      , 'ktv': 'KTV'
+      , 'meirong': '美容'
+      , 'dingdangao': '订蛋糕'
+      , 'dingwaimai': '订外卖'
+      , 'xiuxianyule': '休闲娱乐'
+      , 'lvyou': '旅游'
+      , 'bendishenghuo': '本地生活'
+    };
+
     $scope.init = init;
-    $scope.shops = null;
+    $scope.shops = false;
     $scope.selectType = false;
     $scope.setSelectType = setSelectType;
+    $scope.categoryName = '';
 
     init();
 
     ////////////////
 
     function init() {
-      var categoryId = $state.params.categoryId;
-      query(categoryId);
+      var categoryName = $state.params.categoryName;
+      $scope.categoryName = categoryName;
+      query(categoryName);
     }
 
     function setSelectType(selectType) {
@@ -31,11 +46,11 @@
       }
     }
 
-    function query(categoryId) {
+    function query(categoryName) {
       var _shops = [];
       var condition = {};
-      if (categoryId) {
-        condition.categoryId = categoryId;
+      if (categoryName && categoryName != 'all') {
+        condition.categoryName = categoryMap[categoryName];
       }
       D('Shop')
         .where(condition)

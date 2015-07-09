@@ -50,7 +50,7 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'shop', 'yike.utils',
       })
 
       .state('tab.shop', {
-        url: '/shop/:categoryId',
+        url: '/shop/:categoryName',
         cache: false,
         views: {
           'tab-shop': {

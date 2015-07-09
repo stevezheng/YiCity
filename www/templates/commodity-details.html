@@ -41,12 +41,12 @@
 
         <div class="item" ui-sref="tab.homepage({shopId: shop.id})">
             <img src="img/commodity/shop.png" width="30" style="padding-left: 10px">&nbsp;
-            <span class style="font-size: 20px; color: #222222">{{shop.get('name')}}</span>
+            <span class style="font-size: 16px; color: #222222">{{shop.get('name')}}</span>
             <span class="pull-right enter ">进入店铺 <span class="pull-right ion-chevron-right"></span></span>
         </div>
         <div class="row">
             <div class="col col-25 "><img src="img/commodity/DangQianWeiZi2.png" width="45" height="60"></div>
-            <div class="col col-50 " style="font-size: 15px">{{shop.get('address')}}</div>
+            <div class="col col-50 " style="line-height: 50px; font-size: 15px">{{shop.get('address') || '商家未添加地址'}}</div>
             <div class="col col-25 ">
                 <a href="tel:0592-58886666">
                     <img src="img/commodity/DianHua2.png" width="70" height="50">
@@ -55,6 +55,15 @@
         </div>
 
         <div class="item-divider" style="min-height: 0px;"></div>
+
+        <div class="item shop">商品详情</div>
+        <br>
+        <div class="commodity">
+            <div class="row">
+                <div class="col" ng-bind-html="item.get('content')">
+                </div>
+            </div>
+        </div>
 
         <div class="item shop">商品评价<span class="commodity-s">（46）</span>
             <span class="pull-right enter ">

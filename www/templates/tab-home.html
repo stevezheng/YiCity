@@ -31,44 +31,44 @@
             </ion-slide>
         </ion-slide-box>
         <div class="row">
-            <div class="col text-center" ui-sref="tab.shop({categoryId: '559a156ae4b0001a92d9433a'})">
+            <div class="col text-center" ui-sref="tab.shop({categoryName: 'meishi'})">
                 <img src="img/tab-home/meishi.png" width="80%"/>
 
                 <p>美食</p>
             </div>
-            <div class="col text-center" ui-sref="tab.shop">
+            <div class="col text-center" ui-sref="tab.shop({categoryName: 'dianying'})">
                 <img src="img/tab-home/dianying.png" width="80%"/>
 
                 <p>电影</p>
             </div>
-            <div class="col text-center" ui-sref="tab.shop">
+            <div class="col text-center" ui-sref="tab.shop({categoryName: 'jiudian'})">
                 <img src="img/tab-home/jiudian.png" width="80%"/>
 
                 <p>酒店</p>
             </div>
-            <div class="col text-center" ui-sref="tab.shop">
+            <div class="col text-center" ui-sref="tab.shop({categoryName: 'ktv'})">
                 <img src="img/tab-home/ktv.png" width="80%"/>
 
                 <p>KTV</p>
             </div>
         </div>
         <div class="row">
-            <div class="col text-center" ui-sref="tab.shop">
+                <div class="col text-center" ui-sref="tab.shop({categoryName: 'meirong'})">
                 <img src="img/tab-home/meirong.png" width="80%"/>
 
                 <p>美容</p>
             </div>
-            <div class="col text-center" ui-sref="tab.shop">
+                <div class="col text-center" ui-sref="tab.shop({categoryName: 'dingdangao'})">
                 <img src="img/tab-home/dingdangao.png" width="80%"/>
 
                 <p>订蛋糕</p>
             </div>
-            <div class="col text-center" ui-sref="tab.shop">
+                <div class="col text-center" ui-sref="tab.shop({categoryName: 'dingwaimai'})">
                 <img src="img/tab-home/dingwaimai.png" width="80%"/>
 
                 <p>订外卖</p>
             </div>
-            <div class="col text-center" ui-sref="tab.shop">
+                <div class="col text-center" ui-sref="tab.shop({categoryName: 'xiuxianyule'})">
                 <img src="img/tab-home/xiuxianyule.png" width="80%"/>
 
                 <p>休闲娱乐</p>
@@ -101,7 +101,7 @@
             <div class="item" style="font-size: 14px; padding: 8px; border-left: 5px solid #fe9315">热卖推荐 <span
                     class="pull-right">更多 <i class="ion ion-ios-arrow-right"></i></span></div>
             <div class="item item-thumbnail-left" ng-repeat="item in items" ui-sref="tab.commodity-details({itemId: item.id})">
-                <img src="img/tab-home/dezhuang.png" alt=""/>
+                <img ng-src="{{item.get('image')}}" alt=""/>
 
                 <h2>{{item.get('name')}}</h2>
 
@@ -110,61 +110,6 @@
                 <p>&nbsp;</p>
 
                 <p class="pull-right">已售 {{item.get('salenum')}}</p>
-            </div>
-            <div class="item item-thumbnail-left">
-                <img src="img/tab-home/spa.png" alt=""/>
-
-                <h2>紫薇SPA养生会所</h2>
-
-                <p>女人就要好好爱自己,节假日...</p>
-
-                <p>&nbsp;</p>
-
-                <p class="pull-right">已售 316</p>
-            </div>
-            <div class="item item-thumbnail-left">
-                <img src="img/tab-home/dezhuang.png" alt=""/>
-
-                <h2>德庄火锅6人套餐</h2>
-
-                <p>五一特惠套餐，快约几个好友...</p>
-
-                <p>&nbsp;</p>
-
-                <p class="pull-right">已售 316</p>
-            </div>
-            <div class="item item-thumbnail-left">
-                <img src="img/tab-home/spa.png" alt=""/>
-
-                <h2>紫薇SPA养生会所</h2>
-
-                <p>女人就要好好爱自己,节假日...</p>
-
-                <p>&nbsp;</p>
-
-                <p class="pull-right">已售 316</p>
-            </div>
-            <div class="item item-thumbnail-left">
-                <img src="img/tab-home/dezhuang.png" alt=""/>
-
-                <h2>德庄火锅6人套餐</h2>
-
-                <p>五一特惠套餐，快约几个好友...</p>
-
-                <p>&nbsp;</p>
-
-                <p class="pull-right">已售 316</p>
-            </div>
-            <div class="item item-thumbnail-left">
-                <img src="img/tab-home/spa.png" alt=""/>
-
-                <h2>紫薇SPA养生会所</h2>
-
-                <p>女人就要好好爱自己,节假日...</p>
-
-                <p>&nbsp;</p>
-
-                <p class="pull-right">已售 316</p>
             </div>
         </div>
     </ion-content>
