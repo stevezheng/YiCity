@@ -29,35 +29,17 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'order', 'shop', 'yik
     // Set up the various states which the app can be in.
     // Each state's controller can be found in controllers.js
     $stateProvider
-
-      // setup an abstract state for the tabs directive
-      //.state('tab', {
-      //  url: "/tab",
-      //  abstract: true,
-      //  templateUrl: "templates/tabs.html"
-      //})
-
-      // Each tab has its own nav history stack:
-
       .state('home', {
         url: '/home',
-        //views: {
-        //  'tab-home': {
-            templateUrl: 'templates/tab-home.html',
-            controller: 'HomeCtrl'
-        //  }
-        //}
+        templateUrl: 'templates/tab-home.html',
+        controller: 'HomeCtrl'
       })
 
       .state('shop', {
         url: '/shop/:categoryName',
         cache: false,
-        //views: {
-        //  'tab-shop': {
-            templateUrl: 'templates/tab-shop.html',
-            controller: 'ShopListCtrl'
-        //  }
-        //}
+        templateUrl: 'templates/tab-shop.html',
+        controller: 'ShopListCtrl'
       })
 
       //todo: 跟效果图有出入
@@ -68,42 +50,26 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'order', 'shop', 'yik
 
       .state('homepage', {
         url: '/homepage/:shopId',
-        //views: {
-        //  'tab-shop': {
-            templateUrl: 'templates/mc-homepage.html',
-            controller: 'ShopDetailsCtrl'
-          //}
-        //}
+        templateUrl: 'templates/mc-homepage.html',
+        controller: 'ShopDetailsCtrl'
       })
 
       .state('commodity-details', {
         url: '/commodity-details/:itemId',
-        //views: {
-        //  'tab-shop': {
-            templateUrl: 'templates/commodity-details.html',
-            controller: 'ItemDetailsCtrl'
-        //  }
-        //}
+        templateUrl: 'templates/commodity-details.html',
+        controller: 'ItemDetailsCtrl'
       })
 
       .state('account', {
         url: '/account',
-        //views: {
-        //  'tab-account': {
-            templateUrl: 'templates/tab-account.html',
-            controller: 'UserCtrl',
-        //  }
-        //},
+        templateUrl: 'templates/tab-account.html',
+        controller: 'UserCtrl',
         cache: false
       })
 
       .state('more', {
         url: '/more',
-        //views: {
-        //  'tab-more': {
-            templateUrl: 'templates/tab-more.html'
-        //  }
-        //}
+        templateUrl: 'templates/tab-more.html'
       })
 
       //todo: 自助餐几个字太大了
@@ -111,12 +77,6 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'order', 'shop', 'yik
         url: '/category-list',
         templateUrl: 'templates/category-list.html'
       })
-
-      //.state('gps', {
-      //  url: '/gps',
-      //  templateUrl: 'templates/gps.html',
-      //  controller: 'GPSListCtrl'
-      //})
 
       .state('shop-list', {
         url: '/shop-list/:categoryId',
@@ -304,7 +264,6 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'order', 'shop', 'yik
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html',
-        //controller: 'GPSListCtrl'
       });
 
 
