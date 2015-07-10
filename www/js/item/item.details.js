@@ -18,6 +18,14 @@
     $scope.buyModal = null;
     $scope.cartModal = null;
 
+    $scope.count = {
+      buy: 0,
+      cart: 0
+    };
+
+    $scope.incCount = incCount;
+    $scope.decCount = decCount;
+
     init();
 
     ////////////////
@@ -63,12 +71,30 @@
 
     function joinCart() {
       $scope.cartModal.show();
-      //$scope.buyStatus = true;
     }
 
     function buy() {
       $scope.buyModal.show();
-      //$scope.buyStatus = true;
+    }
+
+    function incCount(type) {
+      if (type == 'cart') {
+        $scope.count.cart++;
+      } else if (type == 'buy') {
+        $scope.count.buy++;
+      }
+    }
+
+    function decCount(type) {
+      if (type == 'cart') {
+        if ($scope.count.cart > 0) {
+          $scope.count.cart--;
+        }
+      } else if (type == 'buy') {
+        if ($scope.count.buy > 0) {
+          $scope.count.buy--;
+        }
+      }
     }
   }
 })();
