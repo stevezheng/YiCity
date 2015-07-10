@@ -20,6 +20,7 @@
       , all: all
       , add: add
       , del: del
+      , format: format
     };
 
     ////////////////
@@ -36,6 +37,22 @@
     }
 
     function del(item) {
+    }
+
+    function format() {
+      var list = [];
+      for (var i = 0; i < cart.length; i++) {
+        var c = cart[i];
+        var data = {};
+        data.itemId = c.item.id;
+        data.itemName = c.item.get('name');
+        data.itemPrice = c.item.get('price');
+        data.shopId = c.shop.id;
+        data.shopName = c.shop.get('name');
+        list.push(data);
+      }
+
+      return list;
     }
   }
 })();

@@ -4,80 +4,57 @@
         </ion-nav-back-button>
     </ion-nav-bar>
     <ion-content style="background-color: #e2e2e2">
-        <div class="row">
-            <div class="col col-20"><img src="img/shopping-cart/store-icon.png" /></div>
-            <div class="col col-60 col-offset-15"><h5>live’ s(万达广场店)</h5></div>
-            <div class="col col-20"><h6>编辑</h6>
+        <div ng-repeat="item in items">
+            <div class="row">
+                <div class="col col-20"><img src="img/shopping-cart/store-icon.png" /></div>
+                <div class="col col-60 col-offset-15"><h5>{{item.shop.get('name')}}</h5></div>
+                <div class="col col-20"><h6>编辑</h6>
+                </div>
             </div>
-        </div>
 
-        <div>
-            <ul class="list">
-                <li class="item item-checkbox">
-                    <label class="checkbox">
-                        <input type="checkbox">
-                    </label>
-                    <div class="item item-thumbnail-left ">
-                        <img src="img/shopping-cart/man-coat.png">
-                        <h2>live’ s专柜新品 男士<span class="new-price pull-right">￥2691</span></h2>
-                        <h2>长袖牛仔夹克外套<span class="old-price pull-right">￥2900</span></h2>
-                        <p>&nbsp;</p>
-                        <p>
-                            180/(88)A &nbsp; 蓝色
+            <div>
+                <ul class="list">
+                    <li class="item item-checkbox">
+                        <label class="checkbox">
+                            <input type="checkbox" checked>
+                        </label>
+                        <div class="item item-thumbnail-left ">
+                            <img ng-src="{{item.item.get('image') || 'img/shopping-cart/man-coat.png'}}">
+                            <h2>{{item.item.get('name')}}<span class="new-price pull-right">￥{{item.item.get('price')}}</span></h2>
+                            <h2><span class="old-price pull-right">￥{{item.item.get('originPrice') || item.item.get('price') * 1.2 | number: 2}}</span></h2>
+                            <p>&nbsp;</p>
+                            <p>
+                                <!--180/(88)A &nbsp; 蓝色-->
 
                             <span class=" pull-right" style="color: #161214">
-                                    x1
+                                    x{{item.count}}
                             </span>
 
-                        </p>
-                    </div>
-                </li>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
 
-                <li class="item item-checkbox">
-                    <label class="checkbox">
-                        <input type="checkbox">
-                    </label>
-                    <div class="item item-thumbnail-left ">
-                        <img src="img/shopping-cart/woman-coat.png">
-                        <h2>live’ s2015新款时尚<span class="new-price pull-right">￥219</span></h2>
-                        <h2>外套<span class="old-price pull-right">￥290</span></h2>
-                        <p>&nbsp;</p>
-                        <p>
-                            170/78(A) &nbsp; 米色
-
-                            <span class="pull-right">
-                                   x2
-                            </span>
-
-                        </p>
-
-                    </div>
-                </li>
-            </ul>
-
-        </div>
-        <div class="final">
-            <ul class="list">
-                <li class="item item-checkbox">
-                    <label class="checkbox">
-                        <input type="checkbox">
-
-                    </label>
-                    <button class="button button-calm button-large pull-right">
-                        <span class="settle-account"> 结算</span>
-                    </button>
-                    <span class="all">全选</span>
-                    <div class="total pull-right">
-                        <span class="total">合计：</span>
-                        <span class="total-price">￥3144</span>
-                        <span class="freight">含运费</span>
-                    </div>
-
-
-
-
-                </li>
-            </ul>
+            </div>
         </div>
     </ion-content>
+    <div class="final bar bar-footer">
+        <ul class="list">
+            <li class="item item-checkbox">
+                <label class="checkbox">
+                    <input type="checkbox" checked>
+
+                </label>
+                <button class="button button-calm button-large pull-right" style="z-index: 9999" ng-click="order()">
+                    <span class="settle-account"> 结算</span>
+                </button>
+                <span class="all">全选</span>
+                <div class="total pull-right">
+                    <span class="total">合计：</span>
+                    <span class="total-price">￥{{cost|number:2}}</span>
+                    <span class="freight">含运费</span>
+                </div>
+            </li>
+        </ul>
+    </div>
 </ion-view>

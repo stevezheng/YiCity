@@ -191,7 +191,9 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'order', 'shop', 'yik
       //购物车
       .state('shopping-cart', {
         url: '/shopping-cart',
-        templateUrl: 'templates/shopping-cart.html'
+        templateUrl: 'templates/shopping-cart.html',
+        controller: 'OrderShoppingCtrl',
+        cache: false
       })
 
       //选择商品

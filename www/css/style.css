@@ -485,9 +485,9 @@ input.grey::-webkit-input-placeholder {
     padding-top: 7px;
 }
 
-.item {
-    font-size: 17px;
-}
+/*.item {*/
+    /*font-size: 17px;*/
+/*}*/
 
 .pull-right {
     float: right;
@@ -750,17 +750,18 @@ input.grey::-webkit-input-placeholder {
 }
 #shopping-cart .final .button{
     width: 66px;
-    height: 40px;
+    height: 44px;
+    line-height: 44px;
     background-color: #ea0051;
 }
+
 #shopping-cart .final ul li button{
     border: none;
     padding: 0 0 0 0;
 }
 #shopping-cart .final .settle-account{
     position: relative;
-    top: -6px;
-;
+    line-height: 44px;
 }
 #shopping-cart .final .all{
     position: relative;
@@ -768,9 +769,15 @@ input.grey::-webkit-input-placeholder {
     left: -20px;
     color: #898989;
 }
-#shopping-cart .final{
-    margin-top: 100%;
+
+.final {
+    padding: 0;
 }
+
+.final .list {
+    width: 100%;
+}
+
 #shopping-cart .final .total{
     font-size: 12px;
     position: relative;
