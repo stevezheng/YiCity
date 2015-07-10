@@ -1,7 +1,7 @@
 AV.initialize('ry3vkr5qo327u3zxk62ifezixglq2lqfmutkthm0c050z9j9', 'abhpp7rycpzbsbvzikr4vsv6giq39z15lk009b7j2ti7z55h');
 var LOGIN_TEMPLATE = 'templates/login.html';
 
-angular.module('starter', ['ionic', 'user', 'gps', 'item', 'shop', 'yike.utils', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'user', 'gps', 'item', 'order', 'shop', 'yike.utils', 'starter.controllers', 'starter.services'])
 
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -216,25 +216,31 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'shop', 'yike.utils',
         templateUrl: 'templates/draw-cash-apply.html'
       })
 
+      //返利
       .state('back-benefit', {
         url: '/back-benefit',
         templateUrl: 'templates/back-benefit.html'
       })
 
+      //编辑购物车
       .state('edit-shopping-cart', {
         url: '/edit-shopping-cart',
         templateUrl: 'templates/edit-shopping-cart.html'
       })
 
+      //购物车
       .state('shopping-cart', {
         url: '/shopping-cart',
         templateUrl: 'templates/shopping-cart.html'
       })
+
+      //选择商品
       .state('commodity-choose', {
         url: '/commodity-choose',
         templateUrl: 'templates/commodity-choose.html'
       })
 
+      //选择立即购买
       .state('commodity-buy', {
         url: '/commodity-buy',
         templateUrl: 'templates/commodity-buy.html'

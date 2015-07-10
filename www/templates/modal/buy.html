@@ -1,0 +1,34 @@
+
+<div style="bottom: 0; position: absolute; width: 100%; background: #fff">
+    <div class="item " style="border: none">
+        <div style="position: relative;top: -35px; z-index:999; height: 0"><img ng-src="{{item.get('image') || 'img/commodity/choose-chose.png'}}" width="110px" height="100px" ></div>
+        <span class="ion-ios-close-outline pull-right" ng-click="closeModal('buyModal')"></span>
+        <span class="pull-left" style="color: #ff0011;padding-left: 120px">￥{{item.get('price')}}</span><br>
+        <span style="padding-left: 120px">销量{{item.get('salenum')}}</span><br>
+        <span style="padding-left: 120px">请选择商品参数</span>
+
+    </div>
+    <div class="line"></div>
+    <div class="row">
+        <div class="col col-33" style="font-size: 16px;color: #9d9e9f;position: relative;top: 12px">购买数量</div>
+
+        <button class="button icon" style="font-size: 65px;position: absolute;right: 10px;max-height: 20px;max-width: 20px;border-color: #ff6800">
+            <i class="ion ion-ios-plus-empty" style="position: relative;top: -9px;left: -4px;color: #ff5100"></i>
+            <!--<span style="position: relative;top: -7px;left: -9px;color: #ff5100">+</span>-->
+        </button>&nbsp;&nbsp;
+        <button class="button icon" style="font-size: 25px;position: absolute;right: 70px">
+            <span style="position: relative;top: -1px">1</span></button>&nbsp;&nbsp;
+        <button class="button icon" style="font-size: 65px;position: absolute;right: 130px;width: 20px;max-height: 45px">
+            <i class="ion-ios-minus-empty" style="position: relative;top: -9px;left: -3px"></i>
+            <!--<span style="position: relative;top: -7px">-</span>-->
+        </button>&nbsp;&nbsp;
+        <button class="button icon" style="border: none;position: relative;left: 1500px"></button>
+    </div>
+
+
+    <div class="line"></div>
+
+    <div class="button-bar">
+        <a class="button button-royal" style="height: 55px">立即购买</a>
+    </div>
+</div>
