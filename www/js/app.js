@@ -29,12 +29,14 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'order', 'shop', 'yik
     // Set up the various states which the app can be in.
     // Each state's controller can be found in controllers.js
     $stateProvider
+      //首页
       .state('home', {
         url: '/home',
         templateUrl: 'templates/tab-home.html',
         controller: 'HomeCtrl'
       })
 
+      //商家
       .state('shop', {
         url: '/shop/:categoryName',
         cache: false,
@@ -42,24 +44,27 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'order', 'shop', 'yik
         controller: 'ShopListCtrl'
       })
 
-      //todo: 跟效果图有出入
-      .state('mc-homepage-nocart', {
-        url: '/mc-homepage-nocart',
-        templateUrl: 'templates/mc-homepage-nocart.html'
-      })
+      ////todo: 跟效果图有出入
+      //.state('mc-homepage-nocart', {
+      //  url: '/mc-homepage-nocart',
+      //  templateUrl: 'templates/mc-homepage-nocart.html'
+      //})
 
+      //商家详情
       .state('homepage', {
         url: '/homepage/:shopId',
         templateUrl: 'templates/mc-homepage.html',
         controller: 'ShopDetailsCtrl'
       })
 
+      //产品详情
       .state('commodity-details', {
         url: '/commodity-details/:itemId',
         templateUrl: 'templates/commodity-details.html',
         controller: 'ItemDetailsCtrl'
       })
 
+      //用户中心
       .state('account', {
         url: '/account',
         templateUrl: 'templates/tab-account.html',
@@ -67,94 +72,115 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'order', 'shop', 'yik
         cache: false
       })
 
+      //更多
       .state('more', {
         url: '/more',
         templateUrl: 'templates/tab-more.html'
       })
 
+      //分类列表
       //todo: 自助餐几个字太大了
       .state('category-list', {
         url: '/category-list',
         templateUrl: 'templates/category-list.html'
       })
 
-      .state('shop-list', {
-        url: '/shop-list/:categoryId',
-        templateUrl: 'templates/shop-list.html',
-        controller: 'ShopListCtrl'
-      })
+      //.state('shop-list', {
+      //  url: '/shop-list/:categoryId',
+      //  templateUrl: 'templates/shop-list.html',
+      //  controller: 'ShopListCtrl'
+      //})
 
+      //产品搜索
       //todo: 跟效果图有出入
       .state('product-search', {
         url: '/product-search',
         templateUrl: 'templates/product-search.html'
       })
 
+      //店铺搜索
       //todo: 跟效果图有出入
       .state('shop-search', {
         url: '/shop-search',
         templateUrl: 'templates/shop-search.html'
       })
 
+      //店铺平路
       //todo: 跟效果图有出入
       .state('mc-evaluation', {
         url: '/mc-evaluation',
         templateUrl: 'templates/mc-evaluation.html'
       })
 
+      //确认订单
       //todo: 跟效果图有出入
-      .state('submit-orders', {
-        url: '/submit-orders',
-        templateUrl: 'templates/submit-orders.html'
+      .state('order', {
+        url: '/order/:id',
+        templateUrl: 'templates/order.html'
       })
 
-      .state('online-payment', {
+      //线上支付
+      .state('payOnline', {
         url: '/online-payment',
         templateUrl: 'templates/online-payment.html'
       })
-      .state('cash-payment', {
+
+      //现金支付
+      .state('payCash', {
         url: '/cash-payment',
         templateUrl: 'templates/cash-payment.html'
       })
 
+      //添加地址
       //todo: 跟效果图有出入
       .state('add-address', {
         url: '/add-address',
         templateUrl: 'templates/add-address.html'
       })
+
+      //所在地区
       .state('area', {
         url: '/area',
         templateUrl: 'templates/area.html'
       })
 
+      //编辑地址
       .state('receiving-address-management', {
         url: '/receiving-address-management',
         templateUrl: 'templates/receiving-address-management.html'
       })
+
+      //登录
       .state('login', {
         url: '/login',
         templateUrl: 'templates/login.html'
       })
 
+      //注册成功
       .state('registered-success', {
         url: '/registered-success',
         templateUrl: 'templates/registered-success.html'
       })
+
+      //个人中心
       .state('personal-center', {
         url: '/personal-center',
         templateUrl: '/templates/personal-center.html'
       })
 
+      //我的订单
       .state('indent', {
         url: '/indent',
         templateUrl: 'templates/indent.html'
       })
 
+      //全部订单
       .state('indent-all', {
         url: '/indent-all',
         templateUrl: 'templates/indent-all.html'
       })
 
+      //待付款订单
       .state('indent-waiting-payment', {
         url: '/indent-waiting-payment',
         templateUrl: 'templates/indent-waiting-payment.html'
@@ -165,12 +191,14 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'order', 'shop', 'yik
         templateUrl: 'templates/indent-waiting-get.html'
       })
 
+      //忘记密码
       .state('forget-password', {
         url: '/forget-password',
         templateUrl: 'templates/forget-password.html',
         controller: 'UserForgetPasswordCtrl'
       })
 
+      //提现申请
       .state('draw-cash-apply', {
         url: '/draw-cash-apply',
         templateUrl: 'templates/draw-cash-apply.html'
@@ -208,16 +236,19 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'order', 'shop', 'yik
         templateUrl: 'templates/commodity-buy.html'
       })
 
+      //消息详情
       .state('information-details', {
         url: '/information-details',
         templateUrl: 'templates/information-details.html'
       })
 
+      //我的推荐
       .state('my-recommend', {
         url: '/my-recommend',
         templateUrl: 'templates/my-recommend.html'
       })
 
+      //我的消息
       .state('my-information', {
         url: '/my-information',
         templateUrl: 'templates/my-information.html'
