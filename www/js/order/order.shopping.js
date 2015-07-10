@@ -48,7 +48,7 @@
             console.log(_order);
             $yikeUtils.confirm('提示', '现在去支付?')
               .then(function() {
-                $state.go('order({id: '+_order.id+'})');
+                $state.go('order', {'orderId':_order.id});
               })
           })
       } else {

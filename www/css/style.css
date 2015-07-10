@@ -1,12 +1,12 @@
-input::-webkit-input-placeholder {
+#home input::-webkit-input-placeholder {
     color: #fff;
 }
 
-input.black::-webkit-input-placeholder {
+#home input.black::-webkit-input-placeholder {
     color: #000;
 }
 
-input.grey::-webkit-input-placeholder {
+#home input.grey::-webkit-input-placeholder {
     color: #737373;
 }
 
@@ -1404,4 +1404,8 @@ input.grey::-webkit-input-placeholder {
 
 #mc-homepage .unactive {
     background-color: #b9b9b9; color:#ffffff;
+}
+
+#submit-orders .checkbox input:after, .checkbox-icon:after {
+    width: 10px;
 }

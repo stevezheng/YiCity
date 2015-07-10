@@ -1,34 +1,33 @@
 <ion-view view-title="添加地址" id="add-address">
-    <ion-nav-buttons side="primary">
-        <div class="bar bar-header">
-            <button class="button button-clear ion-ios-arrow-left pull-left" ui-sref="tab.home"></button>
-        </div>
-    </ion-nav-buttons>
+    <ion-nav-bar class="bar-energized">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
     <ion-content>
         <div class="list">
             <label class="item item-input">
-                <span>收货人：</span>
-                <input type="text" placeholder="收货人">
+                <span style="width: 100px">收货人：</span>
+                <input type="text" placeholder="收货人" ng-model="address.name">
             </label>
             <label class="item item-input">
-                <span>手机号码：</span>
-                <input type="text" placeholder="手机号码">
+                <span style="width: 100px">手机号码：</span>
+                <input type="text" placeholder="手机号码" ng-model="address.phone">
             </label>
             <label class="item item-input">
-                <span>所在地区：</span>
-                <input type="text" placeholder="所在地区">
+                <span style="width: 100px">所在城市：</span>
+                <input type="text" placeholder="所在城市" ng-model="address.city">
             </label>
             <label class="item item-input">
-                <span>详细地址：</span>
-                <input type="text" placeholder="详细地址">
+                <span style="width: 100px">详细地址：</span>
+                <input type="text" placeholder="详细地址" ng-model="address.detail">
             </label>
         </div>
         <div style="height: 150px"></div>
 
 
 
-        <div class="bar bar-footer bar-assertive " style="position: absolute;bottom: -60px;width: 90%;left: 5%">
-            <div class="title">提交</div>
-        </div>
     </ion-content>
+    <div class="bar bar-footer bar-assertive ">
+        <div class="title" ng-click="submit()">提交</div>
+    </div>
 </ion-view>

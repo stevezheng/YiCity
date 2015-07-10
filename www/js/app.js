@@ -1,7 +1,7 @@
 AV.initialize('ry3vkr5qo327u3zxk62ifezixglq2lqfmutkthm0c050z9j9', 'abhpp7rycpzbsbvzikr4vsv6giq39z15lk009b7j2ti7z55h');
 var LOGIN_TEMPLATE = 'templates/login.html';
 
-angular.module('starter', ['ionic', 'user', 'gps', 'item', 'order', 'shop', 'yike.utils', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'user', 'address', 'gps', 'item', 'order', 'shop', 'yike.utils', 'starter.controllers', 'starter.services'])
 
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -115,8 +115,10 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'order', 'shop', 'yik
       //确认订单
       //todo: 跟效果图有出入
       .state('order', {
-        url: '/order/:id',
-        templateUrl: 'templates/order.html'
+        url: '/order/:orderId',
+        templateUrl: 'templates/order.html',
+        controller: 'OrderSubmitCtrl',
+        cache: false
       })
 
       //线上支付
@@ -135,7 +137,8 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'order', 'shop', 'yik
       //todo: 跟效果图有出入
       .state('add-address', {
         url: '/add-address',
-        templateUrl: 'templates/add-address.html'
+        templateUrl: 'templates/add-address.html',
+        controller: 'AddressAddCtrl'
       })
 
       //所在地区

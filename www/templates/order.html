@@ -1,16 +1,19 @@
 <ion-view view-title="提交订单" id="submit-orders">
-    <ion-nav-buttons side="primary">
-        <div class="bar bar-header">
-            <button class="button button-clear ion-ios-arrow-left pull-left" ui-sref="tab.home"></button>
-        </div>
-    </ion-nav-buttons>
+    <ion-nav-bar class="bar-energized">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
     <ion-content>
-        <div class="item">
-            <i class="ion-ios-location-outline"></i>&nbsp;&nbsp;厦门市思明区软件园观日路32号...
+        <div class="item" ng-show="addresses.length > 0">
+            <i class="ion-ios-location-outline"></i>&nbsp;&nbsp;{{addresses[0].get('city')}}{{addresses[0].get('detail')}}
+            <span class="pull-right enter"><i class="icon ion-ios-arrow-right"></i></span>
+        </div>
+        <div class="item" ng-show="addresses.length == 0" ui-sref="add-address">
+            <i class="ion-ios-location-outline"></i>&nbsp;&nbsp;暂无地址,请新增地址
             <span class="pull-right enter"><i class="icon ion-ios-arrow-right"></i></span>
         </div>
         <div class="gray-wide-line"></div>
-        <div class="item">
+        <div class="item" ui-sref="add-address">
             <i class="ion-ios-plus-empty"></i>&nbsp;&nbsp;新增地址
             <span class="pull-right enter"><i class="icon ion-ios-arrow-right"></i></span>
         </div>
@@ -20,17 +23,17 @@
         </div>
         <div class="row">
             <div class="col col-50">
-                <li class="item item-checkbox">
+                <li class="item item-checkbox" ng-click="setMethod('ziti')">
                     <label class="checkbox">
-                        <input type="checkbox">
+                        <input type="checkbox" checked id="method-ziti">
                     </label>
                     到店消费/自提
                 </li>
             </div>
             <div class="col col-50">
-                <li class="item item-checkbox">
+                <li class="item item-checkbox" ng-click="setMethod('shangmen')">
                     <label class="checkbox ">
-                        <input type="checkbox">
+                        <input type="checkbox" id="method-shangmen">
                     </label>
                     送货上门
                 </li>
@@ -49,24 +52,24 @@
         </div>
         <div class="row">
             <div class="col col-50">
-                <li class="item item-checkbox">
+                <li class="item item-checkbox" ng-click="setPay('online')">
                     <label class="checkbox">
-                        <input type="checkbox">
+                        <input type="checkbox" checked id="pay-online">
                     </label>
                     在线支付
                 </li>
             </div>
             <div class="col col-50">
-                <li class="item item-checkbox">
+                <li class="item item-checkbox" ng-click="setPay('cash')">
                     <label class="checkbox ">
-                        <input type="checkbox">
+                        <input type="checkbox" id="pay-cash">
                     </label>
                     现金付款
                 </li>
             </div>
         </div>
-        <div class="bar bar-footer bar-assertive " style="position: absolute;bottom: -60px;width: 90%;left: 5%">
-            <div class="title">提交</div>
-        </div>
     </ion-content>
+    <div class="bar bar-footer bar-assertive ">
+        <div class="title" ng-click="submit()">提交</div>
+    </div>
 </ion-view>
