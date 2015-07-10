@@ -1,16 +1,9 @@
-<ion-nav-bar>
-    <ion-nav-back-button>
-    </ion-nav-back-button>
-</ion-nav-bar>
 <ion-view view-title="商品详情" id="commodity">
-    <!--<ion-nav-buttons side="primary">-->
-        <!--<div class="bar bar-header">-->
-            <!--<button class="button button-clear ion-chevron-left pull-left" ui-sref="tab.home" ></button>-->
-            <!--&lt;!&ndash;<button class="button button-clear ion-ios-heart-outline"></button>&ndash;&gt;-->
-            <!--<button class="button button-clear ion-share pull-right"></button>-->
-        <!--</div>-->
-    <!--</ion-nav-buttons>-->
-    <ion-content >
+    <ion-nav-bar class="bar-energized">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content class="has-footer">
         <ion-slide-box>
             <ion-slide>
                 <div class="box">
@@ -39,7 +32,7 @@
 
         <div class="item-divider" style="min-height: 0px;"></div>
 
-        <div class="item" ui-sref="tab.homepage({shopId: shop.id})">
+        <div class="item" ui-sref="homepage({shopId: shop.id})">
             <img src="img/commodity/shop.png" width="30" style="padding-left: 10px">&nbsp;
             <span class style="font-size: 16px; color: #222222">{{shop.get('name')}}</span>
             <span class="pull-right enter ">进入店铺 <span class="pull-right ion-chevron-right"></span></span>
@@ -101,9 +94,12 @@
             <!--<div class="commodity-time" style="padding-left: 20px">环境很棒，味道很 赞，服务热情，套餐实惠，下次再来。</div>-->
         <!--</div>-->
         <br>
+    </ion-content>
+    <div class="bar bar-footer" style="padding: 0">
         <div class="button-bar">
             <a class="button button-energized" ng-click="joinCart()">加入购物车</a>
-            <a class="button button-royal" ng-click="buy()">立即购买</a>
+            <a class="button button-royal" ng-click="joinBuy()">立即购买</a>
         </div>
-    </ion-content>
+        <!--<div class="title">Footer</div>-->
+    </div>
 </ion-view>

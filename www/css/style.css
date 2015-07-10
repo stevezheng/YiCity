@@ -554,12 +554,17 @@ input.grey::-webkit-input-placeholder {
     background-color: #e4dbe4;
     height: 1px;
 }
-#commodity button{
+
+#commodity .button-bar a {
+    line-height: 44px;
     font-size: 16px;
-    border-radius: 6px;
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
 }
+/*#commodity .button{*/
+    /*font-size: 16px;*/
+    /*border-radius: 6px;*/
+    /*background-color: #ffffff;*/
+    /*border: 1px solid #dddddd;*/
+/*}*/
 
 #commodity .ion-ios-close-outline:before {
     font-size: 40px;

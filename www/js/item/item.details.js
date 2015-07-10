@@ -5,16 +5,16 @@
     .module('item.details', [])
     .controller('ItemDetailsCtrl', ItemDetailsCtrl);
 
-  ItemDetailsCtrl.$inject = ['$scope', '$state', '$ionicModal'];
+  ItemDetailsCtrl.$inject = ['$scope', '$state', '$ionicModal', 'Cart'];
 
   /* @ngInject */
-  function ItemDetailsCtrl($scope, $state, $ionicModal) {
+  function ItemDetailsCtrl($scope, $state, $ionicModal, Cart) {
     var itemId = $state.params.itemId;
     $scope.init = init;
     $scope.item = null;
     $scope.shop = null;
     $scope.joinCart = joinCart;
-    $scope.buy = buy;
+    $scope.joinBuy = joinBuy;
     $scope.buyModal = null;
     $scope.cartModal = null;
 
@@ -26,6 +26,9 @@
     $scope.incCount = incCount;
     $scope.decCount = decCount;
 
+    $scope.cart = cart;
+    $scope.buy = buy;
+
     init();
 
     ////////////////
@@ -34,6 +37,21 @@
       query(itemId);
       setModal('buyModal', 'templates/modal/buy.html');
       setModal('cartModal', 'templates/modal/cart.html');
+    }
+
+    function cart() {
+
+    }
+
+    function buy() {
+      var cart = {
+        item: $scope.item
+        , shop: $scope.shop
+      };
+
+      Cart.add(cart);
+
+      $state.go('')
     }
 
     function setModal(name, tpl) {
@@ -73,7 +91,7 @@
       $scope.cartModal.show();
     }
 
-    function buy() {
+    function joinBuy() {
       $scope.buyModal.show();
     }
 

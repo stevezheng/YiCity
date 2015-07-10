@@ -1,4 +1,8 @@
 <ion-view view-title="商家主页" id="mc-homepage">
+    <ion-nav-bar class="bar-energized">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
     <ion-content>
         <ion-slide-box>
             <ion-slide>
@@ -97,7 +101,7 @@ border: solid 1px #b6b6b6; background-color:#cbcbcb;">
             </div>
 
             <div class="list mc-homepage-NoCart">
-                <div class="item item-thumbnail-left" ui-sref="tab.commodity-details({itemId: item.id})" ng-repeat="item in items">
+                <div class="item item-thumbnail-left" ui-sref="commodity-details({itemId: item.id})" ng-repeat="item in items">
                     <img ng-src="{{item.get('image')||'img/tab-home/dezhuang.png'}}">
 
                     <h2>{{item.get('name')}}</h2>

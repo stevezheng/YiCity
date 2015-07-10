@@ -31,33 +31,33 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'order', 'shop', 'yik
     $stateProvider
 
       // setup an abstract state for the tabs directive
-      .state('tab', {
-        url: "/tab",
-        abstract: true,
-        templateUrl: "templates/tabs.html"
-      })
+      //.state('tab', {
+      //  url: "/tab",
+      //  abstract: true,
+      //  templateUrl: "templates/tabs.html"
+      //})
 
       // Each tab has its own nav history stack:
 
-      .state('tab.home', {
+      .state('home', {
         url: '/home',
-        views: {
-          'tab-home': {
+        //views: {
+        //  'tab-home': {
             templateUrl: 'templates/tab-home.html',
             controller: 'HomeCtrl'
-          }
-        }
+        //  }
+        //}
       })
 
-      .state('tab.shop', {
+      .state('shop', {
         url: '/shop/:categoryName',
         cache: false,
-        views: {
-          'tab-shop': {
+        //views: {
+        //  'tab-shop': {
             templateUrl: 'templates/tab-shop.html',
             controller: 'ShopListCtrl'
-          }
-        }
+        //  }
+        //}
       })
 
       //todo: 跟效果图有出入
@@ -66,44 +66,44 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'order', 'shop', 'yik
         templateUrl: 'templates/mc-homepage-nocart.html'
       })
 
-      .state('tab.homepage', {
+      .state('homepage', {
         url: '/homepage/:shopId',
-        views: {
-          'tab-shop': {
+        //views: {
+        //  'tab-shop': {
             templateUrl: 'templates/mc-homepage.html',
             controller: 'ShopDetailsCtrl'
-          }
-        }
+          //}
+        //}
       })
 
-      .state('tab.commodity-details', {
+      .state('commodity-details', {
         url: '/commodity-details/:itemId',
-        views: {
-          'tab-shop': {
+        //views: {
+        //  'tab-shop': {
             templateUrl: 'templates/commodity-details.html',
             controller: 'ItemDetailsCtrl'
-          }
-        }
+        //  }
+        //}
       })
 
-      .state('tab.account', {
+      .state('account', {
         url: '/account',
-        views: {
-          'tab-account': {
+        //views: {
+        //  'tab-account': {
             templateUrl: 'templates/tab-account.html',
-            controller: 'UserCtrl'
-          }
-        },
+            controller: 'UserCtrl',
+        //  }
+        //},
         cache: false
       })
 
-      .state('tab.more', {
+      .state('more', {
         url: '/more',
-        views: {
-          'tab-more': {
+        //views: {
+        //  'tab-more': {
             templateUrl: 'templates/tab-more.html'
-          }
-        }
+        //  }
+        //}
       })
 
       //todo: 自助餐几个字太大了
@@ -309,6 +309,6 @@ angular.module('starter', ['ionic', 'user', 'gps', 'item', 'order', 'shop', 'yik
 
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/tab/home');
+    $urlRouterProvider.otherwise('/home');
 
   });

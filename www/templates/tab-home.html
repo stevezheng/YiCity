@@ -1,3 +1,5 @@
+<ion-nav-bar class="bar-energized">
+</ion-nav-bar>
 <ion-view view-title="首页">
     <ion-nav-buttons>
         <div class="bar bar-header">
@@ -16,59 +18,59 @@
         <ion-slide-box>
             <ion-slide>
                 <div class="box">
-                    <img src="img/tab-home/banner.png" width="100%" ui-sref="tab.shop"/>
+                    <img src="img/tab-home/banner.png" width="100%" ui-sref="shop"/>
                 </div>
             </ion-slide>
             <ion-slide>
                 <div class="box">
-                    <img src="img/tab-home/banner.png" width="100%" ui-sref="tab.shop"/>
+                    <img src="img/tab-home/banner.png" width="100%" ui-sref="shop"/>
                 </div>
             </ion-slide>
             <ion-slide>
                 <div class="box">
-                    <img src="img/tab-home/banner.png" width="100%" ui-sref="tab.shop"/>
+                    <img src="img/tab-home/banner.png" width="100%" ui-sref="shop"/>
                 </div>
             </ion-slide>
         </ion-slide-box>
         <div class="row">
-            <div class="col text-center" ui-sref="tab.shop({categoryName: 'meishi'})">
+            <div class="col text-center" ui-sref="shop({categoryName: 'meishi'})">
                 <img src="img/tab-home/meishi.png" width="80%"/>
 
                 <p>美食</p>
             </div>
-            <div class="col text-center" ui-sref="tab.shop({categoryName: 'dianying'})">
+            <div class="col text-center" ui-sref="shop({categoryName: 'dianying'})">
                 <img src="img/tab-home/dianying.png" width="80%"/>
 
                 <p>电影</p>
             </div>
-            <div class="col text-center" ui-sref="tab.shop({categoryName: 'jiudian'})">
+            <div class="col text-center" ui-sref="shop({categoryName: 'jiudian'})">
                 <img src="img/tab-home/jiudian.png" width="80%"/>
 
                 <p>酒店</p>
             </div>
-            <div class="col text-center" ui-sref="tab.shop({categoryName: 'ktv'})">
+            <div class="col text-center" ui-sref="shop({categoryName: 'ktv'})">
                 <img src="img/tab-home/ktv.png" width="80%"/>
 
                 <p>KTV</p>
             </div>
         </div>
         <div class="row">
-                <div class="col text-center" ui-sref="tab.shop({categoryName: 'meirong'})">
+                <div class="col text-center" ui-sref="shop({categoryName: 'meirong'})">
                 <img src="img/tab-home/meirong.png" width="80%"/>
 
                 <p>美容</p>
             </div>
-                <div class="col text-center" ui-sref="tab.shop({categoryName: 'dingdangao'})">
+                <div class="col text-center" ui-sref="shop({categoryName: 'dingdangao'})">
                 <img src="img/tab-home/dingdangao.png" width="80%"/>
 
                 <p>订蛋糕</p>
             </div>
-                <div class="col text-center" ui-sref="tab.shop({categoryName: 'dingwaimai'})">
+                <div class="col text-center" ui-sref="shop({categoryName: 'dingwaimai'})">
                 <img src="img/tab-home/dingwaimai.png" width="80%"/>
 
                 <p>订外卖</p>
             </div>
-                <div class="col text-center" ui-sref="tab.shop({categoryName: 'xiuxianyule'})">
+                <div class="col text-center" ui-sref="shop({categoryName: 'xiuxianyule'})">
                 <img src="img/tab-home/xiuxianyule.png" width="80%"/>
 
                 <p>休闲娱乐</p>
@@ -100,7 +102,7 @@
         <div class="list list-home">
             <div class="item" style="font-size: 14px; padding: 8px; border-left: 5px solid #fe9315">热卖推荐 <span
                     class="pull-right">更多 <i class="ion ion-ios-arrow-right"></i></span></div>
-            <div class="item item-thumbnail-left" ng-repeat="item in items" ui-sref="tab.commodity-details({itemId: item.id})">
+            <div class="item item-thumbnail-left" ng-repeat="item in items" ui-sref="commodity-details({itemId: item.id})">
                 <img ng-src="{{item.get('image')}}" alt=""/>
 
                 <h2>{{item.get('name')}}</h2>
@@ -114,3 +116,22 @@
         </div>
     </ion-content>
 </ion-view>
+<ion-tabs class="tabs-icon-top tabs-color-active-energized">
+
+    <ion-tab title="首页" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" href="#/home">
+        <!--<ion-nav-view name="tab-home"></ion-nav-view>-->
+    </ion-tab>
+
+    <ion-tab title="商家" icon-off="iconfont icon-jinrudianpu" icon-on="iconfont icon-jinrudianpu" href="#/shop/">
+        <!--<ion-nav-view name="tab-shop"></ion-nav-view>-->
+    </ion-tab>
+
+    <ion-tab title="我的" icon-off="ion-android-person" icon-on="ion-android-person" href="#/account">
+        <!--<ion-nav-view name="tab-account"></ion-nav-view>-->
+    </ion-tab>
+
+    <ion-tab title="更多" icon-off="ion-ios-more" icon-on="ion-ios-more" href="#/more">
+        <!--<ion-nav-view name="tab-more"></ion-nav-view>-->
+    </ion-tab>
+
+</ion-tabs>

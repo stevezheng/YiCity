@@ -1,3 +1,5 @@
+<ion-nav-bar class="bar-energized">
+</ion-nav-bar>
 <ion-view view-title="商家" id="tab-shop">
   <ion-content>
     <div class="button-bar shop-button-bar">
@@ -13,16 +15,16 @@
     </div>
     <div ng-repeat="shop in shops" ng-show="shop.items">
       <div class="item-divider" style="min-height: 10px;"></div>
-      <div class="list shop-list"ionic browser add crosswalk>
+      <div class="list shop-list">
 
-        <div class="item" ui-sref="tab.homepage({shopId: shop.id})">
+        <div class="item" ui-sref="homepage({shopId: shop.id})">
           <img ng-src="img/tab-shop/shop-icon.png" alt="" height="24px"/>
         <span class="shop-name">
             {{shop.get('name')}}
         </span>
           <span class="pull-right enter">进入店铺 <i class="icon ion-ios-arrow-right"></i></span>
         </div>
-        <div class="item item-thumbnail-left" ng-repeat="item in shop.items" ui-sref="tab.commodity-details({itemId: item.id})">
+        <div class="item item-thumbnail-left" ng-repeat="item in shop.items" ui-sref="commodity-details({itemId: item.id})">
           <img ng-src="{{item.get('image')}}" alt="" height="24px"/>
           <h2>{{item.get('name')}}</h2>
           <p class="intro">{{item.get('spec')}}</p>
@@ -187,3 +189,22 @@
   </ion-content>
 </ion-view>
 
+<ion-tabs class="tabs-icon-top tabs-color-active-energized">
+
+  <ion-tab title="首页" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" href="#/home">
+    <!--<ion-nav-view name="tab-home"></ion-nav-view>-->
+  </ion-tab>
+
+  <ion-tab title="商家" icon-off="iconfont icon-jinrudianpu" icon-on="iconfont icon-jinrudianpu" href="#/shop/">
+    <!--<ion-nav-view name="tab-shop"></ion-nav-view>-->
+  </ion-tab>
+
+  <ion-tab title="我的" icon-off="ion-android-person" icon-on="ion-android-person" href="#/account">
+    <!--<ion-nav-view name="tab-account"></ion-nav-view>-->
+  </ion-tab>
+
+  <ion-tab title="更多" icon-off="ion-ios-more" icon-on="ion-ios-more" href="#/more">
+    <!--<ion-nav-view name="tab-more"></ion-nav-view>-->
+  </ion-tab>
+
+</ion-tabs>
