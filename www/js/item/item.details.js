@@ -5,10 +5,10 @@
     .module('item.details', [])
     .controller('ItemDetailsCtrl', ItemDetailsCtrl);
 
-  ItemDetailsCtrl.$inject = ['$scope', '$state', '$ionicModal', 'Cart'];
+  ItemDetailsCtrl.$inject = ['$scope', '$state', '$ionicModal', '$yikeUtils', 'Cart'];
 
   /* @ngInject */
-  function ItemDetailsCtrl($scope, $state, $ionicModal, Cart) {
+  function ItemDetailsCtrl($scope, $state, $ionicModal, $yikeUtils, Cart) {
     var itemId = $state.params.itemId;
     $scope.init = init;
     $scope.item = null;
@@ -40,18 +40,43 @@
     }
 
     function cart() {
+      if ($scope.count.cart > 0) {
+        var cart = {
+          item: $scope.item
+          , shop: $scope.shop
+          , count: $scope.count.cart
+        };
 
+        Cart.add(cart);
+
+        $scope.cartModal.hide();
+
+        $scope.count.cart = 0;
+
+        $yikeUtils.alert('提示', '放入购物车成功');
+      } else {
+        $yikeUtils.alert('提示', '请先选择购买数量');
+      }
     }
 
     function buy() {
-      var cart = {
-        item: $scope.item
-        , shop: $scope.shop
-      };
+      if ($scope.count.buy > 0) {
+        var cart = {
+          item: $scope.item
+          , shop: $scope.shop
+          , count: $scope.count.buy
+        };
 
-      Cart.add(cart);
+        Cart.add(cart);
 
-      $state.go('')
+        $scope.buyModal.hide();
+
+        $scope.count.buy = 0;
+
+        $state.go('shopping-cart');
+      } else {
+        $yikeUtils.alert('提示', '请先选择购买数量');
+      }
     }
 
     function setModal(name, tpl) {
@@ -64,7 +89,6 @@
 
       $scope.closeModal = function(name) {
         $scope[name].hide();
-        $scope.buyStatus = false;
       };
     }
 
