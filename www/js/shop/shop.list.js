@@ -27,6 +27,8 @@
     $scope.selectType = false;
     $scope.setSelectType = setSelectType;
     $scope.categoryName = '';
+    $scope.sortType = 'new';
+    $scope.sort = sort;
 
     init();
 
@@ -38,6 +40,12 @@
       query(categoryName);
     }
 
+    function sort(type) {
+      $scope.sortType = type;
+      query($scope.categoryName, $scope.sortType);
+      $scope.selectType = false;
+    }
+
     function setSelectType(selectType) {
       if ($scope.selectType == selectType) {
         $scope.selectType = false;
@@ -46,7 +54,7 @@
       }
     }
 
-    function query(categoryName) {
+    function query(categoryName, order) {
       var _shops = [];
       var condition = {};
       if (categoryName && categoryName != 'all') {
@@ -54,6 +62,7 @@
       }
       D('Shop')
         .limit(0, 5)
+        .order(order)
         .where(condition)
         .select()
         .then(function(shops) {

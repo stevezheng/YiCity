@@ -35,34 +35,34 @@
   <ion-content scroll="false" class="all-list has-subheader" ng-show="selectType == 'category'">
     <ul class="list">
       <li class="item" ui-sref="shop({categoryName: 'all'})">
-        <h5><img src="../img/merchant-classify/all.png">&nbsp;&nbsp;&nbsp;全部分类<span class="ion-chevron-right pull-right"></span></h5>
+        <h5><img src="img/merchant-classify/all.png">&nbsp;&nbsp;&nbsp;全部分类<span class="ion-chevron-right pull-right"></span></h5>
       </li>
       <li class="item" ui-sref="shop({categoryName: 'dianying'})">
-        <h5><img src="../img/merchant-classify/movie.png">&nbsp;&nbsp;&nbsp;电影<span class="ion-chevron-right pull-right"></span></h5>
+        <h5><img src="img/merchant-classify/movie.png">&nbsp;&nbsp;&nbsp;电影<span class="ion-chevron-right pull-right"></span></h5>
       </li>
       <li class="item" ui-sref="shop({categoryName: 'meishi'})">
-        <h5><img src="../img/merchant-classify/food.png">&nbsp;&nbsp;&nbsp;美食<span class="ion-chevron-right pull-right"></span></h5>
+        <h5><img src="img/merchant-classify/food.png">&nbsp;&nbsp;&nbsp;美食<span class="ion-chevron-right pull-right"></span></h5>
       </li>
       <li class="item" ui-sref="shop({categoryName: 'jiudian'})">
-        <h5><img src="../img/merchant-classify/local-life.png">&nbsp;&nbsp;&nbsp;酒店<span class="ion-chevron-right pull-right"></span></h5>
+        <h5><img src="img/merchant-classify/local-life.png">&nbsp;&nbsp;&nbsp;酒店<span class="ion-chevron-right pull-right"></span></h5>
       </li>
       <li class="item" ui-sref="shop({categoryName: 'meirong'})">
-        <h5><img src="../img/merchant-classify/hairdressing.png">&nbsp;&nbsp;&nbsp;美容<span class="ion-chevron-right pull-right"></span></h5>
+        <h5><img src="img/merchant-classify/hairdressing.png">&nbsp;&nbsp;&nbsp;美容<span class="ion-chevron-right pull-right"></span></h5>
       </li>
       <li class="item" ui-sref="shop({categoryName: 'dingwaimai'})">
-        <h5><img src="../img/merchant-classify/take-out.png">&nbsp;&nbsp;&nbsp;外卖<span class="ion-chevron-right pull-right"></span></h5>
+        <h5><img src="img/merchant-classify/take-out.png">&nbsp;&nbsp;&nbsp;外卖<span class="ion-chevron-right pull-right"></span></h5>
       </li>
       <li class="item" ui-sref="shop({categoryName: 'ktv'})">
-        <h5><img src="../img/merchant-classify/ktv.png">&nbsp;&nbsp;&nbsp;KTV<span class="ion-chevron-right pull-right"></span></h5>
+        <h5><img src="img/merchant-classify/ktv.png">&nbsp;&nbsp;&nbsp;KTV<span class="ion-chevron-right pull-right"></span></h5>
       </li>
       <li class="item" ui-sref="shop({categoryName: 'lvyou'})">
-        <h5><img src="../img/merchant-classify/travel.png">&nbsp;&nbsp;&nbsp;旅游<span class="ion-chevron-right pull-right"></span></h5>
+        <h5><img src="img/merchant-classify/travel.png">&nbsp;&nbsp;&nbsp;旅游<span class="ion-chevron-right pull-right"></span></h5>
       </li>
       <li class="item" ui-sref="shop({categoryName: 'xiuxianyule'})">
-        <h5><img src="../img/merchant-classify/relaxation.png">&nbsp;&nbsp;&nbsp;休闲娱乐<span class="ion-chevron-right pull-right"></span></h5>
+        <h5><img src="img/merchant-classify/relaxation.png">&nbsp;&nbsp;&nbsp;休闲娱乐<span class="ion-chevron-right pull-right"></span></h5>
       </li>
       <li class="item" ui-sref="shop({categoryName: 'bendishenghuo'})">
-        <h5><img src="../img/merchant-classify/local-life.png">&nbsp;&nbsp;&nbsp;本地生活<span class="ion-chevron-right pull-right"></span></h5>
+        <h5><img src="img/merchant-classify/local-life.png">&nbsp;&nbsp;&nbsp;本地生活<span class="ion-chevron-right pull-right"></span></h5>
       </li>
       <li class="item"  style="padding-bottom: 0">
         <h5></h5>
@@ -124,9 +124,6 @@
       <li class="item">
         <h5>翔安区<span class="ion-chevron-right pull-right"></span></h5>
       </li>
-      <li class="item"  style="padding-bottom: 60px">
-        <h5></h5>
-      </li>
     </ul>
 
     <ul class="list" style="display:none;top: -298px;left: 50%;background-color: #d1c5d0;">
@@ -151,9 +148,6 @@
       <li class="item" style="background-color: #e6e6e6">
         <h5>蔡塘广场</h5>
       </li>
-      <li class="item"  style="padding-bottom: 89px;background-color: #e6e6e6">
-        <h5></h5>
-      </li>
     </ul>
 
 
@@ -161,26 +155,23 @@
 
   <ion-content class="all-list has-subheader" ng-show="selectType == 'sort'" scroll="false">
     <ul class="list">
-      <li class="item">
-        <h5>销量最高</h5>
+      <li class="item" ng-class="sortType == 'sale'?'activeItem':''" ng-click="sort('sale')">
+        <h5 ng-class="sortType == 'sale'?'activeH5':''">销量最高</h5>
       </li>
-      <li class="item" style="background-color: #e6e6e6">
-        <h5 style="color: #f07200">最新发布</h5>
+      <li class="item" ng-class="sortType == 'new'?'activeItem':''" ng-click="sort('new')">
+        <h5 ng-class="sortType == 'new'?'activeH5':''">最新发布</h5>
       </li>
-      <li class="item">
-        <h5>价格最低</h5>
+      <li class="item" ng-click="sort('priceDown')" ng-class="sortType == 'priceDown'?'activeItem':''">
+        <h5 ng-class="sortType == 'priceDown'?'activeH5':''">价格最低</h5>
       </li>
-      <li class="item">
-        <h5>价格最高</h5>
+      <li class="item" ng-click="sort('priceUp')" ng-class="sortType == 'priceUp'?'activeItem':''">
+        <h5 ng-class="sortType == 'priceUp'?'activeH5':''">价格最高</h5>
       </li>
-      <li class="item">
-        <h5>评价最高</h5>
+      <li class="item" ng-click="sort('comment')" ng-class="sortType == 'comment'?'activeItem':''">
+        <h5 ng-class="sortType == 'comment'?'activeH5':''">评价最高</h5>
       </li>
-      <li class="item">
-        <h5>返利最高</h5>
-      </li>
-      <li class="item"  style="padding-bottom: 60px">
-        <h5></h5>
+      <li class="item" ng-click="sort('back')" ng-class="sortType == 'back'?'activeItem':''">
+        <h5 ng-class="sortType == 'back'?'activeH5':''">返利最高</h5>
       </li>
     </ul>
 
