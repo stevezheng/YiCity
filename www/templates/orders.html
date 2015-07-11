@@ -1,24 +1,23 @@
 <ion-view view-title="我的订单">
-    <ion-nav-buttons side="primary">
-        <div class="bar bar-header">
-            <button class="button button-clear ion-chevron-left pull-left" ui-sref="tab.home"></button>
-        </div>
-    </ion-nav-buttons>
+    <ion-nav-bar class="bar-energized">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
     <div class="tabs-striped tabs-top tabs-background-{#ffffff} tabs-color-#737373">
         <div class="tabs">
-            <a class="tab-item active " href="#">
+            <a ng-class="status == 'all'? 'tab-item active': 'tab-item'" ng-click="setStatus('all')">
                 全部
             </a>
-            <a class="tab-item" href="#">
+            <a ng-class="status == '0'? 'tab-item active': 'tab-item'" ng-click="setStatus('0')">
                 待付款
             </a>
-            <a class="tab-item" href="#">
+            <a ng-class="status == '1'? 'tab-item active': 'tab-item'" ng-click="setStatus('1')">
                 待发货
             </a>
-            <a class="tab-item" href="#">
+            <a ng-class="status == '2'? 'tab-item active': 'tab-item'" ng-click="setStatus('2')">
                 待收货
             </a>
-            <a class="tab-item" href="#">
+            <a ng-class="status == '3'? 'tab-item active': 'tab-item'" ng-click="setStatus('3')">
                 待评价
             </a>
         </div>
@@ -41,7 +40,7 @@
 
                 <div class="item text-left">
                     总额：￥{{order.get('cost')}}<i class="icon ion-ios-down"></i>
-                    <button class="button button-royal button-small pull-right" style="width: 20%" ng-click="pay()">
+                    <button class="button button-royal button-small pull-right" style="width: 20%" ng-click="pay()" ng-show="order.get('status') == 0">
                         付款
                     </button>
                 </div>

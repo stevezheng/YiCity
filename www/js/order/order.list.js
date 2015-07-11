@@ -15,10 +15,13 @@
     $scope.orderMap = {
       '-1': '已取消'
       , '0': '待付款'
-      , '1': '已付款'
-      , '2': '已完成'
+      , '1': '待发货'
+      , '2': '待收货'
+      , '3': '待评价'
+      , '4': '已完成'
     };
     $scope.pay = pay;
+    $scope.setStatus = setStatus;
 
 
     init();
@@ -29,10 +32,18 @@
       query()
     }
 
+    function setStatus(status) {
+      $scope.status = status;
+      query();
+    }
+
     function query() {
       var condition = {
         userId: AV.User.current().id
       };
+      if ($scope.status != 'all') {
+        condition.status = Number($scope.status);
+      }
       D('Order')
         .where(condition)
         .select()
