@@ -33,23 +33,26 @@
     }
 
     function add(item) {
+      item.selected = true;
       return cart.push(item);
     }
 
     function del(item) {
     }
 
-    function format() {
+    function format(items) {
       var list = [];
-      for (var i = 0; i < cart.length; i++) {
-        var c = cart[i];
-        var data = {};
-        data.itemId = c.item.id;
-        data.itemName = c.item.get('name');
-        data.itemPrice = c.item.get('price');
-        data.shopId = c.shop.id;
-        data.shopName = c.shop.get('name');
-        list.push(data);
+      for (var i = 0; i < items.length; i++) {
+        var c = items[i];
+        if (c.selected) {
+          var data = {};
+          data.itemId = c.item.id;
+          data.itemName = c.item.get('name');
+          data.itemPrice = c.item.get('price');
+          data.shopId = c.shop.id;
+          data.shopName = c.shop.get('name');
+          list.push(data);
+        }
       }
 
       return list;

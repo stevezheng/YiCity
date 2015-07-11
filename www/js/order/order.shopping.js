@@ -13,6 +13,9 @@
     $scope.items = Cart.all();
     $scope.cost = initCost();
     $scope.order = order;
+    $scope.toggleAll = toggleAll;
+    $scope.optionToggled = optionToggled;
+    $scope.isAllSelected = true;
 
     init();
 
@@ -21,6 +24,17 @@
     function init() {
       console.log(Cart.all());
     }
+
+    function toggleAll() {
+      var toggleStatus = $scope.isAllSelected;
+      angular.forEach($scope.items, function(item){ item.selected = toggleStatus; });
+      $scope.cost = initCost();
+    }
+
+    function optionToggled() {
+      $scope.isAllSelected = $scope.items.every(function(item){ return item.selected; })
+      $scope.cost = initCost();
+    }
     
     function initCost() {
       var items = Cart.all();
@@ -28,9 +42,11 @@
 
       for (var i = 0; i < items.length; i++) {
         var item = items[i];
-        var price = item.item.get('price');
-        var count = item.count;
-        cost += Number(price) * Number(count);
+        if (item.selected) {
+          var price = item.item.get('price');
+          var count = item.count;
+          cost += Number(price) * Number(count);
+        }
       }
 
       return cost;
@@ -39,7 +55,7 @@
     function order() {
       if (AV.User.current()) {
         var data = {};
-        data.items = Cart.format();
+        data.items = Cart.format($scope.items);
         data.cost = $scope.cost;
         data.userId = AV.User.current().id;
         D('Order')

@@ -16,7 +16,7 @@
                 <ul class="list">
                     <li class="item item-checkbox">
                         <label class="checkbox">
-                            <input type="checkbox" checked>
+                            <input type="checkbox" ng-model="item.selected"  ng-change="optionToggled()">
                         </label>
                         <div class="item item-thumbnail-left ">
                             <img ng-src="{{item.item.get('image') || 'img/shopping-cart/man-coat.png'}}">
@@ -42,7 +42,7 @@
         <ul class="list">
             <li class="item item-checkbox">
                 <label class="checkbox">
-                    <input type="checkbox" checked>
+                    <input type="checkbox" ng-model="isAllSelected" ng-click="toggleAll()">
 
                 </label>
                 <button class="button button-calm button-large pull-right" style="z-index: 9999" ng-click="order()">
