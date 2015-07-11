@@ -1,8 +1,9 @@
 <ion-view view-title="我的订单">
-    <ion-nav-bar class="bar-energized">
-        <ion-nav-back-button>
-        </ion-nav-back-button>
-    </ion-nav-bar>
+    <ion-nav-buttons side="primary">
+        <button class="button button-clear" ui-sref="account">
+            <
+        </button>
+    </ion-nav-buttons>
     <div class="tabs-striped tabs-top tabs-background-{#ffffff} tabs-color-#737373">
         <div class="tabs">
             <a ng-class="status == 'all'? 'tab-item active': 'tab-item'" ng-click="setStatus('all')">
