@@ -1,11 +1,8 @@
-<ion-nav-bar class="bar-energized">
-</ion-nav-bar>
 <ion-view view-title="个人中心" id="account">
-    <ion-nav-buttons side="primary">
-        <div class="bar bar-header">
-            <span ng-show="cUser" class="button button-clear pull-right" ng-click="logout()">注销</span>
-        </div>
-    </ion-nav-buttons>
+    <!--todo：这里有个bug-->
+    <ion-nav-bar class="bar-energized">
+        <button ng-show="cUser" class="button button-clear pull-right" ng-click="logout()">注销</button>
+    </ion-nav-bar>
     <ion-content class="has-footer">
         <div class="row" style="background-color: #fc9215;min-height: 210px">
             <div class="col col-25"></div>
