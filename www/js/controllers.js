@@ -31,7 +31,18 @@ angular.module('starter.controllers', [])
   })
 
 .controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
+})
+
+.controller('MoreCtrl', function($scope, $yikeUtils) {
+    $scope.update = function() {
+      $yikeUtils.alert('提示', '已经是最新版本了');
+    };
+
+    $scope.clear = function() {
+      $yikeUtils.alert('提示', '清除缓存成功');
+    };
+
+    $scope.feedback = function() {
+      $yikeUtils.alert('提示', '请拨打电话0592-55889966');
+    }
 });

@@ -365,7 +365,7 @@
 }
 
 .item p {
-    font-size: 10px;
+    font-size: 14px;
     color: #a2a2a2;
 }
 
@@ -452,12 +452,12 @@
 
 
 
-.card, .list-inset {
-    overflow: hidden;
-    margin: 24px 75px;
-    border-radius: 2px;
-    background-color: #fff;
-}
+/*.card, .list-inset {*/
+    /*overflow: hidden;*/
+    /*margin: 24px 75px;*/
+    /*border-radius: 2px;*/
+    /*background-color: #fff;*/
+/*}*/
 
 #product-search .item-thumbnail-left, #product-search .item-thumbnail-left .item-content {
     padding-top: 8px;

@@ -75,7 +75,32 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
       //更多
       .state('more', {
         url: '/more',
-        templateUrl: 'templates/tab-more.html'
+        templateUrl: 'templates/tab-more.html',
+        controller: 'MoreCtrl'
+      })
+
+      //帮助中心
+      .state('help', {
+        url: '/help',
+        templateUrl: 'templates/help.html'
+      })
+
+      //招商加盟
+      .state('zhaoshang', {
+        url: '/zhaoshang',
+        templateUrl: 'templates/zhaoshang.html'
+      })
+
+      //关于
+      .state('about', {
+        url: '/about',
+        templateUrl: 'templates/about.html'
+      })
+
+      //用户协议
+      .state('xieyi', {
+        url: '/xieyi',
+        templateUrl: 'templates/xieyi.html'
       })
 
       //分类列表
