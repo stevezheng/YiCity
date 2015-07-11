@@ -81,6 +81,7 @@
                   $state.go('payOnline', {'orderId':order.id});
                 })
             } else {
+              $yikeUtils.alert('提示', '订单提交成功');
               $state.go('orders')
             }
           })
