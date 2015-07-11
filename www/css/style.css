@@ -1365,9 +1365,9 @@
     z-index: 0;
 }
 #tab-shop .all-list{
-    position: absolute;
-    top: 92px;
-    z-index: 2;
+    /*position: absolute;*/
+    /*top: 92px;*/
+    /*z-index: 2;*/
 }
 #tab-shop .gray-lucency-coverage{
     width: 100%;
