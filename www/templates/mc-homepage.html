@@ -105,22 +105,22 @@ border: solid 1px #b6b6b6; background-color:#cbcbcb;">
             </div>
 
             <div class="list mc-homepage-NoCart">
-                <div class="item item-thumbnail-left" ui-sref="commodity-details({itemId: item.id})" ng-repeat="item in items">
-                    <img ng-src="{{item.get('image')||'img/tab-home/dezhuang.png'}}">
+                <div class="item item-thumbnail-left" ng-repeat="item in items">
+                    <img ng-src="{{item.get('image')||'img/tab-home/dezhuang.png'}}" ui-sref="commodity-details({itemId: item.id})">
 
-                    <h2>{{item.get('name')}}</h2>
+                    <h2 ui-sref="commodity-details({itemId: item.id})">{{item.get('name')}}</h2>
 
-                    <p>已售 {{item.get('salenum')}}</p>
+                    <p ui-sref="commodity-details({itemId: item.id})">已售 {{item.get('salenum')}}</p>
 
                     <p>&nbsp;</p>
 
                     <p>
-                        <span class="assertive price">￥{{item.get('price')}}</span>
-                        <span class="pull-right">已售 {{item.get('salenum')}}</span>
-                    <!--<span class="pull-right">-->
-                    <!--<img src="img/tmp/images/minus.png" width="16px" height="16px">-->
-                    <!--<span style="font-weight: bold;font-size:16px">&nbsp;0&nbsp;</span>-->
-                    <!--<img src="img/tmp/images/add.png" width="16px" height="16px">-->
+                        <!--<span class="assertive price">￥{{item.get('price')}}</span>-->
+                        <!--<span class="pull-right">已售 {{item.get('salenum')}}</span>-->
+                    <span class="pull-right">
+                    <img src="img/tmp/images/minus.png" ng-click="minus(item)" width="22px" height="22px">
+                    <span style="color:#000; font-size:30px">&nbsp;{{item.count}}&nbsp;</span>
+                    <img src="img/tmp/images/add.png" ng-click="add(item)" width="22px" height="22px">
                     </span>
                     </p>
                 </div>
@@ -128,4 +128,11 @@ border: solid 1px #b6b6b6; background-color:#cbcbcb;">
 
         </div>
     </ion-content>
+    <div class="bar bar-footer" style="padding: 0" ng-show="totalCount > 0">
+        <div class="button-bar">
+            <a class="button button-energized">共{{totalCount}}件</a>
+            <a class="button button-royal" ng-click="buy()">选好了</a>
+        </div>
+        <!--<div class="title">Footer</div>-->
+    </div>
 </ion-view>

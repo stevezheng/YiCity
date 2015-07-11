@@ -5,24 +5,60 @@
     .module('shop.details', [])
     .controller('ShopDetailsCtrl', ShopDetailsCtrl);
 
-  ShopDetailsCtrl.$inject = ['$scope', '$state', '$yikeUtils'];
+  ShopDetailsCtrl.$inject = ['$scope', '$state', '$yikeUtils', 'Cart'];
 
   /* @ngInject */
-  function ShopDetailsCtrl($scope, $state, $yikeUtils) {
+  function ShopDetailsCtrl($scope, $state, $yikeUtils, Cart) {
     var shopId = $state.params.shopId;
 
     $scope.init = init;
     $scope.shop = null;
     $scope.tabStatus = '商品列表';
     $scope.collect = collect;
+    $scope.minus = minus;
+    $scope.add = add;
+    $scope.buy = buy;
+    $scope.totalCount = 0;
 
     init();
 
     ////////////////
 
     function init() {
-      console.log('shop.details');
       query(shopId);
+    }
+
+    function buy() {
+      if ($scope.totalCount > 0) {
+        for (var i = 0; i < $scope.items.length; i++) {
+          var item = $scope.items[i];
+          if (item.count > 0) {
+            var cart = {
+              item: item
+              , shop: $scope.shop
+              , count: item.count
+            };
+
+            Cart.add(cart);
+          }
+        }
+
+        $state.go('shopping-cart');
+      } else {
+        $yikeUtils.alert('提示', '请先选择购买数量');
+      }
+    }
+
+    function minus(item) {
+      if (item.count > 0) {
+        item.count--;
+        $scope.totalCount--;
+      }
+    }
+
+    function add(item) {
+      item.count++;
+      $scope.totalCount++;
     }
 
     function collect() {
@@ -42,6 +78,10 @@
         .where({shopId: shopId})
         .select()
         .then(function(items) {
+          for (var i = 0; i < items.length; i++) {
+            var item = items[i];
+            item.count = 0;
+          }
           $scope.items = items;
           $scope.$digest();
         })
