@@ -14,7 +14,7 @@
       name: null
       , phone: null
       , city: null
-      , detail: null
+      , content: null
     };
 
     $scope.submit = submit;
@@ -29,7 +29,7 @@
     function submit() {
       var address = $scope.address;
       address.userId = AV.User.current().id;
-      address.userName = AV.User.current().get('username');
+      address.username = AV.User.current().get('username');
       address.isDefault = 0;
 
       D('Address')

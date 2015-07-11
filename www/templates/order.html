@@ -5,7 +5,7 @@
     </ion-nav-bar>
     <ion-content>
         <div class="item" ng-show="addresses.length > 0">
-            <i class="ion-ios-location-outline"></i>&nbsp;&nbsp;{{addresses[0].get('city')}}{{addresses[0].get('detail')}}
+            <i class="ion-ios-location-outline"></i>&nbsp;&nbsp;{{addresses[0].get('city')}}{{addresses[0].get('address')}}
             <span class="pull-right enter"><i class="icon ion-ios-arrow-right"></i></span>
         </div>
         <div class="item" ng-show="addresses.length == 0" ui-sref="add-address">
@@ -48,7 +48,7 @@
         <div class="gray-line"></div>
         <div class="item line">
             </i>&nbsp;&nbsp;订单总价
-            <span class="assertive  pull-right">￥168</span>
+            <span class="assertive  pull-right">￥{{cart.get('cost') || '未获取到数据'}}</span>
         </div>
         <div class="row">
             <div class="col col-50">
