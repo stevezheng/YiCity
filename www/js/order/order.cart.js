@@ -64,6 +64,7 @@
           data.itemPrice = c.item.get('price');
           data.shopId = c.shop.id;
           data.shopName = c.shop.get('name');
+          data.itemCount = c.item.count;
           list.push(data);
         }
       }
