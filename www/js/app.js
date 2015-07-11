@@ -180,7 +180,8 @@ angular.module('starter', ['ionic', 'user', 'address', 'gps', 'item', 'order', '
       //我的订单
       .state('orders', {
         url: '/orders',
-        templateUrl: 'templates/orders.html'
+        templateUrl: 'templates/orders.html',
+        controller: 'OrderListCtrl'
       })
 
       //全部订单

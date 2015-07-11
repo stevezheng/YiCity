@@ -25,39 +25,42 @@
     </div>
     <ion-content>
         <div class="list shop-list has-header">
-        <div class="item-divider" style="min-height: 20px;"></div>
+            <div ng-repeat="order in orders">
+                <div class="item-divider" style="min-height: 20px;"></div>
+                <div class="item">{{order.get('items')[0].shopName}}
+                    <span class="pull-left ion-chevron-right"></span>
+                    <span class="pull-right enter ">{{orderMap[order.get('status')]}}</span>
+                </div>
+                <div class="item item-thumbnail-left " ng-repeat="item in order.get('items')">
+                    <img src="img/indent/bishengke.jpg">
+                    <h2>{{item.itemName}}</h2>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p><span class="assertive price">￥{{item.itemPrice}}</span><span class="pull-right">共{{item.itemCount || 1}}件</span></p>
+                </div>
 
-            <div class="item">必胜客餐饮
-                <span class="pull-left ion-chevron-right"></span>
-                <span class="pull-right enter ">已完成</span>
+                <div class="item text-left">
+                    总额：￥{{order.get('cost')}}<i class="icon ion-ios-down"></i>
+                    <button class="button button-royal button-small pull-right" style="width: 20%" ng-click="pay()">
+                        付款
+                    </button>
+                </div>
             </div>
-            <p>&nbsp;</p>
-            <div class="item item-thumbnail-left ">
-                <img src="img/indent/bishengke.jpg">
-                <h2>必胜客情侣套餐情人节新品推荐</h2>
-                <p>&nbsp;</p>
-                <p>双人份    到店消费</p>
-                <p><span class="assertive price">￥129</span><span class="pull-right">共1件</span></p>
             </div>
-
-            <div class="item text-left">
-                总额：￥129 <i class="icon ion-ios-down"></i>
-            </div>
-
-
+        <div style="display: none">
             <div class="item-divider" style="min-height: 20px;"></div>
             <!--<div class="list shop-list">-->
             <div class="item ">必胜客餐饮
                 <span class="pull-left ion-chevron-right"></span>
                 <span class="pull-right enter ">待付款</span>
             </div>
-                <div class="item item-thumbnail-left">
-                    <img src="img/indent/bishengke1.jpg">
-                    <h2>阿迪达斯2015春夏新款潮流高帮鞋</h2>
-                    <p>&nbsp;</p>
-                    <p>黑红格子   39码</p>
-                    <p><span class="assertive price">￥629</span><span class="pull-right">共1件</span></p>
-                </div>
+            <div class="item item-thumbnail-left">
+                <img src="img/indent/bishengke1.jpg">
+                <h2>阿迪达斯2015春夏新款潮流高帮鞋</h2>
+                <p>&nbsp;</p>
+                <p>黑红格子   39码</p>
+                <p><span class="assertive price">￥629</span><span class="pull-right">共1件</span></p>
+            </div>
             <div class="item item-thumbnail-left">
                 <img src="img/indent/bishengke2.jpg">
                 <h2>阿迪达斯2015春夏新款潮流高帮鞋</h2>
@@ -73,35 +76,7 @@
                 </button>
             </div>
 
+        </div>
 
-
-        <!--<div class="tabs-striped tabs-color-assertive">-->
-            <!--<div class="tabs">-->
-                <!--<a class="tab-item active" href="#">-->
-                    <!--<i class="icon ion-home"></i>-->
-                    <!--Test-->
-                <!--</a>-->
-                <!--<a class="tab-item" href="#">-->
-                    <!--<i class="icon ion-star"></i>-->
-                    <!--Favorites-->
-                <!--</a>-->
-                <!--<a class="tab-item" href="#">-->
-                    <!--<i class="icon ion-gear-a"></i>-->
-                    <!--Settings-->
-                <!--</a>-->
-            <!--</div>-->
-        <!--</div>-->
-        <ion-list>
-            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
-                <img ng-src="{{chat.face}}">
-                <h2>{{chat.name}}</h2>
-                <p>{{chat.lastText}}</p>
-                <i class="icon ion-chevron-right icon-accessory"></i>
-
-                <ion-option-button class="button-assertive" ng-click="remove(chat)">
-                    Delete
-                </ion-option-button>
-            </ion-item>
-        </ion-list>
     </ion-content>
 </ion-view>
