@@ -61,7 +61,7 @@
         condition.categoryName = categoryMap[categoryName];
       }
       D('Shop')
-        .limit(0, 5)
+        .limit(0, 10)
         .order(order)
         .where(condition)
         .select()
