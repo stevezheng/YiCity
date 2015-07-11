@@ -3,7 +3,7 @@ var LOGIN_TEMPLATE = 'templates/login.html';
 
 angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item', 'order', 'shop', 'yike.utils', 'starter.controllers', 'starter.services'])
 
-  .run(function ($ionicPlatform) {
+  .run(function ($ionicPlatform, $rootScope, $location, $timeout, $ionicHistory, $yikeUtils) {
     $ionicPlatform.ready(function () {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)
@@ -15,11 +15,32 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
         StatusBar.styleLightContent();
       }
 
-      //返回按钮
+      //双击退出
       $ionicPlatform.registerBackButtonAction(function (e) {
+        //判断处于哪个页面时双击退出
+        var path = $location.path();
+        if (path == '/home' || path == '/shop' || path == '/account' || path == '/more') {
+          if ($rootScope.backButtonPressedOnceToExit) {
+            ionic.Platform.exitApp();
+          } else {
+            $rootScope.backButtonPressedOnceToExit = true;
+            $yikeUtils.alert('再按一次退出系统');
+            setTimeout(function () {
+              $rootScope.backButtonPressedOnceToExit = false;
+            }, 2000);
+          }
+        } else if ($ionicHistory.backView()) {
+          $ionicHistory.goBack();
+        } else {
+          $rootScope.backButtonPressedOnceToExit = true;
+          $yikeUtils.alert('再按一次退出系统');
+          setTimeout(function () {
+            $rootScope.backButtonPressedOnceToExit = false;
+          }, 2000);
+        }
         e.preventDefault();
         return false;
-      }, 100);
+      }, 101);
     });
   })
 

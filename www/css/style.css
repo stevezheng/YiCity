@@ -1421,3 +1421,7 @@
     color: #f07200;
     border: none;
 }
+
+#tab-shop h5 {
+    font-size: 16px;
+}
