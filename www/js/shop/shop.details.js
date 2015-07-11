@@ -5,15 +5,16 @@
     .module('shop.details', [])
     .controller('ShopDetailsCtrl', ShopDetailsCtrl);
 
-  ShopDetailsCtrl.$inject = ['$scope', '$state'];
+  ShopDetailsCtrl.$inject = ['$scope', '$state', '$yikeUtils'];
 
   /* @ngInject */
-  function ShopDetailsCtrl($scope, $state) {
+  function ShopDetailsCtrl($scope, $state, $yikeUtils) {
     var shopId = $state.params.shopId;
 
     $scope.init = init;
     $scope.shop = null;
     $scope.tabStatus = '商品列表';
+    $scope.collect = collect;
 
     init();
 
@@ -22,6 +23,10 @@
     function init() {
       console.log('shop.details');
       query(shopId);
+    }
+
+    function collect() {
+      $yikeUtils.alert('收藏店铺成功');
     }
 
     function query(shopId) {

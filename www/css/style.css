@@ -1432,3 +1432,11 @@
 #tab-shop h5 {
     font-size: 16px;
 }
+
+#home .header-item {
+    width: 100%;
+}
+
+#home .primary-buttons {
+    width: 100%;
+}

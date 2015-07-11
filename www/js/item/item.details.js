@@ -17,6 +17,7 @@
     $scope.joinBuy = joinBuy;
     $scope.buyModal = null;
     $scope.cartModal = null;
+    $scope.collect = collect;
 
     $scope.count = {
       buy: 0,
@@ -37,6 +38,10 @@
       query(itemId);
       setModal('buyModal', 'templates/modal/buy.html');
       setModal('cartModal', 'templates/modal/cart.html');
+    }
+
+    function collect() {
+      $yikeUtils.alert('收藏商品成功');
     }
 
     function cart() {

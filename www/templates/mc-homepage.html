@@ -2,6 +2,10 @@
     <ion-nav-bar class="bar-energized">
         <ion-nav-back-button>
         </ion-nav-back-button>
+        <ion-nav-buttons side="right">
+            <button class="button button-clear ion-ios-cart" ui-sref="shopping-cart"></button>
+            <button class="button button-clear ion-heart" ng-click="collect()"></button>
+        </ion-nav-buttons>
     </ion-nav-bar>
     <ion-content>
         <ion-slide-box>
@@ -24,17 +28,17 @@
 
 
         <div class="row">
-            <div class="col col-25">
-                <a href="tel:10086">
+            <div class="col col-10">
+                <a>
                     <img src="img/tmp/images/dangqian.png" width="45" height="60"/>
                 </a>
             </div>
-            <div class="col col-50">
-                <span style="line-height: 50px; font-size: 14px">{{shop.get('address') || '商家未添加地址'}}</span>
+            <div class="col col-65">
+                <span style="line-height: 14px; font-size: 14px; top: 4px; left: 10px; position: relative;">{{shop.get('address') || '商家未添加地址与电话'}}</span>
             </div>
-            <div class="col col-25">
+            <a class="col col-25" href="tel:{{shop.get('phone')}}">
                 <img class="pull-right" src="img/tmp/images/DianHua2.png" width="70" height="50"/>
-            </div>
+            </a>
         </div>
         <div class="gray-wide-line" ></div>
         <!--<div class="item-divider" style="min-height: 0px;background-color: #ededed;"></div>-->
