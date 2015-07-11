@@ -43,9 +43,9 @@
         </div>
         <div class="row">
             <div class="col col-25 "><img src="img/commodity/DangQianWeiZi2.png" width="45" height="60"></div>
-            <div class="col col-50 " style="line-height: 50px; font-size: 15px">{{shop.get('address') || '商家未添加地址'}}</div>
+            <div class="col col-50 " style="line-height: 50px; font-size: 15px">{{shop.get('address') || '商家未添加地址与电话'}}</div>
             <div class="col col-25 ">
-                <a href="tel:0592-58886666">
+                <a href="tel:{{shop.get('phone') || '114'}}">
                     <img src="img/commodity/DianHua2.png" width="70" height="50">
                 </a>
             </div>
