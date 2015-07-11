@@ -22,7 +22,6 @@
     ////////////////
 
     function init() {
-      console.log(Cart.all());
     }
 
     function toggleAll() {
@@ -58,15 +57,8 @@
         data.items = Cart.format($scope.items);
         data.cost = $scope.cost;
         data.userId = AV.User.current().id;
-        D('Order')
-          .add(data)
-          .then(function(_order) {
-            console.log(_order);
-            $yikeUtils.confirm('提示', '现在去支付?')
-              .then(function() {
-                $state.go('order', {'orderId':_order.id});
-              })
-          })
+        Cart.setTmpCart(data);
+        $state.go('order-submit');
       } else {
         $yikeUtils.alert('提示', '尚未登录，请先登录');
         $yikeUtils.loginModal(LOGIN_TEMPLATE, function() {

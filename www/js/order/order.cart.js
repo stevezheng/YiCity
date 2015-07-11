@@ -15,12 +15,16 @@
       //  , 'count': '商品数量'
       //}
     ];
+
+    var tmpCart = {};
     return {
       query: query
       , all: all
       , add: add
       , del: del
       , format: format
+      , getTmpCart: getTmpCart
+      , setTmpCart: setTmpCart
     };
 
     ////////////////
@@ -30,6 +34,15 @@
 
     function all() {
       return cart;
+    }
+
+    function setTmpCart(data) {
+      tmpCart = data;
+      return true;
+    }
+
+    function getTmpCart() {
+      return tmpCart;
     }
 
     function add(item) {

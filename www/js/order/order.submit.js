@@ -5,16 +5,16 @@
     .module('order.submit', [])
     .controller('OrderSubmitCtrl', OrderSubmitCtrl);
 
-  OrderSubmitCtrl.$inject = ['$scope', '$state', '$yikeUtils'];
+  OrderSubmitCtrl.$inject = ['$scope', '$state', '$yikeUtils', '$ionicHistory', 'Cart'];
 
   /* @ngInject */
-  function OrderSubmitCtrl($scope, $state, $yikeUtils) {
+  function OrderSubmitCtrl($scope, $state, $yikeUtils, $ionicHistory, Cart) {
     $scope.init = init;
-    $scope.orderId = $state.params.orderId;
     $scope.addresses = [];
     $scope.submit = submit;
     $scope.setPay = setPay;
     $scope.setMethod = setMethod;
+    $scope.tmpCart = Cart.getTmpCart();
     $scope.radios = {
       pay: 0,
       method: 0
@@ -25,6 +25,14 @@
     ////////////////
 
     function init() {
+      $scope.tmpCart = Cart.getTmpCart();
+      if (!$scope.tmpCart.items) {
+        $yikeUtils.alert('提示', '购物车是空的,请先挑选商品', function() {
+          $ionicHistory.goBack();
+        });
+        return false;
+      }
+
       addresses();
     }
 
@@ -46,20 +54,35 @@
     }
 
     function submit() {
-      if ($scope.radios.pay == 1) {
+      if (!$scope.tmpCart.items) {
+        $yikeUtils.alert('提示', '购物车是空的,请先挑选商品');
+        return false;
+      }
+      if ($scope.radios.pay == 0) {
         $yikeUtils.alert('提示', '在线支付功能即将到来');
       } else {
+        $scope.tmpCart.payMethod = $scope.radios.pay;
+        $scope.tmpCart.useMethod = $scope.radios.method;
+        $scope.tmpCart.vocherId = '';
+        $scope.tmpCart.address = {
+          name: $scope.addresses[0].get('name')
+          , phone: $scope.addresses[0].get('phone')
+          , province: $scope.addresses[0].get('province')
+          , city: $scope.addresses[0].get('city')
+          , area: $scope.addresses[0].get('area')
+          , address: $scope.addresses[0].get('address')
+        };
         D('Order')
-          .where({objectId: $scope.orderId})
-          .find()
+          .add($scope.tmpCart)
           .then(function(order) {
-            order.set('payMethod', $scope.radios.pay);
-            order.set('useMethod', $scope.radios.method);
-            order.set('voucherId', '');
-            order.save();
-          })
-          .then(function() {
-            $yikeUtils.alert('提示', '订单提交成功')
+            if (order.get('pay') == 0) {
+              $yikeUtils.confirm('提示', '订单提交成功,现在去支付?')
+                .then(function() {
+                  $state.go('payOnline', {'orderId':order.id});
+                })
+            } else {
+              $state.go('orders')
+            }
           })
       }
     }

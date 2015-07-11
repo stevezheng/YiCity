@@ -120,22 +120,22 @@ angular.module('starter', ['ionic', 'user', 'address', 'gps', 'item', 'order', '
 
       //确认订单
       //todo: 跟效果图有出入
-      .state('order', {
-        url: '/order/:orderId',
-        templateUrl: 'templates/order.html',
+      .state('order-submit', {
+        url: '/order-submit',
+        templateUrl: 'templates/order-submit.html',
         controller: 'OrderSubmitCtrl',
         cache: false
       })
 
       //线上支付
       .state('payOnline', {
-        url: '/online-payment',
+        url: '/online-payment/:orderId',
         templateUrl: 'templates/online-payment.html'
       })
 
       //现金支付
       .state('payCash', {
-        url: '/cash-payment',
+        url: '/cash-payment/:orderId',
         templateUrl: 'templates/cash-payment.html'
       })
 
@@ -178,9 +178,9 @@ angular.module('starter', ['ionic', 'user', 'address', 'gps', 'item', 'order', '
       })
 
       //我的订单
-      .state('indent', {
-        url: '/indent',
-        templateUrl: 'templates/indent.html'
+      .state('orders', {
+        url: '/orders',
+        templateUrl: 'templates/orders.html'
       })
 
       //全部订单
