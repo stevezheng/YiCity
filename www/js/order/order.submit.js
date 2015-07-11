@@ -15,8 +15,10 @@
     $scope.submit = submit;
     $scope.setPay = setPay;
     $scope.setMethod = setMethod;
-    $scope.pay = 'ziti';
-    $scope.method = 'online';
+    $scope.radios = {
+      pay: 0,
+      method: 0
+    };
 
     init();
 
@@ -44,7 +46,22 @@
     }
 
     function submit() {
-      $yikeUtils.alert('提示', '该功能将于明天开放');
+      if ($scope.radios.pay == 1) {
+        $yikeUtils.alert('提示', '在线支付功能即将到来');
+      } else {
+        D('Order')
+          .where({objectId: $scope.orderId})
+          .find()
+          .then(function(order) {
+            order.set('payMethod', $scope.radios.pay);
+            order.set('useMethod', $scope.radios.method);
+            order.set('voucherId', '');
+            order.save();
+          })
+          .then(function() {
+            $yikeUtils.alert('提示', '订单提交成功')
+          })
+      }
     }
   }
 })();

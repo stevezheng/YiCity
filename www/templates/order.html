@@ -23,17 +23,17 @@
         </div>
         <div class="row">
             <div class="col col-50">
-                <li class="item item-checkbox" ng-click="setMethod('ziti')">
+                <li class="item item-checkbox">
                     <label class="checkbox">
-                        <input type="radio" name="method" checked id="method-ziti">
+                        <input type="radio" name="method" id="method-ziti" ng-model="radios.method" ng-value="0">
                     </label>
                     到店消费/自提
                 </li>
             </div>
             <div class="col col-50">
-                <li class="item item-checkbox" ng-click="setMethod('shangmen')">
+                <li class="item item-checkbox">
                     <label class="checkbox ">
-                        <input type="radio" name="method" id="method-shangmen">
+                        <input type="radio" name="method" id="method-shangmen" ng-model="radios.method" ng-value="1">
                     </label>
                     送货上门
                 </li>
@@ -52,17 +52,17 @@
         </div>
         <div class="row">
             <div class="col col-50">
-                <li class="item item-checkbox" ng-click="setPay('online')">
+                <li class="item item-checkbox">
                     <label class="checkbox">
-                        <input type="radio" name="pay" checked id="pay-online">
+                        <input type="radio" name="pay" id="pay-online" ng-model="radios.pay" ng-value="0">
                     </label>
                     在线支付
                 </li>
             </div>
             <div class="col col-50">
-                <li class="item item-checkbox" ng-click="setPay('cash')">
+                <li class="item item-checkbox">
                     <label class="checkbox ">
-                        <input type="radio" name="pay" id="pay-cash">
+                        <input type="radio" name="pay" id="pay-cash" ng-value="1" ng-model="radios.pay">
                     </label>
                     现金付款
                 </li>
