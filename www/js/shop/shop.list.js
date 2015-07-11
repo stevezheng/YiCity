@@ -53,6 +53,7 @@
         condition.categoryName = categoryMap[categoryName];
       }
       D('Shop')
+        .limit(0, 5)
         .where(condition)
         .select()
         .then(function(shops) {

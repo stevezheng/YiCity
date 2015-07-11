@@ -23,7 +23,7 @@ angular.module('starter.controllers', [])
 
   .controller('HomeCtrl', function($scope, $stateParams, Chats) {
     D('Item')
-      .limit(0,10)
+      .limit(0,5)
       .select()
       .then(function(items) {
         $scope.items = items;
