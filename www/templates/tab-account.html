@@ -21,46 +21,46 @@
             <div class="col col-25"></div>
         </div>
         <div class="button-bar item button-small" style="height: 50px;border: none">
-            <a class="button" ui-sref="collect">
+            <a class="button" ng-click="go('collect')">
                 <img class="images1" src="img/tmp/images/account01.png" style="vertical-align: middle"/>&nbsp;收藏
             </a>
-            <a class="button" style="border-left: 1px solid #D9D9D9;border-right: 1px solid #D9D9D9;" ui-sref="back-benefit">
+            <a class="button" style="border-left: 1px solid #D9D9D9;border-right: 1px solid #D9D9D9;" ng-click="go('back-benefit')">
                 <img class="images1" src="img/tmp/images/account02.png" style="vertical-align: middle"/>&nbsp;返利
             </a>
-            <a class="button" ui-sref="orders">
+            <a class="button" ng-click="go('orders')">
                 <img class="images1" src="img/tmp/images/account03.png" style="vertical-align: middle"/>&nbsp;订单
             </a>
         </div>
         <div class="gray-wide-line"></div>
         <div class="list">
 
-            <a class="item item-icon-right" ui-sref="address-manage">
+            <a class="item item-icon-right" ng-click="go('address-manage')">
                 <img src="img/tmp/images/account04.png" style="height: 20px;width: auto;vertical-align: middle"/>
                 &nbsp;收货地址管理
                 <i class="icon ion-ios-arrow-right i"></i>
             </a>
 
 
-            <a class="item item-icon-right" ui-sref="my-recommend">
+            <a class="item item-icon-right" ng-click="go('my-recommend')">
                 <img src="img/tmp/images/account05.png" style="height: 20px;width: auto;vertical-align: middle"/>
                 &nbsp;我的推荐
                 <i class="icon ion-ios-arrow-right i"></i>
             </a>
 
 
-            <a class="item item-icon-right" ui-sref="draw-cash-apply">
+            <a class="item item-icon-right" ng-click="go('draw-cash-apply')">
                 <img src="img/tmp/images/account06.png" style="height: 20px;width: auto;vertical-align: middle"/>
                 &nbsp;提现申请
                 <i class="icon ion-ios-arrow-right i"></i>
             </a>
 
 
-            <a class="item item-icon-right" href="#">
+            <a class="item item-icon-right">
                 <img src="img/tmp/images/account07.png" style="height: 20px;width: auto;vertical-align: middle"/>
                 &nbsp;推荐好友
                 <i class="icon ion-ios-arrow-right i"></i>
             </a>
-            <a class="item item-icon-right" ui-sref="my-information">
+            <a class="item item-icon-right" ng-click="go('my-information')">
                 <img src="img/tmp/images/account08.png" style="height: 20px;width: auto;vertical-align: middle"/>
                 &nbsp;我的消息
                 <i class="icon ion-ios-arrow-right i"></i>

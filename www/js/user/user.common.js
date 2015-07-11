@@ -12,6 +12,7 @@
     $scope.init = init;
     $scope.login = login;
     $scope.logout = logout;
+    $scope.go= go;
 
     if (AV.User.current()) {
       $scope.cUser = AV.User.current();
@@ -24,6 +25,15 @@
     ////////////////
 
     function init() {
+    }
+
+    function go(route) {
+      if (AV.User.current()) {
+        $state.go(route);
+      } else {
+        $yikeUtils.alert('提示', '请先登录');
+        login();
+      }
     }
 
     function login() {
