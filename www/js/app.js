@@ -50,12 +50,6 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
         controller: 'ShopListCtrl'
       })
 
-      ////todo: 跟效果图有出入
-      //.state('mc-homepage-nocart', {
-      //  url: '/mc-homepage-nocart',
-      //  templateUrl: 'templates/mc-homepage-nocart.html'
-      //})
-
       //商家详情
       .state('homepage', {
         url: '/homepage/:shopId',
@@ -91,12 +85,6 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
         templateUrl: 'templates/category-list.html'
       })
 
-      //.state('shop-list', {
-      //  url: '/shop-list/:categoryId',
-      //  templateUrl: 'templates/shop-list.html',
-      //  controller: 'ShopListCtrl'
-      //})
-
       //产品搜索
       //todo: 跟效果图有出入
       .state('product-search', {
@@ -111,7 +99,7 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
         templateUrl: 'templates/shop-search.html'
       })
 
-      //店铺平路
+      //店铺评论
       //todo: 跟效果图有出入
       .state('mc-evaluation', {
         url: '/mc-evaluation',
@@ -119,7 +107,6 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
       })
 
       //确认订单
-      //todo: 跟效果图有出入
       .state('order-submit', {
         url: '/order-submit',
         templateUrl: 'templates/order-submit.html',
@@ -140,7 +127,6 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
       })
 
       //添加地址
-      //todo: 跟效果图有出入
       .state('add-address', {
         url: '/add-address',
         templateUrl: 'templates/add-address.html',
@@ -153,10 +139,11 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
         templateUrl: 'templates/area.html'
       })
 
-      //编辑地址
-      .state('receiving-address-management', {
-        url: '/receiving-address-management',
-        templateUrl: 'templates/receiving-address-management.html'
+      //收货地址
+      .state('address-manage', {
+        url: '/address-manage',
+        templateUrl: 'templates/address-manage.html',
+        controller: 'AddressManageCtrl'
       })
 
       //登录
@@ -188,17 +175,6 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
       .state('indent-all', {
         url: '/indent-all',
         templateUrl: 'templates/indent-all.html'
-      })
-
-      //待付款订单
-      .state('indent-waiting-payment', {
-        url: '/indent-waiting-payment',
-        templateUrl: 'templates/indent-waiting-payment.html'
-      })
-
-      .state('indent-waiting-get', {
-        url: '/indent-waiting-get',
-        templateUrl: 'templates/indent-waiting-get.html'
       })
 
       //忘记密码
@@ -282,24 +258,27 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
         templateUrl: 'templates/merchant-classify.html'
       })
 
-      //todo: 跟效果图有一定出入
+      //收藏
       .state('collect', {
         url: '/collect',
         templateUrl: 'templates/collect.html',
         controller: 'AccountCollectCtrl'
       })
 
+      //评价详情
       .state('evaluate-detail', {
         url: '/evaluate-detail',
         templateUrl: 'templates/evaluate-detail.html'
       })
 
-
+      //注册
       .state('register', {
         url: '/register',
         templateUrl: 'templates/register.html',
         controller: 'UserRegCtrl'
       })
+
+      //编辑资料
       .state('data-editing', {
         url: '/data-editing',
         templateUrl: '/templates/data-editing.html'

@@ -1,0 +1,46 @@
+<ion-view view-title="收货地址管理" id="receiving-address-management">
+    <ion-nav-buttons side="primary">
+        <div class="bar bar-header">
+            <button class="button button-clear ion-ios-arrow-left pull-left" ui-sref="account"></button>
+        </div>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="gray-wide-line"></div>
+        <div class="white" ui-sref="add-address">
+            <button class="button button-clear ion-plus-round pull-left"></button>
+            <span class="top">新增地址</span>
+            <button class="button button-clear ion-ios-arrow-right pull-right"></button>
+        </div>
+        <div ng-repeat="address in addresses">
+            <div class="gray-wide-line"></div>
+            <div class="item wide">
+                {{address.get('name')}}
+                <span class="pull-right">{{address.get('phone')}}</span>
+                <div class="line"></div>
+                <div class="gray-line"></div>
+                <div class="line"></div>
+                <p style="width: 100%;display:block;word-break: break-all;word-wrap: break-word; white-space: normal">
+                    {{address.get('province')}}
+                    {{address.get('city')}}
+                    {{address.get('area')}}
+                    {{address.get('address')}}
+                    <!--福建省厦门市思明区软件园二期观日路2014号之二5楼 5201 噼里啪啦科技-->
+                </p>
+                <div class="gray-line"></div>
+                <div class="line"></div>
+            <span>
+            <label class="checkbox">
+                <input type="radio" name="isDefault">
+            </label>
+                <span class="move-up">&nbsp;&nbsp;设为默认</span>
+             <span class="pull-right gray">
+                 <img src="img/tmp/images/edit.png" style="vertical-align: middle;" alt="middle"/>
+                 &nbsp;编辑 &nbsp;&nbsp;
+                 <img src="img/tmp/images/delete.png" style="vertical-align: middle;" alt="middle"/>
+                 &nbsp;删除
+             </span>
+            </span>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
