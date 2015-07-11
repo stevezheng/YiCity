@@ -1150,8 +1150,8 @@
 }
 
 #collect h2,#collect p{
-    margin-left: 110px;
-    font-size: 10px;
+    margin-left: 20px;
+    font-size: 12px;
 }
 #collect .assertive-price{
     font-size: 18px;
@@ -1408,4 +1408,16 @@
 
 #submit-orders .checkbox input:after, .checkbox-icon:after {
     width: 10px;
+}
+
+.button.collect-active {
+    background-color: #faf6f6;
+    color: #f07200;
+    border: none;
+}
+
+.button.collect-active:hover {
+    background-color: #faf6f6;
+    color: #f07200;
+    border: none;
 }

@@ -1,8 +1,10 @@
 <ion-view view-title="个人中心" id="account">
     <!--todo：这里有个bug-->
-    <!--<ion-nav-bar class="bar-energized">-->
-        <!--<button ng-show="cUser" class="button button-clear pull-right" ng-click="logout()">注销</button>-->
-    <!--</ion-nav-bar>-->
+    <ion-nav-bar class="bar-energized">
+        <ion-nav-buttons side="right">
+            <button ng-show="cUser" class="button button-clear pull-right" ng-click="logout()">注销</button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
     <ion-content class="has-footer">
         <div class="row" style="background-color: #fc9215;min-height: 210px">
             <div class="col col-25"></div>
@@ -19,7 +21,7 @@
             <div class="col col-25"></div>
         </div>
         <div class="button-bar item button-small" style="height: 50px;border: none">
-            <a class="button">
+            <a class="button" ui-sref="collect">
                 <img class="images1" src="img/tmp/images/account01.png" style="vertical-align: middle"/>&nbsp;收藏
             </a>
             <a class="button" style="border-left: 1px solid #D9D9D9;border-right: 1px solid #D9D9D9;">

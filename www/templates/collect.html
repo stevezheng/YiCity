@@ -1,42 +1,29 @@
-<ion-view view-title=""  id="collect">
+<ion-view view-title="" id="collect">
     <ion-nav-buttons side="primary">
         <div class="bar bar-header">
-            <button class="button button-clear ion-chevron-left pull-left"></button>
+            <button class="button button-clear ion-chevron-left pull-left" ui-sref="account"></button>
             <div class="button-bar" style="max-width: 190px;margin:0 auto;border: 1px solid #ffffff">
-                <a class="button">商品</a>
-                <a class="button" style="background-color: #faf6f6;color: #f07200;border: none">店铺</a>
+                <a ng-class="type=='item'?'button collect-active': 'button'" ng-click="setType('item')">商品</a>
+                <a ng-class="type=='shop'?'button collect-active': 'button'" ng-click="setType('shop')">店铺</a>
             </div>
         </div>
     </ion-nav-buttons>
     <ion-content style="background-color: #eadfe7">
-        <div class="list shop-list">
+        <div class="list shop-list" ng-show="type == 'item'">
             <div class="item item-thumbnail-left">
                 <img src="img/tab-home/dezhuang.png">
-                <h2>德庄火锅美味 6人套餐</h2>
+                <h2>测试收藏商品</h2>
                 <p>五一特惠套餐，快约上几个好友来分享吧！</p>
                 <p>&nbsp;</p>
                 <p><span class="assertive-price">￥168</span><span class="origin-price">￥208</span><span class="pull-right">已售 316</span></p>
             </div>
+        </div>
+        <div class="list shop-list" ng-show="type == 'shop'">
             <div class="item item-thumbnail-left">
-                <img src="img/tab-home/dezhuang.png">
-                <h2>德庄火锅美味 6人套餐</h2>
-                <p>五一特惠套餐，快约上几个好友来分享吧！</p>
+                <img src="img/tab-home/dezhuang.png" />
+                <h2>测试收藏店铺</h2>
+                <p>店铺收藏测试</p>
                 <p>&nbsp;</p>
-                <p><span class="assertive-price">￥168</span><span class="origin-price">￥208</span><span class="pull-right">已售 316</span></p>
-            </div>
-            <div class="item item-thumbnail-left">
-                <img src="img/tab-home/dezhuang.png">
-                <h2>德庄火锅美味 6人套餐</h2>
-                <p>五一特惠套餐，快约上几个好友来分享吧！</p>
-                <p>&nbsp;</p>
-                <p><span class="assertive-price">￥168</span><span class="origin-price">￥208</span><span class="pull-right">已售 316</span></p>
-            </div>
-            <div class="item item-thumbnail-left">
-                <img src="img/tab-home/dezhuang.png">
-                <h2>德庄火锅美味 6人套餐</h2>
-                <p>五一特惠套餐，快约上几个好友来分享吧！</p>
-                <p>&nbsp;</p>
-                <p><span class="assertive-price">￥168</span><span class="origin-price">￥208</span><span class="pull-right">已售 316</span></p>
             </div>
         </div>
     </ion-content >

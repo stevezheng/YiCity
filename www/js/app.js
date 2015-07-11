@@ -1,7 +1,7 @@
 AV.initialize('ry3vkr5qo327u3zxk62ifezixglq2lqfmutkthm0c050z9j9', 'abhpp7rycpzbsbvzikr4vsv6giq39z15lk009b7j2ti7z55h');
 var LOGIN_TEMPLATE = 'templates/login.html';
 
-angular.module('starter', ['ionic', 'user', 'address', 'gps', 'item', 'order', 'shop', 'yike.utils', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item', 'order', 'shop', 'yike.utils', 'starter.controllers', 'starter.services'])
 
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -285,7 +285,8 @@ angular.module('starter', ['ionic', 'user', 'address', 'gps', 'item', 'order', '
       //todo: 跟效果图有一定出入
       .state('collect', {
         url: '/collect',
-        templateUrl: 'templates/collect.html'
+        templateUrl: 'templates/collect.html',
+        controller: 'AccountCollectCtrl'
       })
 
       .state('evaluate-detail', {
