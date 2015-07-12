@@ -1,13 +1,13 @@
 <ion-view view-title="" id="collect">
-    <ion-nav-buttons side="primary">
-        <div class="bar bar-header">
+    <ion-nav-bar class="bar-energized">
+        <ion-nav-buttons side="primary">
             <button class="button button-clear ion-chevron-left pull-left" ui-sref="account"></button>
             <div class="button-bar" style="max-width: 190px;margin:0 auto;border: 1px solid #ffffff">
                 <a ng-class="type=='item'?'button collect-active': 'button'" ng-click="setType('item')">商品</a>
                 <a ng-class="type=='shop'?'button collect-active': 'button'" ng-click="setType('shop')">店铺</a>
             </div>
-        </div>
-    </ion-nav-buttons>
+        </ion-nav-buttons>
+    </ion-nav-bar>
     <ion-content style="background-color: #eadfe7">
         <div class="list shop-list" ng-show="type == 'item'">
             <div class="item item-thumbnail-left">
