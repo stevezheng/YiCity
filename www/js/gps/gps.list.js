@@ -34,7 +34,7 @@
     }
 
     function setCurrentCity() {
-      GPS.setCity($scope.currentCity);
+      GPS.setCity($scope.currentCity || '厦门');
     }
   }
 })();

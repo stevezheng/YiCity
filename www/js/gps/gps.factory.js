@@ -13,10 +13,12 @@
     var area = '思明区';
     var cityList = ['厦门', '北京', '上海', '成都'];
     var areaList = ['思明区', '湖里区', '集美区', '海沧区', '翔安区', '同安区'];
+
     var currentCity = function (cb) {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showErr);
       }
+
       function showPosition(position) {
         var lat = position.coords.latitude;
         var long = position.coords.longitude;
