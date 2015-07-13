@@ -1,18 +1,17 @@
 <ion-view id="shop-search">
-    <ion-nav-buttons side="primary">
-        <div class="bar bar-header">
-
-            <button class="button button-clear ion-chevron-left" style="border: 0; margin-right: 10px">
+    <ion-nav-bar class="bar-energized">
+        <ion-nav-buttons side="primary">
+            <button ui-sref="home" class="button button-clear ion-chevron-left" style="border: 0; margin-right: 10px">
             </button>
             <label class="item-input-wrapper" style="background: #ffffff;border-radius:60px;">
                 <i class="icon ion-ios-search placeholder-icon" style="color: #737373;"></i>&nbsp;
-                <input type="search" class="grey" placeholder="请输入关键词"
+                <input type="search" class="grey" placeholder="请输入关键词" ng-model="search.shop"
                        style="font-size: 12px; height: auto; background: #ffffff;">
             </label>
 
-            <button class="button button-clear" ui-sref="tab.home">搜索</button>
-        </div>
-    </ion-nav-buttons>
+            <button class="button button-clear button-search" ng-click="searchShop()">搜索</button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
     <div class="tabs-striped tabs-top">
         <div class="tabs">
             <a class="tab-item active" href="#">
@@ -27,94 +26,125 @@
 
 
     <ion-content>
-        <div>
+        <div ng-show="!data.shops">
+            <div>
+                <br/>
+                <br/>
+                <br/>
+                &nbsp;<b>历史：</b>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.shop = 'wifi'; searchShop()">wifi</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.shop = '双人'; searchShop()">双人</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.shop = '美发'; searchShop()">美发</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.shop = '旅游'; searchShop()">国际旅游</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.shop = 'wifi'; searchShop()">wifi</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.shop = '双人'; searchShop()">双人</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.shop = '美发'; searchShop()">美发</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.shop = '旅游'; searchShop()">国际旅游</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.shop = 'wifi'; searchShop()">wifi</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.shop = '双人'; searchShop()">双人</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.shop = '美发'; searchShop()">美发</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.shop = '旅游'; searchShop()">国际旅游</button>
+                </div>
+            </div>
+            &nbsp;<b>热搜：</b>
+
+            <div class="row">
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.shop = 'wifi'; searchShop()">wifi</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.shop = '双人'; searchShop()">双人</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.shop = '美发'; searchShop()">美发</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.shop = '旅游'; searchShop()">国际旅游</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.shop = 'wifi'; searchShop()">wifi</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.shop = '双人'; searchShop()">双人</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.shop = '美发'; searchShop()">美发</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.shop = '旅游'; searchShop()">国际旅游</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.shop = 'wifi'; searchShop()">wifi</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.shop = '双人'; searchShop()">双人</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.shop = '美发'; searchShop()">美发</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.shop = '旅游'; searchShop()">国际旅游</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="background-color: #ededed">
             <br/>
             <br/>
             <br/>
-            &nbsp;<b>历史：</b>
-        </div>
-        <div class="row">
-            <div class="col">
-                <button class="button button-small button-block button-light">德庄</button>
-            </div>
-            <div class="col">
-                <button class="button button-small button-block button-light">食汇堂</button>
-            </div>
-            <div class="col">
-                <button class="button button-small button-block button-light">美发</button>
-            </div>
-            <div class="col">
-                <button class="button button-small button-block button-light">国际旅游</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <button class="button button-small button-block button-light">德克士</button>
-            </div>
-            <div class="col">
-                <button class="button button-small button-block button-light">咖啡店</button>
-            </div>
-            <div class="col">
-                <button class="button button-small button-block button-light">足浴</button>
-            </div>
-            <div class="col">
-                <button class="button button-small button-block button-light">星巴克</button>
-            </div>
         </div>
 
-        <div class="row">
-            <div class="col col-25">
-                <div class="col">
-                    <button class="button button-small button-block button-light">宾馆</button>
-                </div>
-            </div>
-            <div class="col col-25 col-25">
-                <div class="col">
-                    <button class="button button-small button-block button-light">美甲</button>
-                </div>
-            </div>
-        </div>
-        &nbsp;<b>热搜：</b>
+        <div class="list text-center padding" ng-show="data.shops.length == 0">无结果</div>
+        <div class="list product-search">
+            <div ng-repeat="shop in data.shops">
+                <div class="item item-thumbnail-left">
+                    <img src="img/tab-home/dezhuang.png">
 
-        <div class="row">
-            <div class="col">
-                <button class="button button-small button-block button-light">德庄</button>
-            </div>
-            <div class="col">
-                <button class="button button-small button-block button-light">食汇堂</button>
-            </div>
-            <div class="col">
-                <button class="button button-small button-block button-light">美发</button>
-            </div>
-            <div class="col">
-                <button class="button button-small button-block button-light">国际旅游</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <button class="button button-small button-block button-light">德克士</button>
-            </div>
-            <div class="col">
-                <button class="button button-small button-block button-light">咖啡店</button>
-            </div>
-            <div class="col">
-                <button class="button button-small button-block button-light">足浴</button>
-            </div>
-            <div class="col">
-                <button class="button button-small button-block button-light">星巴克</button>
-            </div>
-        </div>
+                    <h2>{{shop.get('name')}}</h2>
 
-        <div class="row">
-            <div class="col col-25">
-                <div class="col">
-                    <button class="button button-small button-block button-light">宾馆</button>
+                    <p>{{shop.get('desc')}}</p>
+
+                    <p>&nbsp;</p>
+
+                    <!--<p><span class="assertive price">￥{{shop.get('price')}}</span><span class="origin-price">￥{{shop.get('origin-price')}}</span><span-->
+                            <!--class="pull-right">已售 {{shop.get('salenum')}}</span></p>-->
+                    <p>{{shop.get('categoryName')}}</p>
                 </div>
-            </div>
-            <div class="col col-25 col-25">
-                <div class="col">
-                    <button class="button button-small button-block button-light">美甲</button>
-                </div>
+                <div class="gray-wide-line"></div>
             </div>
         </div>
     </ion-content>

@@ -1,19 +1,17 @@
 <ion-view id="product-search">
-    <ion-nav-buttons side="primary">
-        <div class="bar bar-header">
-
-            <button class="button button-clear ion-chevron-left" style="border: 0; margin-right: 10px">
+    <ion-nav-bar class="bar-energized">
+        <ion-nav-buttons side="primary">
+            <button ui-sref="home" class="button button-clear ion-chevron-left" style="border: 0; margin-right: 10px">
             </button>
             <label class="item-input-wrapper" style="background: #ffffff;border-radius:60px;">
-                <span style="color: #737373 ">商品</span>
-                <i class="icon ion-ios-arrow-down placeholder-icon" style="color: #000000;"></i> &nbsp;
-                <input type="search" class="grey" placeholder="请输入商品关键词"
-                       style="font-size: 12px; height: auto; background: #ffffff; ">
+                <i class="icon ion-ios-search placeholder-icon" style="color: #737373;"></i>&nbsp;
+                <input type="search" class="grey" placeholder="请输入关键词" ng-model="search.item"
+                       style="font-size: 12px; height: auto; background: #ffffff;">
             </label>
 
-            <button class="button button-clear" ui-sref="tab.home">搜索</button>
-        </div>
-    </ion-nav-buttons>
+            <button class="button button-clear button-search" ng-click="searchItem()">搜索</button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
     <div class="tabs-striped tabs-top">
         <div class="tabs">
             <a class="tab-item" href="#" ui-sref="shop-search">
@@ -28,50 +26,124 @@
 
 
     <ion-content>
+        <div ng-show="!data.items">
+            <div>
+                <br/>
+                <br/>
+                <br/>
+                &nbsp;<b>历史：</b>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.item = 'wifi'; searchItem()">wifi</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.item = '双人'; searchItem()">双人</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.item = '美发'; searchItem()">美发</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.item = '旅游'; searchItem()">国际旅游</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.item = 'wifi'; searchItem()">wifi</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.item = '双人'; searchItem()">双人</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.item = '美发'; searchItem()">美发</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.item = '旅游'; searchItem()">国际旅游</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.item = 'wifi'; searchItem()">wifi</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.item = '双人'; searchItem()">双人</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.item = '美发'; searchItem()">美发</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.item = '旅游'; searchItem()">国际旅游</button>
+                </div>
+            </div>
+            &nbsp;<b>热搜：</b>
+
+            <div class="row">
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.item = 'wifi'; searchItem()">wifi</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.item = '双人'; searchItem()">双人</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.item = '美发'; searchItem()">美发</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.item = '旅游'; searchItem()">国际旅游</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.item = 'wifi'; searchItem()">wifi</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.item = '双人'; searchItem()">双人</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.item = '美发'; searchItem()">美发</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.item = '旅游'; searchItem()">国际旅游</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.item = 'wifi'; searchItem()">wifi</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.item = '双人'; searchItem()">双人</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.item = '美发'; searchItem()">美发</button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-light" ng-click="search.item = '旅游'; searchItem()">国际旅游</button>
+                </div>
+            </div>
+
+        </div>
 
         <div style="background-color: #ededed">
             <br/>
             <br/>
             <br/>
         </div>
+
+        <div class="list text-center padding" ng-show="data.items.length == 0">无结果</div>
         <div class="list product-search">
-            <div class="item item-thumbnail-left">
-                <img src="img/tab-home/dezhuang.png">
+            <div ng-repeat="item in data.items">
+                <div class="item item-thumbnail-left">
+                    <img src="img/tab-home/dezhuang.png">
 
-                <h2>德庄火锅美味 6人套餐</h2>
+                    <h2>{{item.get('name')}}</h2>
 
-                <p>五一特惠套餐，快约上几个好友来分享吧！</p>
+                    <p>{{item.get('desc')}}</p>
 
-                <p>&nbsp;</p>
+                    <p>&nbsp;</p>
 
-                <p><span class="assertive price">￥168</span><span class="origin-price">￥208</span><span
-                        class="pull-right">已售 316</span></p>
-            </div>
-            <div class="gray-wide-line"></div>
-            <div class="item item-thumbnail-left">
-                <img src="img/tab-home/dezhuang.png">
-
-                <h2>德庄火锅美味 6人套餐</h2>
-
-                <p>五一特惠套餐，快约上几个好友来分享吧！</p>
-
-                <p>&nbsp;</p>
-
-                <p><span class="assertive price">￥168</span><span class="origin-price">￥208</span><span
-                        class="pull-right">已售 316</span></p>
-            </div>
-            <div class="gray-wide-line"></div>
-            <div class="item item-thumbnail-left">
-                <img src="img/tab-home/dezhuang.png">
-
-                <h2>德庄火锅美味 6人套餐</h2>
-
-                <p>五一特惠套餐，快约上几个好友来分享吧！</p>
-
-                <p>&nbsp;</p>
-
-                <p><span class="assertive price">￥168</span><span class="origin-price">￥208</span><span
-                        class="pull-right">已售 316</span></p>
+                    <p><span class="assertive price">￥{{item.get('price')}}</span><span class="origin-price">￥{{item.get('origin-price')}}</span><span
+                            class="pull-right">已售 {{item.get('salenum')}}</span></p>
+                </div>
+                <div class="gray-wide-line"></div>
             </div>
         </div>
     </ion-content>

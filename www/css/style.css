@@ -1447,3 +1447,30 @@
 #collect .primary-buttons {
     width: 100%;
 }
+
+#shop-search .header-item, #product-search .header-item{
+    width: 100%;
+}
+
+#shop-search .primary-buttons, #product-search .primary-buttons{
+    width: 100%;
+}
+
+#shop-search .button-search, #product-search .button-search{
+    font-size: 14px;
+}
+
+#shop-search .price {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+#shop-search .origin-price {
+    text-decoration: line-through;
+    color: #737373;
+}
+
+#shop-search .tabs-top.tabs-striped .tab-item.tab-item-active, #shop-search .tabs-top.tabs-striped .tab-item.active, #shop-search .tabs-top.tabs-striped .tab-item.activated {
+    color: #f88701;
+    border-color: #f88701;
+}

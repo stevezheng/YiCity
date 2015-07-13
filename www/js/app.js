@@ -136,14 +136,16 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
       //todo: 跟效果图有出入
       .state('product-search', {
         url: '/product-search',
-        templateUrl: 'templates/product-search.html'
+        templateUrl: 'templates/product-search.html',
+        controller: 'SearchCtrl'
       })
 
       //店铺搜索
       //todo: 跟效果图有出入
       .state('shop-search', {
         url: '/shop-search',
-        templateUrl: 'templates/shop-search.html'
+        templateUrl: 'templates/shop-search.html',
+        controller: 'SearchCtrl'
       })
 
       //店铺评论
