@@ -952,6 +952,7 @@
 }
 #data-editing .item{
     color: #737373;
+    padding: 12px;
 }
 #data-editing .i{
     position: absolute;
