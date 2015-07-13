@@ -60,7 +60,8 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
       .state('home', {
         url: '/home',
         templateUrl: 'templates/tab-home.html',
-        controller: 'HomeCtrl'
+        controller: 'HomeCtrl',
+        cache: false
       })
 
       //商家
@@ -333,6 +334,8 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html',
+        controller: 'GPSListCtrl',
+        cache: false
       });
 
 

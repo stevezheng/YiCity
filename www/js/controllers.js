@@ -21,7 +21,8 @@ angular.module('starter.controllers', [])
   $scope.chat = Chats.get($stateParams.chatId);
 })
 
-  .controller('HomeCtrl', function($scope, $stateParams, Chats) {
+  .controller('HomeCtrl', function($scope, $stateParams, GPS) {
+    $scope.city = GPS.getCity();
     D('Item')
       .limit(0,5)
       .select()
