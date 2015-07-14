@@ -329,8 +329,10 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
 
       //编辑资料
       .state('data-editing', {
-        url: '/data-editing',
-        templateUrl: '/templates/data-editing.html'
+        url: '/data-editing/:type',
+        templateUrl: '/templates/data-editing.html',
+        controller: 'UserEditCtrl',
+        cache: false
       })
 
       .state('gps', {

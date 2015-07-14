@@ -1,54 +1,96 @@
 <ion-view view-title="资料编辑" id="data-editing">
-    <ion-nav-buttons side="primary">
-        <div class="bar bar-header">
-            <button class="button button-clear ion-ios-arrow-left pull-left" ui-sref="tab.home"></button>
-        </div>
-    </ion-nav-buttons>
+    <ion-nav-bar class="bar-energized">
+        <ion-nav-back-button>
+            返回
+        </ion-nav-back-button>
+        <ion-nav-buttons side="primary">
+        </ion-nav-buttons>
+    </ion-nav-bar>
     <ion-content>
-    <div class="item">
-        <span class="gray-middle">头像</span>
+        <div ng-show="type == 'none'">
+            <div class="item">
+                <span class="gray-middle">头像</span>
         <span class="pull-right">
         <img src="img/tmp/images/camera.png" height="46px"/>
             &nbsp;
             <i class="ion-ios-arrow-right i"></i>
         </span>
-    </div>
-    <div class="gray-wide-line"></div>
-        <div class="list">
-            <a class="item item-icon-right" href="#">
-                ID：TY6584
-            </a>
-            <a class="item" href="#">
-                手机：13599665545
-                <span class="pull-right">
-                    <span style="color: #ee8102">修改&nbsp;</span>
-                <i class="icon ion-ios-arrow-right i" style="position: absolute;top: 18px;"></i>
-                </span>
-            </a>
-            <a class="item" href="#">
-                邮箱：5246545@qq.com
-                <span class="pull-right">
-                    <span style="color: #ee8102">修改&nbsp;</span>
-                <i class="icon ion-ios-arrow-right i" style="position: absolute;top: 18px;"></i>
-                </span>
-            </a>
-            <a class="item" href="#">
-                性别：未填
-                <span class="pull-right">
-                    <span style="color: #ee8102">修改&nbsp;</span>
-                <i class="icon ion-ios-arrow-right i" style="position: absolute;top: 18px;"></i>
-                </span>
-            </a>
-            <a class="item" href="#">
-                生日：未填
-                <span class="pull-right">
-                    <span style="color: #ee8102">修改&nbsp;</span>
-                <i class="icon ion-ios-arrow-right i" style="position: absolute;top: 18px;"></i>
-                </span>
-            </a>
+            </div>
         </div>
+        <div class="gray-wide-line"></div>
+        <div class="list" ng-show="type == 'phone'">
+            <div class="item">
+                    手机
+                    <input type="text" placeholder="请输入新的手机号" ng-model="info.phone"/>
+            </div>
+        </div>
+        <div class="list" ng-show="type == 'email'">
+            <div class="item">
+                邮箱
+                <input type="text" placeholder="请输入新的邮箱" ng-model="info.email"/>
+            </div>
+        </div>
+        <div class="list" ng-show="type == 'sex'">
+            <div class="item">
+                性别
+                <input type="text" placeholder="请输入性别" ng-model="info.sex"/>
+            </div>
+        </div>
+        <div class="list" ng-show="type == 'birthday'">
+            <div class="item">
+                生日
+                <input type="text" placeholder="请输入生日" ng-model="info.birthday"/>
+            </div>
+        </div>
+        <div class="list" ng-show="type == 'password'">
+            <div class="item">
+                旧的密码
+                <input type="password" placeholder="请输入旧的密码" ng-model="info.password"/>
+            </div>
+            <div class="item">
+                新的密码
+                <input type="password" placeholder="请输入新的密码" ng-model="info.newPassword"/>
+            </div>
+            <div class="item">
+                确认新密码
+                <input type="password" placeholder="请确认新的密码" ng-model="info.reNewPassword"/>
+            </div>
+        </div>
+        <div class="list" ng-show="type == 'none'">
+            <a class="item item-icon-right">
+                ID：{{cUser.get('username')}}
+            </a>
+            <a class="item" ui-sref="data-editing({type: 'phone'})">
+                手机：{{cUser.get('mobilePhoneNumber')}}
+                <span class="pull-right">
+                    <span style="color: #ee8102">修改&nbsp;</span>
+                <i class="icon ion-ios-arrow-right i" style="position: absolute;top: 18px;"></i>
+                </span>
+            </a>
+            <a class="item" ui-sref="data-editing({type: 'email'})">
+                邮箱：{{cUser.get('email') || '未填'}}
+                <span class="pull-right">
+                    <span style="color: #ee8102">修改&nbsp;</span>
+                <i class="icon ion-ios-arrow-right i" style="position: absolute;top: 18px;"></i>
+                </span>
+            </a>
+            <a class="item" ui-sref="data-editing({type: 'sex'})">
+                性别：{{cUser.get('sex') || '未填'}}
+                <span class="pull-right">
+                    <span style="color: #ee8102">修改&nbsp;</span>
+                <i class="icon ion-ios-arrow-right i" style="position: absolute;top: 18px;"></i>
+                </span>
+            </a>
+            <a class="item" ui-sref="data-editing({type: 'birthday'})">
+                生日：{{cUser.get('birthday') || '未填'}}
+                <span class="pull-right">
+                    <span style="color: #ee8102">修改&nbsp;</span>
+                <i class="icon ion-ios-arrow-right i" style="position: absolute;top: 18px;"></i>
+                </span>
+            </a>
 
-            <a class="item" href="#">
+            <div class="gray-wide-line"></div>
+            <a class="item" ui-sref="data-editing({type: 'password'})">
                 登录密码
                 <span class="pull-right">
                     <span style="color: #ee8102">修改&nbsp;</span>
@@ -56,9 +98,17 @@
                 </span>
             </a>
 
-        <div class="gray-wide-line"></div>
-        <div class="bar bar-footer bar-assertive " style="position: absolute;bottom: -60px;width: 90%;left: 5%">
-            <div class="title">保存</div>
         </div>
+
+        <!--<div class="gray-wide-line"></div>-->
+        <!--<div class="bar bar-footer bar-assertive " style="position: absolute;bottom: -60px;width: 90%;left: 5%">-->
+            <!--<div class="title">保存</div>-->
+        <!--</div>-->
     </ion-content>
 </ion-view>
+<div class="bar bar-footer" style="padding: 0" ng-show="type != 'none'">
+    <div class="button-bar">
+        <a class="button button-assertive button-block" ng-click="submit()">修改</a>
+    </div>
+    <!--<div class="title">Footer</div>-->
+</div>
