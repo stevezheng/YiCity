@@ -360,6 +360,12 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
           templateUrl: '/templates/product-sort.html'
         })
 
+      //产品分类
+        .state('product-classify', {
+          url: '/product-classify',
+          templateUrl: '/templates/product-classify.html'
+        })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html'

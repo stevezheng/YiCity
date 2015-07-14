@@ -6,8 +6,8 @@
     </ion-nav-buttons>
     <ion-content class="has-footer" style="background-color: #eeeeee">
         <div class="button-bar shop-button-bar" style="background-color: #ffffff">
-            <a class="button button-clear icon-right ion-arrow-down-b" ng-click="setSelectType('category')">选择分类</a>
-            <a class="button button-clear icon-right ion-arrow-up-b" ng-click="setSelectType('sort')" style="color: #f80293">销量最高</a>
+            <a class="button button-clear icon-right ion-arrow-up-b" ng-click="setSelectType('category')" style="color: #f94647">选择分类</a>
+            <a class="button button-clear icon-right ion-arrow-down-b" ng-click="setSelectType('sort')" >销量最高</a>
         </div>
         <div class="product-Introduction">
             <dl>
@@ -43,25 +43,30 @@
         </div>
 
         <ul class="list">
-            <li class="item">
-                <h5 style="color: #f80293">销量最高</h5>
+            <li class="item" style="background-color: #ebebeb;">
+                <img src="../img/tmp/images/product-classify_01.png">
+                <span class="one" style="color: #f94647">厨具</span>
+                <span class="two"><a>豆浆机</a></span>
             </li>
             <li class="item">
-                <h5>价格最低</h5>
+                <img src="../img/tmp/images/product-classify_02.png">
+                <span class="one" >其他</span>
+                <span class="two"><a style="color: #f94647">电陶炉</a></span>
             </li>
-            <li class="item">
-                <h5>价格最高</h5>
+            <li class="item h">
+                <span class="two half"><a>料理机</a></span>
             </li>
-            <li class="item">
-                <h5>评价最高</h5>
+            <li class="item h" style="border-top: none">
+                <span class="two half"><a>咖啡机</a></span>
             </li>
-            <li class="item"  style="padding-bottom: 30px">
-                <h5></h5>
+            <li class="item h" style="border-top: none">
+                <span class="two half"><a>电磁炉</a></span>
             </li>
         </ul>
+
+
         <div class="gray-lucency-coverage">
         </div>
-
 
     </ion-content>
 </ion-view>
