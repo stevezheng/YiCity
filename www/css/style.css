@@ -1519,3 +1519,34 @@
     height: 60px;
     margin-top: 15px;
 }
+
+#free-trial .list{
+    padding-left: 13px;
+    margin-bottom: 3px;
+}
+#free-trial .item{
+    margin-left: 56px;
+    margin-top: -41px;
+    border: none;
+    padding-left: 0;
+    border-bottom: 1px solid #eaeaea;
+}
+#free-trial dd{
+    border-bottom: 1px solid #ececec;
+    margin-top: 15px;
+}
+#free-trial .price{
+    color: #ff0e28;
+}
+#free-trial .button-Confirm{
+    background-color: #ff193e;
+    height: 50px;
+    width: 94%;
+    position: absolute;
+    top: 133%;
+    left: 3%;
+    padding: 0 0 0 0;
+    border: none;
+    color: #ffffff;
+    border-radius: 5px;
+}

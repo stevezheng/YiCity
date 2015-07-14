@@ -342,9 +342,15 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
           templateUrl: '/templates/hottest-activity.html'
         })
 
+      //申请免费试用
+        .state('application-free-trial', {
+          url: '/application-free-trial',
+          templateUrl: '/templates/application-free-trial.html'
+        })
+
       .state('gps', {
         url: '/gps',
-        templateUrl: 'templates/gps.html',
+        templateUrl: 'templates/gps.html'
       });
 
 
