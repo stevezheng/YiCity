@@ -16,12 +16,36 @@
     $scope.toggleAll = toggleAll;
     $scope.optionToggled = optionToggled;
     $scope.isAllSelected = true;
+    $scope.editCart = editCart;
+    $scope.editCartDone = editCartDone;
+    $scope.decCount = decCount;
+    $scope.incCount = incCount;
 
     init();
 
     ////////////////
 
     function init() {
+    }
+
+    function editCart(item) {
+      item.editType = true;
+    }
+
+    function editCartDone(item) {
+      item.editType = false;
+    }
+
+    function decCount(item) {
+      if (item.count > 0) {
+        item.count--;
+        $scope.cost = initCost();
+      }
+    }
+
+    function incCount(item) {
+      item.count++;
+      $scope.cost = initCost();
     }
 
     function toggleAll() {
@@ -31,7 +55,7 @@
     }
 
     function optionToggled() {
-      $scope.isAllSelected = $scope.items.every(function(item){ return item.selected; })
+      $scope.isAllSelected = $scope.items.every(function(item){ return item.selected; });
       $scope.cost = initCost();
     }
     

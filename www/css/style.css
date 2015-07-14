@@ -735,6 +735,7 @@
     font-size: 15px;
     padding: 5px 18px 3px 15px;
     border: 1px solid #a7a7a7;
+    height: 32px;
 }
 #shopping-cart .item p {
     font-size: 10px;
@@ -1473,4 +1474,8 @@
 #shop-search .tabs-top.tabs-striped .tab-item.tab-item-active, #shop-search .tabs-top.tabs-striped .tab-item.active, #shop-search .tabs-top.tabs-striped .tab-item.activated {
     color: #f88701;
     border-color: #f88701;
+}
+
+#shopping-cart .item-checkbox .checkbox {
+    width: 100px;
 }
