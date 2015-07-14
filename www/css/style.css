@@ -1453,3 +1453,13 @@
     width: 100%;
     display: block;
 }
+
+#search-no-result button.button-block, #search-no-result button.button-full {
+    margin-bottom: -10px;
+}
+#search-no-result .tabs-striped .tab-item.active{
+   color:#fe9315;
+}
+#search-no-result{
+    background-color: #ededed;
+}

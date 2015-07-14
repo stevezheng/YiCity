@@ -335,6 +335,12 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
                 templateUrl: 'templates/feedback.html',
             })
 
+            //搜索（无结果状态）
+            .state('search-no-result', {
+                url: '/search-no-result',
+                templateUrl: 'templates/search-no-result.html',
+            })
+
             .state('gps', {
                 url: '/gps',
                 templateUrl: 'templates/gps.html',
