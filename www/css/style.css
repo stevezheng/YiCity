@@ -1454,3 +1454,51 @@
 #home .primary-buttons {
     width: 100%;
 }
+
+#sign p{
+    margin-top: 100px;
+    font-size: 20px;
+    text-align: center;
+    color: #ff0e28;
+}
+#sign .button{
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    background-color: #ff0e28;
+    border: none;
+    color: #fcfafa;
+    min-height: 7px;
+    height: 38px;
+}
+#hottest{
+    background-color: #eeeeee;
+}
+#hottest .list{
+    width: 94%;
+    position: absolute;
+    left: 3%;
+    margin-top: 42px;
+}
+#hottest img{
+    width: 100%;
+}
+#hottest .list-model{
+    margin-top: 12px;
+    background-color: #ffffff;
+}
+#hottest .name{
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#hottest .date{
+    font-size: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #ff0e28;
+}
+#hottest .text{
+    height: 40px;
+    margin-top: 15px;
+}

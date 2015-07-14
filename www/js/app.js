@@ -330,6 +330,18 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
         templateUrl: '/templates/data-editing.html'
       })
 
+      //签到
+        .state('sign', {
+          url: '/sign',
+          templateUrl: '/templates/sign.html'
+        })
+
+      //最热活动
+        .state('hottest-Activity', {
+          url: '/hottest-Activity',
+          templateUrl: '/templates/hottest-Activity.html'
+        })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html',
