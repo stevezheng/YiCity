@@ -1441,3 +1441,15 @@
 #home .primary-buttons {
     width: 100%;
 }
+
+#feedback{
+    background-color: #ededed;
+}
+
+#feedback label.item.item-input{
+    height: 260px;
+    color: #737373;
+    margin-top: 0;
+    width: 100%;
+    display: block;
+}
