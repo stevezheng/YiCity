@@ -16,6 +16,8 @@
       //}
     ];
 
+    var cartAddress = null;
+
     var tmpCart = {};
     return {
       query: query
@@ -25,11 +27,21 @@
       , format: format
       , getTmpCart: getTmpCart
       , setTmpCart: setTmpCart
+      , setAddress: setAddress
+      , getAddress: getAddress
     };
 
     ////////////////
 
     function query(where, page, num) {
+    }
+
+    function setAddress(address) {
+      cartAddress = address;
+    }
+
+    function getAddress() {
+      return cartAddress;
     }
 
     function all() {

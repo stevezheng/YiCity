@@ -2,5 +2,5 @@
   'use strict';
 
   angular
-    .module('address', ['address.add', 'address.manage']);
+    .module('address', ['address.add', 'address.manage', 'address.select']);
 })();

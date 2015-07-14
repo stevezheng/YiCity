@@ -1,0 +1,27 @@
+<ion-view view-title="选择收货地址" id="receiving-address-management">
+    <ion-nav-bar class="bar-energized">
+        <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content>
+        <div class="gray-wide-line"></div>
+        <div ng-repeat="address in addresses" ng-click="setAddress(address)">
+            <div class="gray-wide-line"></div>
+            <div class="item wide">
+                {{address.get('name')}}
+                <span class="pull-right">{{address.get('phone')}}</span>
+                <div class="line"></div>
+                <div class="gray-line"></div>
+                <div class="line"></div>
+                <p style="width: 100%;display:block;word-break: break-all;word-wrap: break-word; white-space: normal">
+                    {{address.get('province')}}
+                    {{address.get('city')}}
+                    {{address.get('area')}}
+                    {{address.get('address')}}
+                    <!--福建省厦门市思明区软件园二期观日路2014号之二5楼 5201 噼里啪啦科技-->
+                </p>
+                <div class="gray-line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -33,7 +33,7 @@
         return false;
       }
 
-      addresses();
+      getAddress();
     }
 
     function setPay(type) {
@@ -43,13 +43,21 @@
       $scope.method = type;
     }
 
-    function addresses() {
+    function getAddress() {
+      addresses(function(addresses) {
+        $scope.currentAddress = Cart.getAddress() || addresses[0];
+        console.log($scope.currentAddress);
+      })
+    }
+
+    function addresses(cb) {
       D('Address')
         .where({userId: AV.User.current().id})
         .select()
         .then(function(addresses) {
           $scope.addresses = addresses;
           $scope.$digest();
+          cb(addresses);
         })
     }
 

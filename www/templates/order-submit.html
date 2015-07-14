@@ -4,8 +4,8 @@
         </ion-nav-back-button>
     </ion-nav-bar>
     <ion-content>
-        <div class="item" ng-show="addresses.length > 0">
-            <i class="ion-ios-location-outline"></i>&nbsp;&nbsp;{{addresses[0].get('city')}}{{addresses[0].get('address')}}
+        <div class="item" ng-show="currentAddress" ui-sref="address-select">
+            <i class="ion-ios-location-outline"></i>{{currentAddress.get('name')}}&nbsp;&nbsp;{{currentAddress.get('city')}}{{currentAddress.get('address')}}
             <span class="pull-right enter"><i class="icon ion-ios-arrow-right"></i></span>
         </div>
         <div class="item" ng-show="addresses.length == 0" ui-sref="add-address">

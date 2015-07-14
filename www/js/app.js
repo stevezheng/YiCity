@@ -195,6 +195,14 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
         controller: 'AddressManageCtrl'
       })
 
+      //选择地址
+      .state('address-select', {
+        url: '/address-select',
+        templateUrl: 'templates/address-select.html',
+        controller: 'AddressSelectCtrl',
+        cache: false
+      })
+
       //登录
       .state('login', {
         url: '/login',
