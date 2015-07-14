@@ -337,9 +337,9 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
         })
 
       //最热活动
-        .state('hottest-Activity', {
-          url: '/hottest-Activity',
-          templateUrl: '/templates/hottest-Activity.html'
+        .state('hottest-activity', {
+          url: '/hottest-activity',
+          templateUrl: '/templates/hottest-activity.html'
         })
 
       .state('gps', {

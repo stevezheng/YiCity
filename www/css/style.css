@@ -1478,7 +1478,7 @@
     width: 94%;
     position: absolute;
     left: 3%;
-    margin-top: 42px;
+
 }
 #hottest img{
     width: 100%;
@@ -1492,13 +1492,30 @@
     margin-top: 10px;
     margin-left: 10px;
 }
-#hottest .date{
-    font-size: 10px;
+#hottest .name-p{
+    font-size: 16px;
     margin-top: 10px;
     margin-left: 10px;
+}
+#hottest .date{
+    font-size: 14px;
+    position: absolute;
+    margin-top: 0;
+    margin-left: 11%;
+    color: #ff0e28;
+}
+#hottest .date-p{
+    font-size: 14px;
+    position: absolute;
+    margin-top: -42px;
+    margin-left: 60%;
     color: #ff0e28;
 }
 #hottest .text{
     height: 40px;
+    margin-top: 15px;
+}
+#hottest .text-p{
+    height: 60px;
     margin-top: 15px;
 }
