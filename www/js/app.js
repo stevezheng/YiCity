@@ -353,6 +353,12 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
                 templateUrl: 'templates/search-recipes.html',
             })
 
+            //搜索（帖子）
+            .state('search-post', {
+                url: '/search-post',
+                templateUrl: 'templates/search-post.html',
+            })
+
             .state('gps', {
                 url: '/gps',
                 templateUrl: 'templates/gps.html',
