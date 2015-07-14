@@ -347,6 +347,12 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
                 templateUrl: 'templates/search-product.html',
             })
 
+            //搜索（食谱）
+            .state('search-recipes', {
+                url: '/search-recipes',
+                templateUrl: 'templates/search-recipes.html',
+            })
+
             .state('gps', {
                 url: '/gps',
                 templateUrl: 'templates/gps.html',
