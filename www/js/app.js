@@ -348,6 +348,12 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
           templateUrl: '/templates/application-free-trial.html'
         })
 
+      //产品搜索
+        .state('product', {
+          url: '/product',
+          templateUrl: '/templates/product.html'
+        })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html'

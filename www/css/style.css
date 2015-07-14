@@ -1550,3 +1550,49 @@
     color: #ffffff;
     border-radius: 5px;
 }
+
+#product .button-bar{
+    border-top: 1px solid #beb6b3;
+    margin-top: 0;
+}
+#product a{
+    color: #000000;
+    padding-right: 40px;
+    margin-left: 18px;
+}
+#product .product-Introduction{
+    width: 94%;
+    position: absolute;
+    left: 3%;
+    margin-top: 10px;
+
+}
+#product img{
+    width: 100%;
+}
+#product .name{
+    margin-top: 6px;
+    margin-left: 10px;
+    font-size: 13px;
+}
+#product .new-price{
+    margin-top: 2px;
+    margin-left: 10px;
+    font-weight: 600;
+}
+#product .old-price{
+    text-decoration:line-through;
+    margin-left: 10px;
+    color: #9f989d;
+    font-size: 9px;
+}
+#product .Number{
+    position: absolute;
+    right: 6%;
+    color: #9f989d;
+    font-size: 9px;
+}
+#product dl{
+    margin-bottom: 8px;
+    background-color: #ffffff;
+}
