@@ -32,10 +32,23 @@ angular.module('starter.controllers', [])
       })
   })
 
-  .controller('SearchCtrl', function ($scope, $state) {
+  .factory('Search', function() {
+    var item = '';
+    return {
+      getItem: function() {
+        return item;
+      },
+
+      setItem: function(_item) {
+        item = _item;
+      }
+    }
+  })
+
+  .controller('SearchCtrl', function ($scope, Search) {
     $scope.search = {
       shop: ''
-      , item: ''
+      , item: Search.getItem()
     };
     $scope.data = {
       items: null
@@ -43,6 +56,7 @@ angular.module('starter.controllers', [])
     };
 
     $scope.searchItem = function() {
+      Search.setItem($scope.search.item);
       var query = 'select * from Item where name like "' + $scope.search.item + '%"';
       AV.Query.doCloudQuery(query, {
         success: function (result) {
@@ -56,7 +70,8 @@ angular.module('starter.controllers', [])
     };
 
     $scope.searchShop = function() {
-      var query = 'select * from Shop where name like "'+$scope.search.shop+'%"';
+      Search.setItem($scope.search.item);
+      var query = 'select * from Shop where name like "'+$scope.search.item +'%"';
       AV.Query.doCloudQuery(query, {
         success: function(result){
           $scope.data.shops = result.results;
@@ -67,6 +82,12 @@ angular.module('starter.controllers', [])
         }
       });
     };
+
+    if ($scope.search.item != '') {
+      $scope.searchItem();
+      $scope.searchShop();
+    }
+
   })
 
   .controller('AccountCtrl', function ($scope) {

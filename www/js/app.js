@@ -137,7 +137,8 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
       .state('product-search', {
         url: '/product-search',
         templateUrl: 'templates/product-search.html',
-        controller: 'SearchCtrl'
+        controller: 'SearchCtrl',
+        cache: false
       })
 
       //店铺搜索
@@ -145,7 +146,8 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
       .state('shop-search', {
         url: '/shop-search',
         templateUrl: 'templates/shop-search.html',
-        controller: 'SearchCtrl'
+        controller: 'SearchCtrl',
+        cache: false
       })
 
       //店铺评论
@@ -339,7 +341,7 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
       .state('data-editing', {
         url: '/data-editing/:type',
         templateUrl: '/templates/data-editing.html',
-        controller: 'UserEditCtrl',
+        controller: 'UserEditCrrl',
         cache: false
       })
 

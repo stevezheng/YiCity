@@ -7,8 +7,8 @@
     <ion-content class="has-footer">
         <div class="row" style="background-color: #fc9215;min-height: 210px">
             <div class="col col-25"></div>
-            <div class="col col-50" style="text-align: center;" ng-show="cUser">
-                <img class="beauty" src="img/tmp/images/head-edit.png" width="100%" ui-sref="data-editing"/>
+            <div class="col col-50" style="text-align: center;" ng-show="cUser" ui-sref="data-editing({type: 'none'})">
+                <img class="beauty" src="img/tmp/images/head-edit.png" width="100%"/>
                 <span class="account-font">ID：{{cUser.get('username')}}</span>
                 <br/>
                 <span class="account-font">积分：{{cUser.get('point')}}</span>
