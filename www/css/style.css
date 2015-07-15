@@ -1487,3 +1487,16 @@
 #product-search .go-back {
     width: 30px;
 }
+
+#mc-homepage .bar .button {
+    line-height: 36px;
+}
+
+#mc-homepage .bar-footer {
+    height: 38px;
+}
+
+#mc-homepage .button.button-block, .button.button-full {
+     margin-top: 0;
+     margin-bottom: 0;
+}

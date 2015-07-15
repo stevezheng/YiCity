@@ -4,7 +4,7 @@
         </ion-nav-back-button>
         <ion-nav-buttons side="right">
             <button class="button button-clear ion-ios-cart" style="font-size: 24px;padding: 3px" ui-sref="shopping-cart"></button>
-            <button class="button button-clear ion-heart" style="font-size: 24px;padding: 3px" ng-click="collect()"></button>
+            <button class="button button-clear ion-ios-heart-outline" style="font-size: 24px;padding: 3px" ng-click="collect()"></button>
         </ion-nav-buttons>
     </ion-nav-bar>
     <ion-content>
@@ -129,10 +129,18 @@ border: solid 1px #b6b6b6; background-color:#cbcbcb;">
         </div>
     </ion-content>
     <div class="bar bar-footer" style="padding: 0" ng-show="totalCount > 0">
-        <div class="button-bar">
-            <a class="button button-energized">共{{totalCount}}件</a>
-            <a class="button button-royal" ng-click="buy()">选好了</a>
+        <div class="row" style="padding: 0">
+            <div class="col col-75" style="padding: 0">
+                <a class="button button-energized button-block" style="border-radius: 0"><i class="icon ion-ios-cart-outline"></i>共{{totalCount}}件</a>
+            </div>
+            <div class="col col-25" style="padding: 0">
+                <a class="button button-royal button-block" style="width: 100%; border-radius: 0" ng-click="buy()">选好了</a>
+            </div>
         </div>
+        <!--<div class="button-bar">-->
+            <!--<a class="button button-energized" style="width: 70%">共{{totalCount}}件</a>-->
+            <!--<a class="button button-royal" style="width: 30%" ng-click="buy()">选好了</a>-->
+        <!--</div>-->
         <!--<div class="title">Footer</div>-->
     </div>
 </ion-view>
