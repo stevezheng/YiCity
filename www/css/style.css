@@ -1479,3 +1479,11 @@
 #shopping-cart .item-checkbox .checkbox {
     width: 100px;
 }
+
+#shop-search .go-back {
+    width: 30px;
+}
+
+#product-search .go-back {
+    width: 30px;
+}
