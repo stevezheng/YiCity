@@ -220,7 +220,7 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
       //个人中心
       .state('personal-center', {
         url: '/personal-center',
-        templateUrl: '/templates/personal-center.html'
+        templateUrl: 'templates/personal-center.html'
       })
 
       //我的订单
@@ -340,7 +340,7 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
       //编辑资料
       .state('data-editing', {
         url: '/data-editing/:type',
-        templateUrl: '/templates/data-editing.html',
+        templateUrl: 'templates/data-editing.html',
         controller: 'UserEditCtrl',
         cache: false
       })

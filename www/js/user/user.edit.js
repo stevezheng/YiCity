@@ -86,13 +86,12 @@
           $yikeUtils.alert('提示', '两次密码不一样');
           return false;
         }
-        $scope.cUser.updatePassword($scope.info.password, $scope.info.newPassword,{
+        cUser.updatePassword($yi, '新密码',{
           success: function(){
-            $yikeUtils.alert('提示', '修改成功');
-            $scope.cUser = AV.User.current();
-            $ionicHistory.goBack();
+            //更新成功
           },
           error: function(err){
+            //更新失败
             console.dir(err);
           }
         });
