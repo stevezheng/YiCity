@@ -10,13 +10,17 @@
   /* @ngInject */
   function GPSListCtrl($scope, $location, $anchorScroll, GPS) {
     $scope.init = init;
-    $scope.data = [];
+    $scope.data = {
+      city: ''
+    };
     $scope.goto = goto;
 
     $scope.cityList = GPS.cityList;
     $scope.city = GPS.city;
     $scope.setCity = GPS.setCity;
     $scope.setCurrentCity = setCurrentCity;
+    $scope.search = search;
+    $scope.isSearch = false;
 
     init();
 
@@ -35,6 +39,10 @@
 
     function setCurrentCity() {
       GPS.setCity($scope.currentCity || '厦门');
+    }
+
+    function search() {
+      $scope.isSearch = true;
     }
   }
 })();

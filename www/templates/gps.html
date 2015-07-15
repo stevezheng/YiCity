@@ -8,11 +8,21 @@
         <div class="item item-input-inset" style="color: #000;">
             <label class="item-input-wrapper">
                 <i class="icon ion-ios-search placeholder-icon"></i>
-                <input type="text" class="grey full" placeholder="请输入城市中文名称或拼音">
+                <input type="text" class="grey full" placeholder="请输入城市中文名称或拼音" ng-model="data.city">
             </label>
-            <button class="button button-small button-energized">
+            <button class="button button-small button-energized" ng-click="search()">
                 搜索
             </button>
+        </div>
+        <div class="item item-divider" ng-show="isSearch">搜索结果</div>
+        <div class="row" ng-show="isSearch">
+            <div class="col col-30">
+                <button class="button button-light button-block" ng-click="setCity(data.city)">
+                    {{data.city}}
+                </button>
+            </div>
+            <div class="col col-30"></div>
+            <div class="col col-30"></div>
         </div>
         <div class="list">
             <div class="item item-divider">定位城市</div>
