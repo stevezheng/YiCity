@@ -18,6 +18,7 @@
     $scope.minus = minus;
     $scope.add = add;
     $scope.buy = buy;
+    $scope.openImage = openImage;
     $scope.totalCount = 0;
 
     init();
@@ -26,6 +27,11 @@
 
     function init() {
       query(shopId);
+    }
+
+    function openImage(image) {
+      console.log(image);
+      $yikeUtils.alert('<i class="pull-right">X</i>', '<img src="' + image + '" width="100%">')
     }
 
     function buy() {

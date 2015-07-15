@@ -106,7 +106,8 @@ border: solid 1px #b6b6b6; background-color:#cbcbcb;">
 
             <div class="list mc-homepage-NoCart">
                 <div class="item item-thumbnail-left" ng-repeat="item in items">
-                    <img ng-src="{{item.get('image')||'img/tab-home/dezhuang.png'}}" ui-sref="commodity-details({itemId: item.id})">
+                    <!--<img ng-src="{{item.get('image')||'img/tab-home/dezhuang.png'}}" ui-sref="commodity-details({itemId: item.id})">-->
+                    <img ng-src="{{item.get('image')||'img/tab-home/dezhuang.png'}}" ng-click="openImage(item.get('image'))">
 
                     <h2 ui-sref="commodity-details({itemId: item.id})">{{item.get('name')}}</h2>
 
