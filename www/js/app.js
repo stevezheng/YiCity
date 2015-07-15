@@ -341,7 +341,7 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
       .state('data-editing', {
         url: '/data-editing/:type',
         templateUrl: '/templates/data-editing.html',
-        controller: 'UserEditCrrl',
+        controller: 'UserEditCtrl',
         cache: false
       })
 
