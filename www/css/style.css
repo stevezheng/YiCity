@@ -1869,3 +1869,62 @@
     background-color: #f94546;
     color: #ffffff;
 }
+
+
+#recipes .button-bar{
+    border-top: 1px solid #beb6b3;
+    margin-top: 0;
+}
+#recipes a{
+    color: #000000;
+    padding-right: 11px;
+    margin-left: -8px;
+    font-weight:600;
+}
+#recipes img{
+    width: 100%;
+    height: 185px;
+}
+#recipes .name{
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight:600;
+}
+#recipes .all-type{
+    font-size: 13px;
+    color: #959595;
+    margin-top: 2px;
+    margin-left: 10px;
+}
+#recipes .Number{
+    position: absolute;
+    right: 6%;
+    color: #9f989d;
+    font-size: 13px;
+}
+#recipes dl{
+    margin-bottom: 8px;
+    background-color: #ffffff;
+    padding-bottom: 10px;
+    margin-top: 13px;
+}
+#recipes .list{
+    position: relative;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+    margin-top: -2px;
+}
+#recipes .list img{
+    width: 14px;
+    height: 80px;
+}
+#recipes .recipes-list{
+    max-width: 94%;
+    position: absolute;
+    left: 3%;
+    top: 50px;
+}

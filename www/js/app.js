@@ -390,6 +390,12 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
           templateUrl: '/templates/service-centre.html'
         })
 
+      //食谱
+        .state('recipes', {
+          url: '/recipes',
+          templateUrl: '/templates/recipes.html'
+        })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html'
