@@ -366,6 +366,12 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
           templateUrl: '/templates/product-classify.html'
         })
 
+      //配件专区
+        .state('accessories', {
+          url: '/accessories',
+          templateUrl: '/templates/accessories.html'
+        })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html'
