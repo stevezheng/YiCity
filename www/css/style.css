@@ -270,15 +270,21 @@
     background-color: #ededed;
 }
 
+#login .item-input {
+    width: 80%;
+    height: 40px;
+    border: none;
+}
+
 #login input[type="text"] {
 
     padding-left: 6px;
 }
 
 #login .font {
-    color: #ee8102;
-    position: absolute;
-    left: 75%;
+    color: #888888;
+    /*position: absolute;*/
+    /*left: 75%;*/
 }
 
 #more {

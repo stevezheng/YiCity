@@ -3,33 +3,39 @@
     <h1 class="title">登陆</h1>
     <button class="button button-clear" style="font-size: 12px;" ng-click="reg('register')">注册</button>
 </ion-header-bar>
-<ion-view view-title="登录" id="login">
+<ion-view view-title="" id="login">
+    <ion-nav-buttons side="primary">
+        <div class="bar bar-header">
+            <button class="button button-clear ion-ios-arrow-left pull-left" ui-sref="tab.home"></button>
+            <span style="padding-left: 33%">
+            <button class="login-button"
+                    style="background-color: #fdfdfe;border: none;border-bottom: 2px solid #fd0033;color: #fd0033">登录
+            </button>
+                <span>&nbsp;&nbsp;</span>
+            <button class="reg-button"
+                    style="background-color: #fdfdfe;border: none;color: #fd0033">注册
+            </button>
+            </span>
+        </div>
+    </ion-nav-buttons>
     <ion-content>
+        <div class="gray-wide-line"></div>
         <div class="item item-input-inset">
-            <div class="col col-25">
-                <p>
-                手机号码
-                </p>
-            </div>
-            <div class="col col-75">
-                <label class="item item-input">
-                    <input type="text" ng-model="user.phone" class="grey"  placeholder="请输入手机号" >
-                </label>
-            </div>
+            <img src="img/tmp/images/register_01.png" alt="" style="height: 26px;width: auto"/>
+            <label class="item item-input">
+                <input type="text" class="grey" placeholder="输入手机号登录" ng-model="user.phone" >
+            </label>
         </div>
         <div class="item item-input-inset">
-            <div class="col col-25">
-                <p>密码</p>
-            </div>
-            <div class="col col-75">
-                <label class="item item-input">
-                    <input type="password" ng-model="user.password" class="grey" placeholder="请输入密码" >
-                </label>
-            </div>
-         </div>
+            <img src="img/tmp/images/register_02.png" alt="" style="height: 26px;width: auto"/>
+            <label class="item item-input">
+                <input type="password" class="grey" placeholder="输入密码" ng-model="user.password" >
+            </label>
+        </div>
+        <div class="gray-wide-line"></div>
 
-        <div class="button button-assertive button-block" ng-click="doLogin(user.phone, user.password)">登录</div>
-        <span class="font" ui-sref="forget-password">忘记密码？</span>
+        <div class="button button-assertive button-block" ng-click="doLogin(user.phone, user.password)" style="background-color: #fd0033">登录</div>
+        <span class="font pull-right" ui-sref="forget-password">忘记密码&nbsp;&nbsp;</span>
     </ion-content>
 </ion-view>
 
