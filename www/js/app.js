@@ -378,6 +378,12 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
           templateUrl: '/templates/service-network.html'
         })
 
+      //服务吐槽
+        .state('service-review', {
+          url: '/service-review',
+          templateUrl: '/templates/service-review.html'
+        })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html'
