@@ -940,11 +940,15 @@
     /*white-space: normal;*/
     color: #737373;
 }
+#registered-success{
+    background-color: #ededed;
+}
+
 
 #registered-success .center {
     position: absolute;
     left: 25%;
-    padding-top: 70%;
+    padding-top: 50%;
 
 }
 
@@ -1667,3 +1671,4 @@
 #search-post .pull-right {
     padding-top: 0px;
 }
+#
