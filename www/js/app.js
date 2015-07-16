@@ -408,6 +408,12 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
           templateUrl: '/templates/recipes-technology.html'
         })
 
+      //食谱图文模式
+        .state('recipes-graphic-mode', {
+          url: '/recipes-graphic-mode',
+          templateUrl: '/templates/recipes-graphic-mode.html'
+        })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html'
