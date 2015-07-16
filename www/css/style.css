@@ -1933,10 +1933,10 @@
     height: 270px;
     z-index: 10;
     background-repeat: repeat-y;
-    background-color: #484048;
-    filter:alpha(opacity=50);
-    -moz-opacity:0.5;
-    opacity:0.5;
+    background-color: #272427;
+    filter:alpha(opacity=40);
+    -moz-opacity:0.4;
+    opacity:0.4;
 }
 #recipes li{
     border-color: #f3eff4;
