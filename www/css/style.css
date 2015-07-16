@@ -1696,3 +1696,63 @@
 #accessories li{
     border-color: rgb(233, 242, 239);
 }
+
+
+#service-network .tabs{
+    background-color: #ffffff;
+    margin-top: 1px;
+    border-bottom: 1px solid #eee5ec;
+}
+#service-network .active{
+    margin-top: 0;
+    color: #ff6767;
+    border-bottom: 2px solid #ff6767;
+}
+#service-network .list{
+    margin-top: 62px;
+}
+#service-network .list .item{
+    max-width: 80%;
+    max-height: 30px;
+}
+#service-network .list button{
+    position: absolute;
+    right: 1%;
+    top: 10%;
+    background-color: #f94647;
+    border: none;
+    border-radius: 2px;
+    color: #ffffff;
+    min-width: 40px;
+    min-height: 25px;
+    font-size: 10px;
+}
+#service-network .item-in{
+    max-width: 94%;
+    margin-left: 3%;
+    border-left: none;
+    border-right: none;
+    margin-top: -5px;
+    padding-bottom: 8px;
+}
+#service-network .item .work{
+    width: 70%;
+    font-size: 14px;
+    margin-top: -6px;
+    margin-left: -15px;
+}
+#service-network .item .work p{
+    font-size: 9px;
+    margin-top: 6px;
+    width: 100%;
+    display: block;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: normal;
+}
+#service-network img{
+    width: 25px;
+    position: absolute;
+    top: 37%;
+    right: 15%;
+}
