@@ -1879,7 +1879,7 @@
     color: #000000;
     padding-right: 11px;
     margin-left: -8px;
-    font-weight:600;
+    font-size: 16px;
 }
 #recipes img{
     width: 100%;
@@ -1927,4 +1927,21 @@
     position: absolute;
     left: 3%;
     top: 50px;
+}
+#recipes .gray-lucency-coverage{
+    width: 100%;
+    height: 270px;
+    z-index: 10;
+    background-repeat: repeat-y;
+    background-color: #484048;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    opacity:0.5;
+}
+#recipes li{
+    border-color: #f3eff4;
+}
+#recipes h5{
+    font-size: 15px;
+    color: #4b464b;
 }

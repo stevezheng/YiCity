@@ -396,6 +396,12 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
           templateUrl: '/templates/recipes.html'
         })
 
+      //食谱功效选择
+        .state('recipes-effect', {
+          url: '/recipes-effect',
+          templateUrl: '/templates/recipes-effect.html'
+        })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html'
