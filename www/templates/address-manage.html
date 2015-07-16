@@ -19,7 +19,7 @@
                 <div class="line"></div>
                 <div class="gray-line"></div>
                 <div class="line"></div>
-                <p style="width: 100%;display:block;word-break: break-all;word-wrap: break-word; white-space: normal">
+                <p style="font-size: 16px; padding: 10px 0; width: 100%;display:block;word-break: break-all;word-wrap: break-word; white-space: normal">
                     {{address.get('province')}}
                     {{address.get('city')}}
                     {{address.get('area')}}
@@ -34,10 +34,14 @@
             </label>
                 <span class="move-up">&nbsp;&nbsp;设为默认</span>
              <span class="pull-right gray">
+                 <span ng-click="edit(address)">
                  <img src="img/tmp/images/edit.png" style="vertical-align: middle;" alt="middle"/>
                  &nbsp;编辑 &nbsp;&nbsp;
+                 </span>
+                 <span ng-click="del(address)">
                  <img src="img/tmp/images/delete.png" style="vertical-align: middle;" alt="middle"/>
                  &nbsp;删除
+                 </span>
              </span>
             </span>
             </div>
