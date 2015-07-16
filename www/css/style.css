@@ -1514,3 +1514,7 @@
     border-style: solid;
     font-size: 16px;
 }
+
+#home .button-city:before {
+    font-size: 10px;
+}
