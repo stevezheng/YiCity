@@ -402,6 +402,12 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
           templateUrl: '/templates/recipes-effect.html'
         })
 
+      //食谱全部工艺
+        .state('recipes-technology', {
+          url: '/recipes-technology',
+          templateUrl: '/templates/recipes-technology.html'
+        })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html'
