@@ -21,6 +21,7 @@
     $scope.setCurrentCity = setCurrentCity;
     $scope.search = search;
     $scope.isSearch = false;
+    $scope.searchCity = '无结果';
 
     init();
 
@@ -43,6 +44,11 @@
 
     function search() {
       $scope.isSearch = true;
+      var isCity = _.indexOf($scope.cityList, $scope.data.city);
+      console.log(isCity);
+      if (isCity > -1) {
+        $scope.searchCity = $scope.data.city;
+      }
     }
   }
 })();
