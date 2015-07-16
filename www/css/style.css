@@ -298,6 +298,16 @@
 #register .item-input {
     width: 80%;
     height: 40px;
+    border: none;
+}
+
+#register .item-input.border{
+    border: 1px solid #cbcbcb;
+    margin-right: auto;
+}
+
+#register{
+    background-color: #ededed;
 }
 
 #register .padding-more {
@@ -328,7 +338,7 @@
     top: -8px;
 }
 
-#register .bar.bar-footer.bar-assertive {
+#register .button.button-assertive.button-block {
     background-color: #fd0033;
 }
 
@@ -395,7 +405,7 @@
     font-size: 19px;
 }
 
-#password .line {
+#forget-password .line {
     height: 1px;
     background-color: #e06769;
 }
@@ -405,10 +415,13 @@
     height: 32px;
 }
 
-#password .item-input {
+#forget-password .item-input {
     width: 80%;
     height: 32px;
+    border: none;
 }
+
+
 
 #back-benefit .item {
     border: none;
@@ -1671,4 +1684,3 @@
 #search-post .pull-right {
     padding-top: 0px;
 }
-#

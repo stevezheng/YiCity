@@ -1,37 +1,46 @@
-<ion-view view-title="注册" id="register">
+<ion-view view-title="" id="register">
     <ion-nav-buttons side="primary">
         <div class="bar bar-header">
-            <button class="button button-clear ion-ios-arrow-left pull-left" ui-sref="tab.account"></button>
+            <button class="button button-clear ion-ios-arrow-left pull-left" ui-sref="tab.home"></button>
+            <span style="padding-left: 33%">
+            <button class="login-button"
+                    style="background-color: #fdfdfe;border: none;color: #fd0033">登录
+            </button>
+                <span>&nbsp;&nbsp;</span>
+            <button class="reg-button"
+                    style="background-color: #fdfdfe;border: none;border-bottom: 2px solid #fd0033;color: #fd0033">注册
+            </button>
+            </span>
         </div>
     </ion-nav-buttons>
     <ion-content>
         <div class="item item-input-inset">
-            <span class="padding-more">手机号 </span>&nbsp;&nbsp;&nbsp;
+            <img src="img/tmp/images/register_01.png" alt="" style="height: 30px;width: auto"/>&nbsp;&nbsp;&nbsp;
             <label class="item item-input">
-                <input type="text" class="grey" placeholder="请输入手机号码" ng-model="user.phone" >
+                <input type="text" class="grey" placeholder="输入手机号" ng-model="user.phone" >
             </label>
         </div>
         <div class="item item-input-inset">
-            <span class="padding-more">登录密码 </span>&nbsp;&nbsp;&nbsp;
+            <img src="img/tmp/images/register_02.png" alt="" style="height: 30px;width: auto"/>&nbsp;&nbsp;&nbsp;
             <label class="item item-input">
-                <input type="password" class="grey" placeholder="请输入登录密码" ng-model="user.password" >
+                <input type="password" class="grey" placeholder="输入密码" ng-model="user.password" >
             </label>
         </div>
         <div class="item item-input-inset">
-            <span class="padding-more">确认密码 </span>&nbsp;&nbsp;&nbsp;
+            <img src="img/tmp/images/register_02.png" alt="" style="height: 30px;width: auto"/>&nbsp;&nbsp;&nbsp;
             <label class="item item-input">
-                <input type="password" class="grey" placeholder="请再次确认密码"  ng-model="user.rePassword">
+                <input type="password" class="grey" placeholder="确认密码"  ng-model="user.rePassword">
             </label>
         </div>
         <div class="item item-input-inset">
-            <span class="padding-more">邀请码 </span>&nbsp;&nbsp;&nbsp;
+            <img src="img/tmp/images/register_03.png" alt="" style="height: 30px;width: auto"/>&nbsp;&nbsp;&nbsp;
             <label class="item item-input">
-                <input type="text" class="grey" placeholder="请输入邀请码"  ng-model="user.inviteCode">
+                <input type="text" class="grey" placeholder="输入邀请码"  ng-model="user.inviteCode">
             </label>
         </div>
         <div class="item item-input-inset">
-            <span class="padding-more">验证码 </span>
-            <label class="item item-input" style="width: 40%">
+            <img src="img/tmp/images/register_04.png" alt="" style="width: 30px;height: auto"/>&nbsp;&nbsp;&nbsp;
+            <label class="item item-input border" style="width: 35%">
                 <input type="text" placeholder="验证码" ng-model="user.code">
             </label>
             <button class="button button-light button-blue" ng-click="reg(user.phone, user.password, user.rePassword, user.inviteCode)">
@@ -39,11 +48,5 @@
             </button>
         </div>
         <div class="button button-assertive button-block" ng-click="submit(user.phone, user.password, user.rePassword, user.code)">提交</div>
-        <div class="font-bottom">
-            <span>温馨提示：<br/></span>
-            <span class="auto-linefeed">
-                邀请码不能更改，请向你身边有装本软件的好有索取邀请码。如无法获取邀请码,
-                可填写平台邀请码无邀请码：<span style="color: red">TY569985</span>完成注册。</span>
-        </div>
     </ion-content>
 </ion-view>
