@@ -421,6 +421,10 @@
     border: none;
 }
 
+#forget-password .item-input.border{
+    border: 1px solid #cdcdcd;
+    margin-right: auto;
+}
 
 
 #back-benefit .item {
