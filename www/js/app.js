@@ -384,6 +384,12 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
           templateUrl: '/templates/service-review.html'
         })
 
+      //服务中心
+        .state('service-centre', {
+          url: '/service-centre',
+          templateUrl: '/templates/service-centre.html'
+        })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html'
