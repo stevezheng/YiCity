@@ -10,7 +10,6 @@
   /* @ngInject */
   function AddressManageCtrl($scope, $yikeUtils) {
     $scope.init = init;
-    $scope.edit = edit;
     $scope.del = del;
 
     init();
@@ -53,10 +52,6 @@
               })
           }
         })
-    }
-
-    function edit(address) {
-
     }
   }
 })();

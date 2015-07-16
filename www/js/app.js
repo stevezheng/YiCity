@@ -197,6 +197,13 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
         controller: 'AddressManageCtrl'
       })
 
+      //编辑收货地址
+      .state('address-edit', {
+        url: '/address-edit/:id',
+        templateUrl: 'templates/address-edit.html',
+        controller: 'AddressEditCtrl'
+      })
+
       //选择地址
       .state('address-select', {
         url: '/address-select',

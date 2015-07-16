@@ -1,0 +1,33 @@
+<ion-view view-title="编辑地址" id="add-address">
+    <ion-nav-bar class="bar-energized">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content class="has-footer">
+        <div class="list">
+            <label class="item item-input">
+                <span style="width: 100px">收货人：</span>
+                <input type="text" placeholder="收货人" ng-model="address.name">
+            </label>
+            <label class="item item-input">
+                <span style="width: 100px">手机号码：</span>
+                <input type="text" placeholder="手机号码" ng-model="address.phone">
+            </label>
+            <label class="item item-input">
+                <span style="width: 100px">所在城市：</span>
+                <input type="text" placeholder="所在城市" ng-model="address.city">
+            </label>
+            <label class="item item-input">
+                <span style="width: 100px">详细地址：</span>
+                <input type="text" placeholder="详细地址" ng-model="address.address">
+            </label>
+        </div>
+        <div style="height: 150px"></div>
+
+
+
+    </ion-content>
+    <div class="bar bar-footer bar-assertive ">
+        <div class="title" ng-click="submit()">提交</div>
+    </div>
+</ion-view>
