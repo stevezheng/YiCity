@@ -362,6 +362,11 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
             .state('gps', {
                 url: '/gps',
                 templateUrl: 'templates/gps.html',
+            })
+
+            .state('my-activities', {
+                url: '/my-activities',
+                templateUrl: 'templates/my-activities.html',
             });
 
 
