@@ -959,8 +959,8 @@
     /*width: 100%;*/
     /*display: block;*/
     /*word-break: break-all;*/
-    /*word-wrap: break-word;*/
-    /*white-space: normal;*/
+    word-wrap: break-word;
+    white-space: normal;
     color: #737373;
 }
 #registered-success{
