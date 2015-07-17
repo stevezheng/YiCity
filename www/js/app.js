@@ -363,7 +363,7 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
                 url: '/gps',
                 templateUrl: 'templates/gps.html',
             })
-
+            //我的活动
             .state('my-activities', {
                 url: '/my-activities',
                 templateUrl: 'templates/my-activities.html',

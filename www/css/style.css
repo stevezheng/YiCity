@@ -685,11 +685,6 @@
     background-color: #ffffff;
 }
 
-#shopping-cart .col img {
-    width: 22px;
-    height: 22px;
-}
-
 #shopping-cart .col h5 {
     font-size: 115%;
     margin-top: 0;
@@ -781,6 +776,7 @@
     font-size: 15px;
     padding: 5px 18px 3px 15px;
     border: 1px solid #a7a7a7;
+    height: 32px;
 }
 
 #shopping-cart .item p {
@@ -1725,4 +1721,8 @@
     width: 85px;
     bottom: 9px;
     right: 15px;
+}
+
+#area{
+    font-weight: bold;
 }
