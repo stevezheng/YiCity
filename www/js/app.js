@@ -426,6 +426,12 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
           templateUrl: '/templates/healthy-classroom.html'
         })
 
+      //返利签到
+        .state('recipes-sign', {
+          url: '/recipes-sign',
+          templateUrl: '/templates/recipes-sign.html'
+        })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html'
