@@ -414,6 +414,12 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
           templateUrl: '/templates/recipes-graphic-mode.html'
         })
 
+      //活动详情
+        .state('activity-details', {
+          url: '/activity-details',
+          templateUrl: '/templates/activity-details.html'
+        })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html'

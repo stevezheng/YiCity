@@ -1945,3 +1945,69 @@
     font-size: 15px;
     color: #4b464b;
 }
+
+
+#activity-details img{
+    width: 100%;
+    margin-top: -1px;
+}
+#activity-details .name{
+    margin-top: 5px;
+}
+#activity-details .name img{
+    width: 3px;
+    margin-left: 10px;
+}
+#activity-details .name .word{
+    font-size: 15px;
+    margin-left: 6px;
+}
+
+#activity-details .grey-word{
+    margin-left: 25px;
+    font-size: 13px;
+    color: rgba(126, 123, 123, 0.93);
+}
+#activity-details .red-word{
+    font-size: 14px;
+    color: #f94647;
+    margin-left: -3px;
+}
+#activity-details .list .button{
+    width: 84%;
+    position: absolute;
+    left: 8%;
+    top: 290px;
+    background-color: #f94546;
+    border: none;
+    color: #ffffff;
+    border-radius: 5px;
+}
+#activity-details .details{
+    border-top: 1px solid #eae1e9;
+    margin-top: 70px;
+}
+#activity-details .details .button{
+    width: 50%;
+    border: none;
+    background-color: #ffffff;
+    color: #868686;
+    font-size: 14px;
+}
+#activity-details .details a{
+    border-bottom: 2px solid #f94647;
+    padding-bottom: 13px;
+    margin-bottom: 0;
+}
+#activity-details .parameter{
+    background-color: #f1f1f1;
+    margin-top: -22px;
+}
+#activity-details .parameter .key{
+    font-size: 5px;
+    -webkit-text-size-adjust:none;
+}
+#activity-details .parameter .key .crude{
+    font-size: 5px;
+    -webkit-text-size-adjust:none;
+}
