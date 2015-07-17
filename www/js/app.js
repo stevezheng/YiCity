@@ -93,10 +93,10 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
         cache: false
       })
 
-      //更多
-      .state('more', {
-        url: '/more',
-        templateUrl: 'templates/tab-more.html',
+      //设置
+      .state('setting', {
+        url: '/setting',
+        templateUrl: 'templates/setting.html',
         controller: 'MoreCtrl'
       })
 

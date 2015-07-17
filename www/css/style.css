@@ -288,20 +288,6 @@
     left: 75%;
 }
 
-#more {
-    background-color: #ededed;
-}
-
-#more .new {
-    height: 20px;
-    position: absolute;
-    left: 90px;
-}
-
-#more ion-content {
-    color: #737373;
-}
-
 #register .item-input {
     width: 80%;
     height: 40px;
@@ -2037,4 +2023,31 @@
     margin-left: 140px;
     margin-top: -5px;
     margin-bottom: 0;
+}
+
+
+
+#setting {
+    background-color: #ededed;
+}
+
+#setting img{
+    height: 15px;
+    position: absolute;
+    left: 90px;
+}
+
+#setting ion-content {
+    color: #737373;
+}
+#setting a.item{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+#setting i.icon{
+    font-size: 18px;
+}
+#setting .list{
+    margin-bottom: 10px;
 }
