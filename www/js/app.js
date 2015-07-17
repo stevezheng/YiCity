@@ -367,6 +367,12 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
             .state('my-activities', {
                 url: '/my-activities',
                 templateUrl: 'templates/my-activities.html',
+            })
+
+            //论坛
+            .state('forum', {
+                url: '/forum',
+                templateUrl: 'templates/forum.html',
             });
 
 

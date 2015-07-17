@@ -180,7 +180,7 @@
     background-color: #ededed;
 }
 
-#online-payment .item.order-menu{
+#online-payment .item.order-menu {
     padding-bottom: 0px;
 }
 
@@ -311,12 +311,12 @@
     border: none;
 }
 
-#register .item-input.border{
+#register .item-input.border {
     border: 1px solid #cbcbcb;
     margin-right: auto;
 }
 
-#register{
+#register {
     background-color: #ededed;
 }
 
@@ -431,11 +431,10 @@
     border: none;
 }
 
-#forget-password .item-input.border{
+#forget-password .item-input.border {
     border: 1px solid #cdcdcd;
     margin-right: auto;
 }
-
 
 #back-benefit .item {
     border: none;
@@ -963,10 +962,10 @@
     white-space: normal;
     color: #737373;
 }
-#registered-success{
+
+#registered-success {
     background-color: #ededed;
 }
-
 
 #registered-success .center {
     position: absolute;
@@ -1695,7 +1694,6 @@
     padding-top: 0px;
 }
 
-
 #my-activities {
     background-color: #ededed;
 }
@@ -1717,12 +1715,44 @@
     padding-top: 5px;
 }
 
-#my-activities .button.button-small.button-assertive{
+#my-activities .button.button-small.button-assertive {
     width: 85px;
     bottom: 9px;
     right: 15px;
 }
 
-#area{
+#area {
     font-weight: bold;
+}
+
+#forum {
+    background-color: #ededed;
+}
+
+#forum .wrap {
+    width: 104%;
+    display: block;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+#forum dl {
+    margin-bottom: 0px;
+    padding-left: 18px;
+}
+
+#forum .item-thumbnail-left > img:first-child {
+    max-width: 100px;
+}
+
+#forum .item p:last-child {
+    margin-bottom: -7px;
+}
+
+#forum .pull-right {
+    padding-top: 0px;
+}
+
+#forum .tabs-striped .tab-item.active {
+    color: #fe9315;
 }
