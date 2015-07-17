@@ -432,6 +432,12 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
           templateUrl: '/templates/recipes-sign.html'
         })
 
+      //返利说明
+        .state('recipes-explain', {
+          url: '/recipes-explain',
+          templateUrl: '/templates/recipes-explain.html'
+        })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html'

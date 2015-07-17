@@ -2065,6 +2065,8 @@
     border-bottom: 2px solid #f94647;
     color: #f94647;
     padding-bottom: 13px;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 #recipes-sign .list{
     background-color: #ffffff;
@@ -2110,6 +2112,73 @@
 }
 #recipes-sign .word-three{
     font-size: 14px;
+    color: #f94647;
+    margin-left: -7px;
+}
+
+
+#recipes-explain .button-s{
+    margin-top: 0;
+    border-top: 1px solid #c1b7ba;
+}
+#recipes-explain .button-s .button{
+    width: 50%;
+    border: none;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #868891;
+}
+#recipes-explain .button-s .button .chose{
+    border-bottom: 2px solid #f94647;
+    color: #f94647;
+    padding-bottom: 13px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+#recipes-explain .list{
+    background-color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#recipes-explain dl{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+#recipes-explain .list .icon{
+    color: #e1dde5;
+    border: none;
+    font-size: 12px;
+}
+#recipes-explain .sign{
+    font-size: 14px;
+    margin-left: 6px;
+}
+#recipes-explain .date{
+    font-size: 14px;
+    margin-top: 5px;
+}
+#recipes-explain dd.one{
+    padding-bottom: 6px;
+}
+#recipes-explain dd.two{
+    margin-top: 10px;
+}
+#recipes-explain .word-one{
+    font-size: 15px;
+    color: #94969f;
+}
+#recipes-explain .pull-right{
+    padding-top: 0;
+    margin-top: 0;
+}
+#recipes-explain .word-two{
+    font-size: 14px;
+    color: rgba(148, 150, 159, 0.8);
+}
+#recipes-explain .word-three{
+    font-size: 15px;
     color: #f94647;
     margin-left: -7px;
 }
