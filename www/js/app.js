@@ -438,6 +438,13 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
           templateUrl: '/templates/recipes-explain.html'
         })
 
+
+      //步骤参考
+        .state('step-reference', {
+          url: '/step-reference',
+          templateUrl: '/templates/step-reference.html'
+        })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html'
