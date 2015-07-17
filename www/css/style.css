@@ -2011,3 +2011,30 @@
     font-size: 5px;
     -webkit-text-size-adjust:none;
 }
+
+
+
+#healthy-classroom .all{
+    background-color: #ffffff;
+    margin-top: 10px;
+}
+#healthy-classroom img{
+    width: 105px;
+    height: 80px;
+}
+#healthy-classroom .list{
+    padding: 10px 10px 6px 9px;
+}
+#healthy-classroom .word{
+    margin-left: 115px;
+    margin-top: -87px;
+}
+#healthy-classroom p{
+    font-size: 12px;
+    color: rgba(109, 111, 120, 0.77);
+}
+#healthy-classroom .word .num{
+    margin-left: 140px;
+    margin-top: -5px;
+    margin-bottom: 0;
+}

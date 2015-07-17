@@ -420,6 +420,12 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
           templateUrl: '/templates/activity-details.html'
         })
 
+      //健康课堂
+        .state('healthy-classroom', {
+          url: '/healthy-classroom',
+          templateUrl: '/templates/healthy-classroom.html'
+        })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html'
