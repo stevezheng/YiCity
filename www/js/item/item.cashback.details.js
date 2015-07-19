@@ -2,13 +2,13 @@
   'use strict';
 
   angular
-    .module('item.bigsell.details', [])
-    .controller('ItemBigsellDetailsCtrl', ItemBigsellDetailsCtrl);
+    .module('item.cashBack.details', [])
+    .controller('ItemCashBackDetailsCtrl', ItemCashBackDetailsCtrl);
 
-  ItemBigsellDetailsCtrl.$inject = ['$scope', '$state', 'Cart'];
+  ItemCashBackDetailsCtrl.$inject = ['$scope', '$state', 'Cart'];
 
   /* @ngInject */
-  function ItemBigsellDetailsCtrl($scope, $state, Cart) {
+  function ItemCashBackDetailsCtrl($scope, $state, Cart) {
     var id = $state.params.id;
     $scope.init = init;
     $scope.item = null;
@@ -23,7 +23,7 @@
     }
 
     function query() {
-      D('FlashSale')
+      D('CashBack')
         .where({'objectId': id})
         .include('Item')
         .find()
@@ -44,8 +44,7 @@
 
     function buy() {
       var item = $scope.item.get('Item');
-      item.set('price', $scope.item.get('discountPrice'));
-      item.set('bigSellId', $scope.item.id);
+      item.set('cashBackId', $scope.item.id);
       item.set('specialType', 'bigSell');
       var cart = {
         item: item

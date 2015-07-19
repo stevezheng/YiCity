@@ -1,0 +1,118 @@
+<ion-view view-title="商品详情" id="commodity">
+    <ion-nav-bar class="bar-energized">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+        <ion-nav-buttons side="right">
+            <!--<button class="button button-clear ion-ios-cart" style="font-size: 24px;padding: 3px" ui-sref="shopping-cart"></button>-->
+            <button class="button button-clear ion-heart" style="font-size: 24px;padding: 3px" ng-click="collect()"></button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content>
+        <ion-slide-box>
+            <ion-slide>
+                <div class="box">
+                    <img ng-src="{{item.get('Item').get('image') || 'img/commodity/trade-name.png'}}" width="100%" height="150"/>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box">
+                    <img src="img/commodity/trade-name.png" width="100%" height="150"/>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box">
+                    <img src="img/commodity/trade-name.png" width="100%" height="150"/>
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+        <div class="item" style="border: none">
+            <p>{{item.get('Item').get('name')}}</p>
+            <p>{{item.get('Item').get('title')}}</p>
+            <p>
+                <span style="color: #fe9315; font-size: 30px" class="button button-clear">
+                    {{item.get('Item').get('price')}} 元
+                </span>
+                <span ng-if="item.get('Item').get('originPrice')" style="text-decoration: line-through; color: #636363; font-size: 14px" class="button button-clear">
+                    {{item.get('Item').get('originPrice')}} 元
+                </span>
+                <button class="button button-energized pull-right-price" style="font-size: 16px" ng-click="buy()">
+                    返现 {{item.get('cashBack')}} 元
+                </button>
+            </p>
+
+        </div>
+
+        <div class="white-line"></div>
+
+        <div class="item-divider" style="min-height: 0px;"></div>
+
+        <div class="item" ui-sref="homepage({shopId: shop.id})">
+            <img src="img/commodity/shop.png" width="30" style="padding-left: 10px">&nbsp;
+            <span class style="font-size: 16px; color: #222222">{{shop.get('name')}}</span>
+            <span class="pull-right enter ">进入店铺 <span class="pull-right ion-chevron-right"></span></span>
+        </div>
+        <div class="row">
+            <div class="col col-25 "><img src="img/commodity/DangQianWeiZi2.png" width="45" height="60"></div>
+            <div class="col col-50 " style="line-height: 50px; font-size: 15px">{{shop.get('address') || '商家未添加地址与电话'}}</div>
+            <div class="col col-25 ">
+                <a href="tel:{{shop.get('phone') || '114'}}">
+                    <img src="img/commodity/DianHua2.png" width="70" height="50">
+                </a>
+            </div>
+        </div>
+
+        <div class="item-divider" style="min-height: 0px;"></div>
+
+        <div class="item shop">商品详情</div>
+        <br>
+        <div class="commodity">
+            <div class="row">
+                <div class="col" ng-bind-html="item.get('Item').get('content')">
+                </div>
+            </div>
+        </div>
+
+        <div class="item shop">商品评价<span class="commodity-s">（0）</span>
+            <span class="pull-right enter ">
+            </span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="start-pull-right">
+                <img src="img/evaluate-detail/star.png" width="16px" height="16px">
+                <img src="img/evaluate-detail/star.png" width="16px" height="16px">
+                <img src="img/evaluate-detail/star.png" width="16px" height="16px">
+                <img src="img/evaluate-detail/star.png" width="16px" height="16px">
+                <img src="img/evaluate-detail/star.png" width="16px" height="16px">
+                <!--<img src="img/commodity/gray-star.png" width="16px" height="16px">-->
+                <span class="commodity-s">5</span>
+            </span>
+        </div>
+        <br>
+        <div class="commodity">
+            <div class="row">
+                <div class="col">
+                    暂无评价
+                </div>
+            </div>
+        </div>
+        <!--<div class="commodity">-->
+            <!--<span class="commodity-TY">TY95k</span>&nbsp;&nbsp;-->
+            <!--<span class="commodity-time">2015-06-20</span>-->
+            <!--&nbsp;&nbsp;&nbsp;&nbsp;-->
+            <!--<span class="start-pull-right" style="padding-right: 5px">-->
+                <!--<img src="img/evaluate-detail/star.png" width="16px" height="16px">-->
+                <!--<img src="img/evaluate-detail/star.png" width="16px" height="16px">-->
+                <!--<img src="img/evaluate-detail/star.png" width="16px" height="16px">-->
+                <!--<img src="img/evaluate-detail/star.png" width="16px" height="16px">-->
+                <!--<img src="img/commodity/gray-star.png" width="16px" height="16px">-->
+            <!--</span>-->
+            <!--<div class="commodity-time" style="padding-left: 20px">环境很棒，味道很 赞，服务热情，套餐实惠，下次再来。</div>-->
+        <!--</div>-->
+        <br>
+    </ion-content>
+    <!--<div class="bar bar-footer" style="padding: 0">-->
+        <!--<div class="button-bar">-->
+            <!--<a class="button button-energized" ng-click="joinCart()">加入购物车</a>-->
+            <!--<a class="button button-royal" ng-click="joinBuy()">立即购买</a>-->
+        <!--</div>-->
+    <!--</div>-->
+</ion-view>
