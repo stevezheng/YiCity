@@ -50,6 +50,7 @@
         item: item
         , shop: $scope.shop
         , count: 1
+        , specialType: 'bigSell'
       };
 
       Cart.add(cart);
