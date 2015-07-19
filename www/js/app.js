@@ -352,6 +352,22 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
         cache: false
       })
 
+      //特卖会列表
+      .state('big-sell', {
+        url: '/big-sell',
+        templateUrl: 'templates/big-sell.html',
+        controller: 'ItemBigsellCtrl',
+        cache: false
+      })
+
+      //特卖会详情
+      .state('big-sell-details', {
+        url: '/big-sell-details/:id',
+        templateUrl: 'templates/big-sell-details.html',
+        controller: 'ItemBigsellDetailsCtrl',
+        cache: false
+      })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html',

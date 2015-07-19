@@ -1,0 +1,23 @@
+<ion-view view-title="特卖汇">
+    <ion-nav-bar class="bar-energized">
+        <ion-nav-back-button>
+            返回
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content>
+        <div class="list list-home">
+            <div class="item item-thumbnail-left" ng-repeat="item in items" ui-sref="big-sell-details({id: item.id})">
+                <img ng-src="{{item.get('Item').get('image')}}" alt=""/>
+
+                <h2>{{item.get('Item').get('name')}}</h2>
+
+                <p>{{item.get('Item').get('spec')}}</p>
+
+                <p>&nbsp;</p>
+
+                <span><button class="button button-energized button-small">{{item.get('discountPrice')}}元 抢购中</button><button class="button button-clear button-small" style="text-decoration: line-through">{{item.get('Item').get('price')}}元</button></span>
+                <span class="pull-right">已售 {{item.get('Item').get('salenum')}}</span>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

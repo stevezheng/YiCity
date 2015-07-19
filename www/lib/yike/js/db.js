@@ -117,6 +117,11 @@ function D(model) {
 
     },
 
+    include: function(field) {
+      q.include(field);
+      return this;
+    },
+
     where: function (where) {
       AV._.mapObject(where, function (val, key) {
         if (typeof val === 'string' || typeof val === 'number') {
