@@ -1,0 +1,21 @@
+<!--<div class="row">-->
+    <!--<div class="col-lg-4">-->
+            <!--<button class="btn btn-info uploadButton" ng-click="browseFile()">-->
+                <!--<i class="icon ion-image"></i>上传图片-->
+            <!--</button>-->
+    <!--</div>-->
+    <!--<div class="col-lg-3">-->
+        <!--<a ng-show="item.image.length > 5" href="{{item.image}}" target="_blank">[查看图片]</a>-->
+        <!--<img alt="" id="shadowImage"/>-->
+        <!--<input type="file" id="browseBtn" style="display: none;">-->
+    <!--</div>-->
+<!--</div>-->
+<div class="item">
+    <span class="gray-middle">头像</span>
+                <span class="pull-right">
+                <img class="uploadButton" ng-click="browseFile()" ng-src="{{cUser.get('image') || 'img/tmp/images/camera.png'}}" height="46px"/>
+                    <!--&nbsp;-->
+                    <!--<i class="ion-ios-arrow-right i"></i>-->
+                </span>
+    <input type="file" id="browseBtn" style="display: none;">
+</div>
