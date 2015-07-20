@@ -457,6 +457,13 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
           templateUrl: '/templates/health-class-details-video.html'
         })
 
+
+      //我的订单(评价)
+        .state('order-form-evaluation', {
+          url: '/order-form-evaluation',
+          templateUrl: '/templates/order-form-evaluation.html'
+        })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html'
