@@ -445,6 +445,18 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
           templateUrl: '/templates/step-reference.html'
         })
 
+      //健康课堂详情(图文)
+        .state('health-class-details', {
+          url: '/health-class-details',
+          templateUrl: '/templates/health-class-details.html'
+        })
+
+      //健康课堂详情(视频)
+        .state('health-class-details-video', {
+          url: '/health-class-details-video',
+          templateUrl: '/templates/health-class-details-video.html'
+        })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html'

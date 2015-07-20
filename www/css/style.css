@@ -2203,3 +2203,49 @@
     font-size: 15px;
     color: rgba(31, 31, 37, 0.75);
 }
+
+
+#health-class-details .button img{
+    height: 20px;
+    width: 22px;
+}
+#health-class-details .bar .title + .button:last-child, .bar > .button + .button:last-child, .bar > .button.pull-right, .bar .buttons.pull-right, .bar .title + .buttons {
+    position: absolute;
+    top: 9px;
+    right: 5px;
+    bottom: 5px;
+}
+#health-class-details .img-one img{
+    width: 100%;
+    height: 170px;
+    border-bottom: none;
+}
+#health-class-details .list{
+    padding-left: 10px;
+    padding-right: 8px;
+    margin-top: 8px;
+}
+#health-class-details .title{
+    font-size: 16px;
+    font-weight: 600;
+}
+#health-class-details .list .date-browse{
+    margin-top: 10px;
+    color: rgba(128, 128, 151, 0.75);
+    font-size: 13px;
+}
+#health-class-details .list .date-browse .browse{
+    position: absolute;
+    right: 3%;
+}
+#health-class-details .content{
+    margin-top: 10px;
+    font-size: 14px;
+    color: rgba(136, 136, 159, 0.75);
+}
+#health-class-details .img-two img{
+    width: 100%;
+    height: 170px;
+    border-bottom: none;
+    margin-top: 10px;
+}
