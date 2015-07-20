@@ -381,10 +381,16 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
                 templateUrl: 'templates/recipe-details.html',
             })
 
-            //食谱详情步骤
+            //食谱详情-步骤
             .state('recipe-details-step', {
                 url: '/recipe-details-step',
                 templateUrl: 'templates/recipe-details-step.html',
+            })
+
+            //食谱详情-图文模式
+            .state('recipe-details-graphic-mode', {
+                url: '/recipe-details-graphic-mode',
+                templateUrl: 'templates/recipe-details-graphic-mode.html',
             });
 
 

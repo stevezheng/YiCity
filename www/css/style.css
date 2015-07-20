@@ -1798,3 +1798,11 @@
     position: absolute;
     top: 200px;
 }
+
+#recipe-details-graphic-mode .tabs-top > .tabs,#recipe-details-graphic-mode .tabs.tabs-top{
+    top: 150px;
+}
+#recipe-details-graphic-mode .row-positive{
+    position: absolute;
+    top: 200px;
+}
