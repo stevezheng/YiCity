@@ -1757,22 +1757,22 @@
     color: #fe9315;
 }
 
-#recipe-details .play{
+#recipe-details .play {
     position: absolute;
-    top: 26%;
+    top: 44px;
     left: 41%;
 }
 
-#recipe-details .tabs-top > .tabs,#recipe-details .tabs.tabs-top{
+#recipe-details .tabs-top > .tabs, #recipe-details .tabs.tabs-top {
     top: 150px;
 }
 
-#recipe-details .recipe-position-1{
+#recipe-details .recipe-position-1 {
     position: relative;
     top: 50px;
 }
 
-#recipe-details dl{
+#recipe-details dl {
     width: 100%;
 }
 
@@ -1784,25 +1784,40 @@
     padding-left: 8px;
 }
 
+#recipe-details .recipe-list {
+    padding-left: 10px;
+    padding-right: 10px;
+    top: 356px;
+    position: absolute;
+    width: 100%
+}
 
-#recipe-details-step .play{
+#recipe-details .recipe-list dd {
+    border: solid 1px #ededed;
+    padding: 10px;
+    border-top: none;
+}
+
+#recipe-details-step .play {
     position: absolute;
     top: 26%;
     left: 41%;
 }
 
-#recipe-details-step .tabs-top > .tabs,#recipe-details .tabs.tabs-top{
+#recipe-details-step .tabs-top > .tabs, #recipe-details .tabs.tabs-top {
     top: 150px;
 }
-#recipe-details-step .row-positive{
+
+#recipe-details-step .row-positive {
     position: absolute;
     top: 200px;
 }
 
-#recipe-details-graphic-mode .tabs-top > .tabs,#recipe-details-graphic-mode .tabs.tabs-top{
+#recipe-details-graphic-mode .tabs-top > .tabs, #recipe-details-graphic-mode .tabs.tabs-top {
     top: 150px;
 }
-#recipe-details-graphic-mode .row-positive{
+
+#recipe-details-graphic-mode .row-positive {
     position: absolute;
     top: 200px;
 }
