@@ -464,6 +464,12 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
           templateUrl: '/templates/order-form-evaluation.html'
         })
 
+      //我的订单(收货)
+        .state('order-form-receive', {
+          url: '/order-form-receive',
+          templateUrl: '/templates/order-form-receive.html'
+        })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html'
