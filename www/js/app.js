@@ -373,6 +373,18 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
             .state('forum', {
                 url: '/forum',
                 templateUrl: 'templates/forum.html',
+            })
+
+            //食谱详情
+            .state('recipe-details', {
+                url: '/recipe-details',
+                templateUrl: 'templates/recipe-details.html',
+            })
+
+            //食谱详情步骤
+            .state('recipe-details-step', {
+                url: '/recipe-details-step',
+                templateUrl: 'templates/recipe-details-step.html',
             });
 
 

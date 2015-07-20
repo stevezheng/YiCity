@@ -1756,3 +1756,45 @@
 #forum .tabs-striped .tab-item.active {
     color: #fe9315;
 }
+
+#recipe-details .play{
+    position: absolute;
+    top: 26%;
+    left: 41%;
+}
+
+#recipe-details .tabs-top > .tabs,#recipe-details .tabs.tabs-top{
+    top: 150px;
+}
+
+#recipe-details .recipe-position-1{
+    position: relative;
+    top: 50px;
+}
+
+#recipe-details dl{
+    width: 100%;
+}
+
+#recipe-details .wrap {
+    width: 100%;
+    display: block;
+    word-wrap: break-word;
+    white-space: normal;
+    padding-left: 8px;
+}
+
+
+#recipe-details-step .play{
+    position: absolute;
+    top: 26%;
+    left: 41%;
+}
+
+#recipe-details-step .tabs-top > .tabs,#recipe-details .tabs.tabs-top{
+    top: 150px;
+}
+#recipe-details-step .row-positive{
+    position: absolute;
+    top: 200px;
+}
