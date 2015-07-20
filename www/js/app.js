@@ -458,16 +458,22 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
         })
 
 
-      //我的订单(评价)
+      //我的订单(待评价)
         .state('order-form-evaluation', {
           url: '/order-form-evaluation',
           templateUrl: '/templates/order-form-evaluation.html'
         })
 
-      //我的订单(收货)
+      //我的订单(待收货)
         .state('order-form-receive', {
           url: '/order-form-receive',
           templateUrl: '/templates/order-form-receive.html'
+        })
+
+      //我的订单(待付款)
+        .state('order-form-pay', {
+          url: '/order-form-pay',
+          templateUrl: '/templates/order-form-pay.html'
         })
 
       .state('gps', {
