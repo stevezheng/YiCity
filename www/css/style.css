@@ -1800,7 +1800,7 @@
 
 #recipe-details-step .play {
     position: absolute;
-    top: 26%;
+    top: 44px;
     left: 41%;
 }
 
@@ -1820,4 +1820,13 @@
 #recipe-details-graphic-mode .row-positive {
     position: absolute;
     top: 200px;
+}
+#recipe-details-comment .play {
+    position: absolute;
+    top: 44px;
+    left: 41%;
+}
+
+#recipe-details-comment .tabs-top > .tabs, #recipe-details-comment .tabs.tabs-top {
+    top: 150px;
 }

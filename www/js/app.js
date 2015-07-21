@@ -391,6 +391,18 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
             .state('recipe-details-graphic-mode', {
                 url: '/recipe-details-graphic-mode',
                 templateUrl: 'templates/recipe-details-graphic-mode.html',
+            })
+
+            //食谱详情-评论
+            .state('recipe-details-comment', {
+                url: '/recipe-details-comment',
+                templateUrl: 'templates/recipe-details-comment.html',
+            })
+
+            //评论
+            .state('comment', {
+                url: '/comment',
+                templateUrl: 'templates/comment.html',
             });
 
 
