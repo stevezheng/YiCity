@@ -28,9 +28,7 @@
     ////////////////
 
     function init() {
-      GPS.currentCity(function(res) {
-        $scope.currentCity = res.result.addressComponent.city;
-      });
+      $scope.currentCity = GPS.currentCity.city;
     }
 
     function goto(id) {
