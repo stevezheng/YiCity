@@ -368,6 +368,20 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
         cache: false
       })
 
+      .state('vouchers', {
+        url: '/vouchers',
+        templateUrl: 'templates/vouchers.html',
+        controller: 'ItemVouchersCtrl',
+        cache: false
+      })
+
+      .state('buying', {
+        url: '/buying',
+        templateUrl: 'templates/buying.html',
+        controller: 'ItemBuyingCtrl',
+        cache: false
+      })
+
       .state('cash-back', {
         url: '/cash-back',
         templateUrl: 'templates/cash-back.html',
