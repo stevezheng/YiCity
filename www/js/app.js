@@ -488,6 +488,12 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
           templateUrl: '/templates/home-page.html'
         })
 
+      //首页不展开
+        .state('home-page01', {
+          url: '/home-page01',
+          templateUrl: '/templates/home-page01.html'
+        })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html'
