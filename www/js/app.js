@@ -482,6 +482,12 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
           templateUrl: '/templates/order-form-all.html'
         })
 
+      //首页展开
+        .state('home-page', {
+          url: '/home-page',
+          templateUrl: '/templates/home-page.html'
+        })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html'
