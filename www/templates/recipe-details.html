@@ -3,10 +3,12 @@
         <ion-nav-back-button>
             返回
         </ion-nav-back-button>
-        <ion-nav-buttons style="left: 20px">
-            <button class="button button-clear ion-ios-heart-outline" ng-click="collect()" style="left: 259px"></button>
+        <ion-nav-buttons side="right">
+            <button class="button button-clear ion-ios-heart-outline" ng-click="collect()"></button>
             <i>&nbsp;&nbsp;</i>
-            <img src="img/tmp/images/share_01.png" style="height: 13px;position: absolute;bottom: 15px;left: 295px"/>
+            <button class="button button-clear">
+                <img src="img/tmp/images/share_01.png" style="height: 13px;width: 13px"/>
+            </button>
         </ion-nav-buttons>
     </ion-nav-bar>
     <ion-content>
@@ -17,11 +19,11 @@
                 <a class="tab-item active" href="#">
                     <span>详情</span>
                 </a>
-                <a class="tab-item" href="#" ui-sref="">
+                <a class="tab-item" href="#">
                     <span>步骤</span>
                 </a>
 
-                <a class="tab-item" href="#" ui-sref="">
+                <a class="tab-item" href="#">
                     <span>评价</span>
                 </a>
             </div>
@@ -88,13 +90,5 @@
                 </dd>
             </dl>
         </div>
-
-
-
-
-
-
-
-
     </ion-content>
     </ion-view>
