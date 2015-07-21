@@ -1821,6 +1821,7 @@
     position: absolute;
     top: 200px;
 }
+
 #recipe-details-comment .play {
     position: absolute;
     top: 44px;
@@ -1829,4 +1830,9 @@
 
 #recipe-details-comment .tabs-top > .tabs, #recipe-details-comment .tabs.tabs-top {
     top: 150px;
+}
+
+#recipe-details-comment .row-positive {
+    top: 200px;
+    position: absolute;
 }
