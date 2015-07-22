@@ -375,10 +375,24 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
         cache: false
       })
 
+      .state('vouchers-details', {
+        url: '/vouchers-details/:id',
+        templateUrl: 'templates/vouchers-details.html',
+        controller: 'ItemVouchersDetailsCtrl',
+        cache: false
+      })
+
       .state('buying', {
         url: '/buying',
         templateUrl: 'templates/buying.html',
         controller: 'ItemBuyingCtrl',
+        cache: false
+      })
+
+      .state('buying-details', {
+        url: '/buying-details/:id',
+        templateUrl: 'templates/buying-details.html',
+        controller: 'ItemBuyingDetailsCtrl',
         cache: false
       })
 

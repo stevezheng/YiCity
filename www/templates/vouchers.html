@@ -6,18 +6,16 @@
     </ion-nav-bar>
     <ion-content>
         <div class="list list-home">
-            <div class="item item-thumbnail-left" ng-repeat="item in items" ui-sref="cash-back-details({id: item.id})">
-                <img ng-src="{{item.get('Item').get('image')}}" alt=""/>
+            <div class="item item-thumbnail-left" ng-repeat="item in items">
+                <img ng-src="{{item.get('Shop').get('image')}}" alt="" ui-sref="vouchers-details({id: item.id})"/>
 
-                <h2>{{item.get('Item').get('name')}}</h2>
+                <h2 ui-sref="vouchers-details({id: item.id})">{{item.get('Shop').get('name')}}</h2>
 
-                <p>{{item.get('Item').get('spec')}}</p>
+                <p>满{{item.get('condition')}}元减{{item.get('discount')}}元</p>
+                <p>{{item.get('expireTime') | date: 'yyyy-MM-dd'}}到期</p>
 
-                <p>&nbsp;</p>
-
-                <span><button class="button button-energized button-small">返现{{item.get('cashBack')}}元</button>
-                    <button class="button button-clear button-small">{{item.get('Item').get('price')}}元</button></span>
-                <span class="pull-right">已售 {{item.get('Item').get('salenum')}}</span>
+                <span><button class="button button-energized button-small" ng-click="buy()">立即领取</button></span>
+                <span class="pull-right">{{item.get('count')}}人领取</span>
             </div>
         </div>
     </ion-content>

@@ -5,11 +5,12 @@
     .module('item.vouchers', [])
     .controller('ItemVouchersCtrl', ItemVouchersCtrl);
 
-  ItemVouchersCtrl.$inject = ['$scope'];
+  ItemVouchersCtrl.$inject = ['$scope', '$yikeUtils'];
 
   /* @ngInject */
-  function ItemVouchersCtrl($scope) {
+  function ItemVouchersCtrl($scope, $yikeUtils) {
     $scope.init = init;
+    $scope.buy = buy;
 
     init();
 
@@ -30,6 +31,10 @@
           $scope.items = data;
         }
       })
+    }
+
+    function buy() {
+      $yikeUtils.alert('提示', '领取成功');
     }
   }
 })();
