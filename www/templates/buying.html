@@ -6,18 +6,15 @@
     </ion-nav-bar>
     <ion-content>
         <div class="list list-home">
-            <div class="item item-thumbnail-left" ng-repeat="item in items" ui-sref="cash-back-details({id: item.id})">
-                <img ng-src="{{item.get('Item').get('image')}}" alt=""/>
+            <div class="item item-thumbnail-left" ng-repeat="item in items">
+                <img ng-src="{{item.get('Item').get('image')}}" alt="" ui-sref="buying-details({id: item.id})"/>
 
-                <h2>{{item.get('Item').get('name')}}</h2>
+                <h2 ui-sref="buying-details({id: item.id})">{{item.get('Item').get('name')}}</h2>
 
-                <p>{{item.get('Item').get('spec')}}</p>
+                <p ui-sref="buying-details({id: item.id})" style="margin-bottom: 10px">{{item.get('Item').get('spec')}}</p>
 
-                <p>&nbsp;</p>
-
-                <span><button class="button button-energized button-small">返现{{item.get('cashBack')}}元</button>
-                    <button class="button button-clear button-small">{{item.get('Item').get('price')}}元</button></span>
-                <span class="pull-right">已售 {{item.get('Item').get('salenum')}}</span>
+                <span><button ng-click="buy()" class="button button-energized button-small">立即报名</button></span>
+                <span class="pull-right">{{item.get('count')}}报名</span>
             </div>
         </div>
     </ion-content>

@@ -5,10 +5,10 @@
     .module('item.buying.details', [])
     .controller('ItemBuyingDetailsCtrl', ItemBuyingDetailsCtrl);
 
-  ItemBuyingDetailsCtrl.$inject = ['$scope', '$state', 'Cart'];
+  ItemBuyingDetailsCtrl.$inject = ['$scope', '$state', 'Cart', '$yikeUtils'];
 
   /* @ngInject */
-  function ItemBuyingDetailsCtrl($scope, $state, Cart) {
+  function ItemBuyingDetailsCtrl($scope, $state, Cart, $yikeUtils) {
     var id = $state.params.id;
     $scope.init = init;
     $scope.item = null;
@@ -25,12 +25,12 @@
     function query() {
       D('Buying')
         .where({'objectId': id})
-        .include('Shop')
+        .include('Item')
         .find()
         .then(function(data) {
           $scope.item = data;
           return D('Shop')
-            .where({objectId: data.get('shopId')})
+            .where({objectId: data.get('Item').get('shopId')})
             .find()
         })
         .then(function(shop) {
@@ -43,6 +43,7 @@
     }
 
     function buy() {
+      $yikeUtils.alert('提示', '报名成功');
     }
   }
 })();
