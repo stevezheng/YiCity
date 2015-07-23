@@ -45,14 +45,15 @@
     function buy() {
       var item = $scope.item.get('Item');
       item.set('cashBackId', $scope.item.id);
-      item.set('specialType', 'bigSell');
+      item.set('specialType', 'cashBack');
       var cart = {
         item: item
         , shop: $scope.shop
         , count: 1
-        , specialType: 'bigSell'
+        , specialType: 'cashBack'
       };
 
+      Cart.empty();
       Cart.add(cart);
 
       $state.go('shopping-cart');

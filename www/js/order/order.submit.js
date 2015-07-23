@@ -46,7 +46,6 @@
     function getAddress() {
       addresses(function(addresses) {
         $scope.currentAddress = Cart.getAddress() || addresses[0];
-        console.log($scope.currentAddress);
       })
     }
 
@@ -80,6 +79,17 @@
           , area: $scope.addresses[0].get('area')
           , address: $scope.addresses[0].get('address')
         };
+
+        if ($scope.tmpCart.items[0].specialType == 'cashBack') {
+          $scope.tmpCart.specialType = 'cashBack';
+        }
+
+        if ($scope.tmpCart.items[0].specialType == 'bigSell') {
+          $scope.tmpCart.specialType = 'bigSell';
+        }
+        
+        console.log($scope.tmpCart);
+
         D('Order')
           .add($scope.tmpCart)
           .then(function(order) {

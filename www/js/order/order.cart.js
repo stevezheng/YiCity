@@ -24,6 +24,7 @@
       , all: all
       , add: add
       , del: del
+      , empty: empty
       , format: format
       , getTmpCart: getTmpCart
       , setTmpCart: setTmpCart
@@ -59,10 +60,16 @@
 
     function add(item) {
       item.selected = true;
+      console.log(item);
       return cart.push(item);
     }
 
     function del(item) {
+    }
+
+    function empty() {
+      cart = [];
+      return true;
     }
 
     function format(items) {
@@ -76,7 +83,8 @@
           data.itemPrice = c.item.get('price');
           data.shopId = c.shop.id;
           data.shopName = c.shop.get('name');
-          data.itemCount = c.item.count;
+          data.itemCount = c.count;
+          data.specialType = c.item.get('specialType');
           list.push(data);
         }
       }
