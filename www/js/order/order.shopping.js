@@ -26,6 +26,17 @@
     ////////////////
 
     function init() {
+      group();
+    }
+
+    function group() {
+      var g = _.groupBy($scope.items, function(item) {
+        item.shopName = item.shop.get('name');
+        return item.shop.id;
+      });
+      console.log(g);
+      $scope.groups = g;
+      return g;
     }
 
     function editCart(item) {
