@@ -43,6 +43,7 @@
       user.set("username", username);
       user.set("password", password);
       user.set("inviteCode", inviteCode);
+      user.set("levelOne", inviteCode);
 
       user.setMobilePhoneNumber(username);
 

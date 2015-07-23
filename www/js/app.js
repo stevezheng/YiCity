@@ -297,7 +297,8 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
       //我的推荐
       .state('my-recommend', {
         url: '/my-recommend',
-        templateUrl: 'templates/my-recommend.html'
+        templateUrl: 'templates/my-recommend.html',
+        controller: 'UserRecommendCtrl'
       })
 
       //我的消息

@@ -1,18 +1,18 @@
-<ion-view view-title="我的推荐" id="my-recommend">
+1888<ion-view view-title="我的推荐" id="my-recommend">
     <ion-nav-bar class="bar-energized">
         <ion-nav-buttons side="left">
             <button class="button button-clear ion-chevron-left pull-left" ui-sref="account"></button>
         </ion-nav-buttons>
     </ion-nav-bar>
     <ion-content style="background-color: rgba(232, 224, 228, 0.56)">
-        <div class="item ion">
+        <div class="item ion" ng-repeat="user in users">
             <span class="ion-record">
             </span>
             <span class="id-name">
-                会员ID：KT896L
+                会员ID：{{user.get('username')}}
             </span>
             <span class="time pull-right">
-                18359625846
+                {{user.get('username')}}
             </span>
             <span class="line"></span>
             <div class="white-line"></div>
@@ -27,47 +27,15 @@
             </div>
             <div class="indent-number pull-right">
                 <div class="money">
-                    2015-05-12<br>
+                    {{user.createdAt | date: 'yyyy-MM-dd'}}<br>
                     <div class="white-line"></div>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    ￥65551<br>
+                    <p class="text-right">
+                        ￥{{user.cost || 0}}
+                    </p>
                     <div class="white-line"></div>
-                    2015-05-26
+                    {{user.createdAt | date: 'yyyy-MM-dd'}}<br>
                 </div>
             </div>
         </div>
-
-        <div class="item ion">
-            <span class="ion-record">
-            </span>
-            <span class="id-name">
-                会员ID：KT896L
-            </span>
-            <span class="time pull-right">
-                18359625846
-            </span>
-            <span class="line"></span>
-            <div class="white-line"></div>
-            <div class="line"></div>
-            <div class="white-line"></div>
-            <div class="indent-number">
-                注册时间<br>
-                <div class="white-line"></div>
-                总消费<br>
-                <div class="white-line"></div>
-                最后消费时间
-            </div>
-            <div class="indent-number pull-right">
-                <div class="money">
-                    2015-05-12<br>
-                    <div class="white-line"></div>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    ￥65551<br>
-                    <div class="white-line"></div>
-                    2015-05-26
-                </div>
-            </div>
-        </div>
-
     </ion-content>
 </ion-view>
