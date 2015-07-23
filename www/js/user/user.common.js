@@ -13,6 +13,7 @@
     $scope.login = login;
     $scope.logout = logout;
     $scope.go= go;
+    $scope.recommend = recommend;
 
     if (AV.User.current()) {
       $scope.cUser = AV.User.current();
@@ -50,6 +51,10 @@
             $state.reload();
           }
         });
+    }
+
+    function recommend() {
+      $yikeUtils.alert('提示', '您的推荐码为:' + AV.User.current().get('autoId'));
     }
   }
 })();
