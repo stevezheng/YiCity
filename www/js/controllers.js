@@ -23,6 +23,19 @@ angular.module('starter.controllers', [])
   })
 
   .controller('HomeCtrl', function ($scope, $stateParams, GPS) {
+    //var opt = {
+    //  'data' : {
+    //    'content' : {
+    //      'text' : '要分享的内容', //要分享的文字
+    //    }
+    //  }
+    //};
+    //$('#umshare').umshare(opt);
+    //
+    //$scope.share = function() {
+    //  $('#umshare').umshare(opt);
+    //};
+
     $scope.city = GPS.getCity();
     D('Item')
       .limit(0, 5)
