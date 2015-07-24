@@ -42,8 +42,8 @@
             <span class="pull-right enter ">进入店铺 <span class="pull-right ion-chevron-right"></span></span>
         </div>
         <div class="row">
-            <div class="col col-25 "><img src="img/commodity/DangQianWeiZi2.png" width="45" height="60"></div>
-            <div class="col col-50 " style="line-height: 50px; font-size: 15px">{{shop.get('address') || '商家未添加地址与电话'}}</div>
+            <div class="col col-25 " ui-sref="map({shopId: shop.id})"><img src="img/commodity/DangQianWeiZi2.png" width="45" height="60"></div>
+            <div class="col col-50 " ui-sref="map({shopId: shop.id})" style="line-height: 30px; font-size: 15px">{{shop.get('address') || '商家未添加地址与电话'}}</div>
             <div class="col col-25 ">
                 <a href="tel:{{shop.get('phone') || '114'}}">
                     <img src="img/commodity/DianHua2.png" width="70" height="50">

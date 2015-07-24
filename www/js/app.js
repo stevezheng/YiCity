@@ -411,6 +411,13 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
         cache: false
       })
 
+      .state('map', {
+        url: '/map/:shopId',
+        templateUrl: 'templates/map.html',
+        controller: 'ShopMapCtrl',
+        cache: false
+      })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html',

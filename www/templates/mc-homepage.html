@@ -28,12 +28,12 @@
 
 
         <div class="row">
-            <div class="col col-10">
+            <div class="col col-10" ui-sref="map({shopId: shop.id})">
                 <a>
                     <img src="img/tmp/images/dangqian.png" width="45" height="60"/>
                 </a>
             </div>
-            <div class="col col-65">
+            <div class="col col-65" ui-sref="map({shopId: shop.id})">
                 <span style="line-height: 14px; font-size: 14px; top: 4px; left: 10px; position: relative;">{{shop.get('address') || '商家未添加地址与电话'}}</span>
             </div>
             <a class="col col-25" href="tel:{{shop.get('phone')}}">
