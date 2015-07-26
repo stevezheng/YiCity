@@ -1,7 +1,7 @@
 <ion-view view-title="" id="home">
     <ion-nav-bar class="bar-energized">
         <ion-nav-buttons side="primary">
-            <a class="button icon-right ion-arrow-down-b button-city" style="border: 0;" ui-sref="gps">
+            <a class="button icon-right ion-arrow-down-b button-city" style="border: 0; font-size: 16px" ui-sref="gps">
                 {{city}}
             </a>
             <label class="item-input-wrapper" style="background: #e67c00;" ui-sref="shop-search">
@@ -27,24 +27,24 @@
         <!--</div>-->
     <!--</ion-nav-buttons>-->
     <ion-content class="has-footer">
-        <ion-slide-box>
+        <ion-slide-box style="height: 143px;">
             <ion-slide>
                 <div class="box">
-                    <img src="img/tab-home/banner.png" width="100%" ui-sref="shop"/>
+                    <img src="img/tab-home/banner.png" ui-sref="shop"/>
                 </div>
             </ion-slide>
             <ion-slide>
                 <div class="box">
-                    <img src="img/tab-home/banner.png" width="100%" ui-sref="shop"/>
+                    <img src="img/tab-home/banner.png" ui-sref="shop"/>
                 </div>
             </ion-slide>
             <ion-slide>
                 <div class="box">
-                    <img src="img/tab-home/banner.png" width="100%" ui-sref="shop"/>
+                    <img src="img/tab-home/banner.png" ui-sref="shop"/>
                 </div>
             </ion-slide>
         </ion-slide-box>
-        <div class="row">
+        <div class="row in" style="margin-top: 5px">
             <div class="col text-center" ui-sref="shop({categoryName: 'meishi'})">
                 <img src="img/tab-home/meishi.png" width="80%"/>
 
@@ -66,7 +66,7 @@
                 <p>KTV</p>
             </div>
         </div>
-        <div class="row">
+        <div class="row in" style="padding: 0 0 5px 0">
                 <div class="col text-center" ui-sref="shop({categoryName: 'meirong'})">
                 <img src="img/tab-home/meirong.png" width="80%"/>
 
@@ -89,23 +89,23 @@
             </div>
         </div>
 
-        <div class="item-divider"></div>
+        <div class="item-divider" style="height: 14px"></div>
 
-        <div class="row">
-            <div class="col text-center" style="border-right: solid 1px #EEEEEE; border-bottom: solid 1px #EEEEEE" ui-sref="cash-back">
-                <img src="img/tab-home/dapaifanxian.png" width="90%"/>
+        <div class="row level2">
+            <div class="col text-center" style=" border-right: solid 1px #EEEEEE; border-bottom: solid 1px #EEEEEE" ui-sref="cash-back">
+                <img src="img/tab-home/dapaifanxian.png" width="85%"/>
             </div>
-            <div class="col text-center" style="border-bottom: solid 1px #EEEEEE" ui-sref="vouchers">
-                <img src="img/tab-home/daijinquan.png" width="90%"/>
+            <div class="col text-center" style=" border-bottom: solid 1px #EEEEEE" ui-sref="vouchers">
+                <img src="img/tab-home/daijinquan.png" width="85%"/>
             </div>
         </div>
 
-        <div class="row">
+        <div class="row level2">
             <div class="col text-center" style="border-right: solid 1px #EEEEEE" ui-sref="buying">
-                <img src="img/tab-home/qianggou.png" width="90%"/>
+                <img src="img/tab-home/qianggou.png" width="85%"/>
             </div>
-            <div class="col text-center" ui-sref="big-sell">
-                <img src="img/tab-home/temaihui.png" width="90%"/>
+            <div class="col text-center" style="" ui-sref="big-sell">
+                <img src="img/tab-home/temaihui.png" width="85%"/>
             </div>
         </div>
 

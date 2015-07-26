@@ -1534,3 +1534,35 @@
 #home .item-input-wrapper {
     border-radius: 20px;
 }
+
+#home .in {
+    padding: 4px 6px 0;
+}
+
+#home .in .col{
+    padding: 0 7px;
+}
+
+#home .level2 {
+    padding: 0;
+    height: 60px;
+    margin-top: 1px;
+}
+
+#home .box img {
+    width: 100%;
+    height: 80%;
+}
+
+#home .slider-pager .slider-pager-page {
+    color: #000000;
+    font-size: 10px;
+}
+
+#home .slider-pager .slider-pager-page.active {
+    color: #fe9315;
+}
+
+#home .slider-pager {
+    bottom: 10px;
+}
