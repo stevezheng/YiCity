@@ -66,7 +66,7 @@
                 <p>KTV</p>
             </div>
         </div>
-        <div class="row in" style="padding: 0 0 5px 0">
+        <div class="row in" style="padding: 0 5px 5px 5px">
                 <div class="col text-center" ui-sref="shop({categoryName: 'meirong'})">
                 <img src="img/tab-home/meirong.png" width="80%"/>
 
@@ -145,7 +145,7 @@
 
                 <h2>{{item.get('name')}}</h2>
 
-                <p>{{item.get('spec')}}</p>
+                <p>{{item.get('spec') || '商家偷懒没有添加信息'}}</p>
 
                 <p>&nbsp;</p>
 
@@ -156,11 +156,11 @@
 </ion-view>
 <ion-tabs class="tabs-icon-top tabs-color-active-energized">
 
-    <ion-tab title="首页" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" href="#/home">
+    <ion-tab title="首页" icon-off="ion-android-home" icon-on="ion-android-home" href="#/home">
         <!--<ion-nav-view name="tab-home"></ion-nav-view>-->
     </ion-tab>
 
-    <ion-tab title="商家" icon-off="iconfont icon-jinrudianpu" icon-on="iconfont icon-jinrudianpu" href="#/shop/">
+    <ion-tab title="附近" icon-off="ion-android-map" icon-on="ion-android-map" href="#/shop/">
         <!--<ion-nav-view name="tab-shop"></ion-nav-view>-->
     </ion-tab>
 
