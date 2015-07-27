@@ -27,9 +27,9 @@
         </ion-slide-box>
 
         <div class="row">
-            <div class="col col-20 " ui-sref="map({shopId: shop.id})"><img src="img/commodity/DangQianWeiZi2.png" width="45" height="60"></div>
-            <div class="col col-50 " ui-sref="map({shopId: shop.id})" style="padding: 25px 0 0 0; font-size: 15px">{{shop.get('address') || '商家未添加地址与电话'}}</div>
-            <div class="col col-25 ">
+            <div class="col col-10 " ui-sref="map({shopId: shop.id})"><img style="margin-left: -15px;" src="img/commodity/DangQianWeiZi2.png" width="45" height="60"></div>
+            <div class="col col-60 " ui-sref="map({shopId: shop.id})" style="padding: 25px 0 0 0; font-size: 15px">{{shop.get('address') || '商家未添加地址与电话'}}</div>
+            <div class="col col-30" style="text-align: right">
                 <a href="tel:{{shop.get('phone') || '114'}}">
                     <img src="img/commodity/DianHua2.png" width="70" height="50" style="margin-top: 10px">
                 </a>
@@ -53,14 +53,14 @@
         <!--<div class="item-divider" style="min-height: 0px;background-color: #ededed;"></div>-->
         <div class="row">
             <div class="col">
-                <button ng-class="tabStatus == '商品列表'?'button button-small button-block button-energized':'button button-small button-block unactive'" ng-click="tabStatus='商品列表'">商品列表</button>
+                <button style="padding: 3px" ng-class="tabStatus == '商品列表'?'button button-small button-block button-energized':'button button-small button-block unactive'" ng-click="tabStatus='商品列表'">商品列表</button>
             </div>
             <div class="col">
-                    <button ng-class="tabStatus == '商家介绍'?'button button-small button-block button-energized':'button button-small button-block unactive'" ng-click="tabStatus='商家介绍'">商家介绍</button>
+                    <button style="padding: 3px" ng-class="tabStatus == '商家介绍'?'button button-small button-block button-energized':'button button-small button-block unactive'" ng-click="tabStatus='商家介绍'">商家介绍</button>
                 </button>
             </div>
             <div class="col">
-                <button ng-class="tabStatus == '评价详情'?'button button-small button-block button-energized':'button button-small button-block unactive'" ng-click="tabStatus='评价详情'">评价详情</button>
+                <button style="padding: 3px" ng-class="tabStatus == '评价详情'?'button button-small button-block button-energized':'button button-small button-block unactive'" ng-click="tabStatus='评价详情'">评价详情</button>
                 </button>
             </div>
         </div>
@@ -108,7 +108,7 @@
         </div>
 
         <div ng-show="tabStatus == '商品列表'">
-            <div style="height: 35px; margin: 5px; padding: 5px;border-radius:5px;
+            <div style="height: 35px; margin: 0 5px; padding: 5px;border-radius:5px;
 border: solid 1px #b6b6b6; background-color:#cbcbcb;">
                 <b><span>团购</span>&nbsp;
                     <span style="color: red">热销菜品</span>&nbsp;
@@ -119,7 +119,7 @@ border: solid 1px #b6b6b6; background-color:#cbcbcb;">
             </div>
 
             <div class="list mc-homepage-NoCart">
-                <div class="item item-thumbnail-left" ng-repeat="item in items">
+                <div class="item item-thumbnail-left" ng-repeat="item in items" style="border-bottom: 2px solid #b6b6b6; border-top: 0">
                     <!--<img ng-src="{{item.get('image')||'img/tab-home/dezhuang.png'}}" ui-sref="commodity-details({itemId: item.id})">-->
                     <img ng-src="{{item.get('image')||'img/tab-home/dezhuang.png'}}" ng-click="openImage(item.get('image'))">
 
