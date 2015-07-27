@@ -20,6 +20,8 @@
     $scope.buy = buy;
     $scope.openImage = openImage;
     $scope.totalCount = 0;
+    $scope.popup = null;
+    $scope.closePopup = closePopup;
 
     init();
 
@@ -31,7 +33,11 @@
 
     function openImage(image) {
       console.log(image);
-      $yikeUtils.alert('<i class="pull-right">X</i>', '<img src="' + image + '" width="100%">')
+      $scope.popup = $yikeUtils.show('<i class="pull-right" ng-click="closePopup()">X</i>', '<img src="' + image + '" width="100%">')
+    }
+
+    function closePopup() {
+      $scope.popup.close();
     }
 
     function buy() {

@@ -1490,7 +1490,7 @@
 }
 
 #mc-homepage .bar .button {
-    line-height: 36px;
+    line-height: 44px;
 }
 
 #mc-homepage .bar-footer {
@@ -1570,4 +1570,19 @@
 
 #commodity .button-bar .button {
     border-radius: 0;
+}
+
+#commodity .payback {
+    position: absolute;
+    background: url('../img/tab-shop/back.png') no-repeat;
+    width: 83px;
+    height: 28px;
+    z-index: 9999;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    line-height: 28px;
+    background-size:contain;
+    top:80px;
+    right: 10px;
 }
