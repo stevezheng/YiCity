@@ -37,14 +37,14 @@
 
         <div class="item-divider" style="min-height: 0px;"></div>
 
-        <div class="item" ui-sref="homepage({shopId: shop.id})">
+        <div class="item" ui-sref="homepage({shopId: shop.id})" style="margin-left: -10px;">
             <img src="img/commodity/shop.png" width="30" style="padding-left: 10px; position: absolute">&nbsp;
             <span class style="font-size: 16px; color: #222222; padding-left: 30px">{{shop.get('name')}}</span>
             <span class="pull-right enter ">进入店铺 <span class="pull-right ion-chevron-right"></span></span>
         </div>
         <div class="row">
-            <div class="col col-20 " ui-sref="map({shopId: shop.id})"><img src="img/commodity/DangQianWeiZi2.png" width="45" height="60"></div>
-            <div class="col col-50 " ui-sref="map({shopId: shop.id})" style="padding: 25px 0 0 0; font-size: 15px">{{shop.get('address') || '商家未添加地址与电话'}}</div>
+            <div class="col col-10 " style="margin-left: -10px;" ui-sref="map({shopId: shop.id})"><img src="img/commodity/DangQianWeiZi2.png" width="45" height="60"></div>
+            <div class="col col-50 " ui-sref="map({shopId: shop.id})" style="padding: 25px 0 0 0; margin-left: 17px; font-size: 15px">{{shop.get('address') || '商家未添加地址与电话'}}</div>
             <div class="col col-30" style="text-align: right">
                 <a href="tel:{{shop.get('phone') || '114'}}">
                     <img src="img/commodity/DianHua2.png" width="70" height="50" style="margin-top: 10px">
@@ -57,7 +57,7 @@
         <div class="item shop">商品详情</div>
         <br>
         <div class="commodity">
-            <div class="row">
+            <div class="row" style="padding: 10px;">
                 <div class="col" ng-bind-html="item.get('content')">
                 </div>
             </div>
