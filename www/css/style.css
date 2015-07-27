@@ -47,7 +47,7 @@
     padding: 0 0 1px 0;
     vertical-align: inherit;
     font-size: 16px;
-    line-height: 41px;
+    line-height: 32px;
     pointer-events: none;
 }
 
@@ -363,6 +363,7 @@
 .shop-list .enter{
     color: #fe9315;
     font-size: 15px;
+    line-height: 24px;
 }
 
 .item p {
@@ -1353,7 +1354,7 @@
     padding-bottom: 10px;
     margin-bottom: -5px;
     border: 1px solid rgba(246, 233, 241, 0.53);
-    padding-left: 6px;
+    padding-left: 10px;
 }
 #tab-shop .item .item-thumbnail-left {
     padding-left: 60px;
@@ -1603,4 +1604,9 @@
 #mc-homepage .item-thumbnail-left > img:first-child, .item-thumbnail-left .item-image, .item-thumbnail-left .item-content > img:first-child, .item-thumbnail-left .item-content .item-image {
     max-width: 120px;
     max-height: 90px;
+}
+
+#tab-shop .button {
+    min-height: 36px;
+    line-height: 36px;
 }
