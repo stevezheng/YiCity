@@ -1,60 +1,99 @@
 <ion-view view-title="购物车" id="shopping-cart">
     <ion-nav-bar class="bar-energized">
-        <ion-nav-back-button>
-        </ion-nav-back-button>
+        <ion-nav-buttons side="left">
+            <button class="button button-clear ion-chevron-left pull-left" ui-sref="account"></button>
+        </ion-nav-buttons>
     </ion-nav-bar>
     <ion-content style="background-color: #e2e2e2">
-        <div ng-repeat="item in items">
-            <div class="row">
-                <div class="col col-20"><img src="img/shopping-cart/store-icon.png" /></div>
-                <div class="col col-60 col-offset-15"><h5>{{item.shop.get('name')}}</h5></div>
-                <div class="col col-20"><h6>编辑</h6>
-                </div>
-            </div>
-
-            <div>
-                <ul class="list">
-                    <li class="item item-checkbox">
-                        <label class="checkbox">
-                            <input type="checkbox" ng-model="item.selected"  ng-change="optionToggled()">
-                        </label>
-                        <div class="item item-thumbnail-left ">
-                            <img ng-src="{{item.item.get('image') || 'img/shopping-cart/man-coat.png'}}">
-                            <h2>{{item.item.get('name')}}<span class="new-price pull-right">￥{{item.item.get('price')}}</span></h2>
-                            <h2><span class="old-price pull-right">￥{{item.item.get('originPrice') || item.item.get('price') * 1.2 | number: 2}}</span></h2>
-                            <p>&nbsp;</p>
-                            <p>
-                                <!--180/(88)A &nbsp; 蓝色-->
-
-                            <span class=" pull-right" style="color: #161214">
-                                    x{{item.count}}
-                            </span>
-
-                            </p>
+        <dl class="list">
+            <dd>
+                <dl>
+                    <dd class="dd-padding">
+                       <div class="order-form">订单号&nbsp;：20152264895</div>
+                       <div class="edit">编辑</div>
+                    </dd>
+                </dl>
+            </dd>
+            <dd>
+                <dl style="border-bottom: none">
+                    <dd class="dd-padding" style="border-bottom: 1px solid #efe6e6;">
+                        <div class="element">
+                            <label class="checkbox" style="position: absolute;">
+                                <input type="checkbox">
+                            </label>
+                            <img src="../img/tmp/images/shopping-car-1.png">
+                            <div class="word">
+                                <div class="word-one">
+                                    <div class="name">2015新款德国原装进口手工咖啡机</div>
+                                    <span class="new-price pull-right">￥2691</span>
+                                    <div class="old-price pull-right">￥2990</div>
+                                    <div class="model-s">
+                                        <span class="model">型号&nbsp;TU4450</span>
+                                        <span class="number pull-right">x1</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </li>
-                </ul>
+                    </dd>
+                </dl>
+            </dd>
 
-            </div>
-        </div>
+            <dd>
+                <dl style="border-bottom: none">
+                    <dd class="dd-padding">
+                        <div class="element">
+                            <label class="checkbox" style="position: absolute;">
+                                <input type="checkbox">
+                            </label>
+                            <img src="../img/tmp/images/shopping-car2.png">
+                            <div class="word">
+                                <div class="word-one">
+                                    <div class="name">2015新款德国原装进口手工咖啡机</div>
+                                    <span class="new-price pull-right">￥1219</span>
+                                    <div class="old-price pull-right">￥290</div>
+                                    <div class="model-s">
+                                        <span class="model">型号&nbsp;TU4450</span>
+                                        <span class="number pull-right">x1</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+            </dd>
+        </dl>
+
     </ion-content>
     <div class="final bar bar-footer">
-        <ul class="list">
-            <li class="item item-checkbox">
-                <label class="checkbox">
-                    <input type="checkbox" ng-model="isAllSelected" ng-click="toggleAll()">
-
+        <!--<ul class="list">-->
+            <!--<li class="item item-checkbox">-->
+                <!--<label class="checkbox" style="position: absolute;">-->
+                    <!--<input type="checkbox">-->
+                <!--</label>-->
+                <!--<button class="button button-calm button-large pull-right" style="z-index: 9999" ng-click="order()">-->
+                    <!--<span class="settle-account"> 结算</span>-->
+                <!--</button>-->
+                <!--<span class="all">全选</span>-->
+                <!--<div class="total pull-right">-->
+                    <!--<span class="total">合计：</span>-->
+                    <!--<span class="total-price">￥3144</span>-->
+                    <!--<span class="freight">含运费</span>-->
+                <!--</div>-->
+            <!--</li>-->
+        <!--</ul>-->
+        <div class="final bar bar-footer">
+            <div class="all-chose">
+                <label class="checkbox" style="position: absolute;">
+                    <input type="checkbox">
                 </label>
-                <button class="button button-calm button-large pull-right" style="z-index: 9999" ng-click="order()">
-                    <span class="settle-account"> 结算</span>
-                </button>
-                <span class="all">全选</span>
-                <div class="total pull-right">
-                    <span class="total">合计：</span>
-                    <span class="total-price">￥{{cost|number:2}}</span>
-                    <span class="freight">含运费</span>
-                </div>
-            </li>
-        </ul>
+                <p>全选</p>
+            </div>
+            <div class="total pull-right">
+                <span class="total">合计：</span>
+                <span class="total-price">￥3144</span>
+                <span class="freight">含运费</span>
+            </div>
+            <button class="button button-calm button-large pull-right">结算(2)</button>
+        </div>
     </div>
 </ion-view>

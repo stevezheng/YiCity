@@ -494,6 +494,12 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
           templateUrl: '/templates/home-page01.html'
         })
 
+      //帖子管理（浏览记录）
+        .state('post-management-record', {
+          url: '/post-management-record',
+          templateUrl: '/templates/post-management-record.html'
+        })
+
       .state('gps', {
         url: '/gps',
         templateUrl: 'templates/gps.html'
