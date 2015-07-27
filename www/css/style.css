@@ -483,7 +483,7 @@
     font-size: 25px;
     color: #ff0322;
     padding-right: 10px;
-    padding-top: 7px;
+    /*padding-top: 7px;*/
 }
 
 /*.item {*/
@@ -494,7 +494,7 @@
     float: right;
     color: rgb(156, 156, 158);
     font-size: 15px;
-    padding-top: 3px;
+    /*padding-top: 3px;*/
 }
 #commodity .commodity-s{
     color: #fe9315;
@@ -548,7 +548,7 @@
     float: right;
     color: #bdbdbd;
     font-size: 17px;
-    padding-top: 3px;
+    /*padding-top: 3px;*/
     border-color: #d2d2d2;
 }
 #commodity .line{
@@ -1566,4 +1566,8 @@
 
 #home .slider-pager {
     bottom: 10px;
+}
+
+#commodity .button-bar .button {
+    border-radius: 0;
 }

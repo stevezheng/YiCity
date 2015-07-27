@@ -3,8 +3,8 @@
         <ion-nav-back-button>
         </ion-nav-back-button>
         <ion-nav-buttons side="right">
-            <button class="button button-clear ion-ios-cart" style="font-size: 24px;padding: 3px" ui-sref="shopping-cart"></button>
-            <button class="button button-clear ion-ios-heart-outline" style="font-size: 24px;padding: 3px" ng-click="collect()"></button>
+            <button class="button button-clear ion-ios-cart" style="font-size: 24px;margin-right: 5px" ui-sref="shopping-cart"></button>
+            <button class="button button-clear ion-ios-heart-outline" style="font-size: 24px;" ng-click="collect()"></button>
         </ion-nav-buttons>
     </ion-nav-bar>
     <ion-content>
@@ -65,7 +65,12 @@
         </div>
 
         <div ng-show="tabStatus == '商家介绍'" >
-            <div class="row">
+            <div class="row" ng-if="shop.get('content')">
+                <div class="col">
+                    {{shop.get('content')}}
+                </div>
+            </div>
+            <div class="row" ng-if="!shop.get('content')">
                 <div class="col">
                     <ul>
                         <li>
