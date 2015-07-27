@@ -70,7 +70,7 @@
           return Promise.all(_.each(_shops, function(shop) {
             return D('Item')
               .where({shopId: shop.id})
-              .limit(0, 3)
+              .limit(0, 2)
               .select()
               .then(function(items) {
                 if (items.length > 0) {

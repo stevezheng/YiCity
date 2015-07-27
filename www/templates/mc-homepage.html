@@ -26,20 +26,29 @@
             </ion-slide>
         </ion-slide-box>
 
-
         <div class="row">
-            <div class="col col-10" ui-sref="map({shopId: shop.id})">
-                <a>
-                    <img src="img/tmp/images/dangqian.png" width="45" height="60"/>
+            <div class="col col-20 " ui-sref="map({shopId: shop.id})"><img src="img/commodity/DangQianWeiZi2.png" width="45" height="60"></div>
+            <div class="col col-50 " ui-sref="map({shopId: shop.id})" style="padding: 25px 0 0 0; font-size: 15px">{{shop.get('address') || '商家未添加地址与电话'}}</div>
+            <div class="col col-25 ">
+                <a href="tel:{{shop.get('phone') || '114'}}">
+                    <img src="img/commodity/DianHua2.png" width="70" height="50" style="margin-top: 10px">
                 </a>
             </div>
-            <div class="col col-65" ui-sref="map({shopId: shop.id})">
-                <span style="line-height: 14px; font-size: 14px; top: 4px; left: 10px; position: relative;">{{shop.get('address') || '商家未添加地址与电话'}}</span>
-            </div>
-            <a class="col col-25" href="tel:{{shop.get('phone')}}">
-                <img class="pull-right" src="img/tmp/images/DianHua2.png" width="70" height="50"/>
-            </a>
         </div>
+
+        <!--<div class="row">-->
+            <!--<div class="col col-10" ui-sref="map({shopId: shop.id})">-->
+                <!--<a>-->
+                    <!--<img src="img/tmp/images/dangqian.png" width="45" height="60"/>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<div class="col col-65" ui-sref="map({shopId: shop.id})">-->
+                <!--<span style="line-height: 14px; font-size: 14px; top: 4px; left: 10px; position: relative;">{{shop.get('address') || '商家未添加地址与电话'}}</span>-->
+            <!--</div>-->
+            <!--<a class="col col-25" href="tel:{{shop.get('phone')}}">-->
+                <!--<img class="pull-right" src="img/tmp/images/DianHua2.png" width="70" height="50"/>-->
+            <!--</a>-->
+        <!--</div>-->
         <div class="gray-wide-line" ></div>
         <!--<div class="item-divider" style="min-height: 0px;background-color: #ededed;"></div>-->
         <div class="row">
