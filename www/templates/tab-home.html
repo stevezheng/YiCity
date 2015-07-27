@@ -138,7 +138,7 @@
         <div class="item-divider"></div>
 
         <div class="list list-home">
-            <div class="item" style="font-size: 14px; padding: 8px; border-left: 5px solid #fe9315" ui-sref="shop">热卖推荐 <span
+            <div class="item" style="font-size: 14px; padding: 8px 8px 8px 20px;" ui-sref="shop"> <span style="display:inline-block; position: absolute; width: 3px; height: 18px; left: 10px; background: #fe9315"></span>热卖推荐 <span
                     class="pull-right">更多 <i class="ion ion-ios-arrow-right"></i></span></div>
             <div class="item item-thumbnail-left" ng-repeat="item in items" ui-sref="commodity-details({itemId: item.id})">
                 <img ng-src="{{item.get('image')}}" alt=""/>
