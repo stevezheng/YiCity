@@ -72,19 +72,38 @@
           , area: $scope.addresses[0].get('area')
           , address: $scope.addresses[0].get('address')
         };
-        D('Order')
-          .add($scope.tmpCart)
-          .then(function(order) {
-            if (order.get('pay') == 0) {
-              $yikeUtils.confirm('提示', '订单提交成功,现在去支付?')
-                .then(function() {
-                  $state.go('payOnline', {'orderId':order.id});
-                })
-            } else {
-              $yikeUtils.alert('提示', '订单提交成功');
-              $state.go('orders')
-            }
-          })
+
+        var Post = AV.Object.extend("Order");
+        var _order  = new Post();
+        AV._.mapObject($scope.tmpCart, function (val, key) {
+          _order.set(key, val);
+        });
+
+        _order.save(null, {
+          success: function(post) {
+            // 成功保存之后，执行其他逻辑.
+            alert('New object created with objectId: ' + post.id);
+          },
+          error: function(post, error) {
+            // 失败之后执行其他逻辑
+            // error 是 AV.Error 的实例，包含有错误码和描述信息.
+            alert('Failed to create new object, with error message: ' + error.message);
+          }
+        });
+
+        //D('Order')
+        //  .add($scope.tmpCart)
+        //  .then(function(order) {
+        //    if (order.get('pay') == 0) {
+        //      $yikeUtils.confirm('提示', '订单提交成功,现在去支付?')
+        //        .then(function() {
+        //          $state.go('payOnline', {'orderId':order.id});
+        //        })
+        //    } else {
+        //      $yikeUtils.alert('提示', '订单提交成功');
+        //      $state.go('orders')
+        //    }
+        //  })
       }
     }
   }

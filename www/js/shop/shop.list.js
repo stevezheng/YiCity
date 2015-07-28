@@ -27,6 +27,7 @@
     $scope.selectType = false;
     $scope.setSelectType = setSelectType;
     $scope.categoryName = '';
+    $scope.categoryMap = categoryMap;
     $scope.sortType = 'new';
     $scope.sort = sort;
 
@@ -56,6 +57,7 @@
 
     function query(categoryName, order) {
       var _shops = [];
+
       var condition = {};
       if (categoryName && categoryName != 'all') {
         condition.categoryName = categoryMap[categoryName];

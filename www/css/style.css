@@ -1757,6 +1757,14 @@
     color: #fe9315;
 }
 
+#forum .post{
+    width: 50px;
+    position: absolute;
+    right: 16px;
+    bottom: 31px;
+    z-index: 10;
+}
+
 #recipe-details .play {
     position: absolute;
     top: 44px;
@@ -1835,4 +1843,8 @@
 #recipe-details-comment .row-positive {
     top: 200px;
     position: absolute;
+}
+
+#forum-details{
+
 }

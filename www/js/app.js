@@ -403,6 +403,12 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
             .state('comment', {
                 url: '/comment',
                 templateUrl: 'templates/comment.html',
+            })
+
+            //论坛详情
+            .state('forum-details', {
+                url: '/forum-details',
+                templateUrl: 'templates/forum-details.html',
             });
 
 
