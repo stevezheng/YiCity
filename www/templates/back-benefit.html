@@ -1,10 +1,20 @@
-<ion-view view-title="返利" id="back-benefit">
+<ion-view view-title="返利" id="back-benefit" class="has-header" ng-init="data.type='xiaofei'">
     <ion-nav-bar class="bar-energized">
         <ion-nav-buttons side="left">
             <button class="button button-clear ion-chevron-left pull-left" ui-sref="account"></button>
         </ion-nav-buttons>
     </ion-nav-bar>
-    <ion-content>
+    <div class="tabs-striped tabs-top tabs-background-light">
+        <div class="tabs">
+            <a ng-class="data.type=='xiaofei'?'tab-item active': 'tab-item'" ng-click="data.type='xiaofei'">
+                消费返利
+            </a>
+            <a ng-class="data.type=='tuijian'?'tab-item active': 'tab-item'" ng-click="data.type='tuijian'">
+                推荐返利
+            </a>
+        </div>
+    </div>
+    <ion-content class="has-subheader">
         <p class="text-center padding">暂无返利</p>
         <!--<div class="item ion">-->
             <!--<span class="ion-record">-->
