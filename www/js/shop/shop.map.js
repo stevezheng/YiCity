@@ -10,6 +10,8 @@
   /* @ngInject */
   function ShopMapCtrl($scope, $state) {
     var shopId = $state.params.shopId;
+    $scope.pos = {};
+    $scope.openBaidu = openBaidu;
     init();
 
     ////////////////
@@ -33,6 +35,11 @@
             lat = shop.get('lat');
             long = shop.get('long');
             sContent = shop.get('name');
+            $scope.pos = {
+              lat: lat
+              , long: long
+              , sContent: sContent
+            }
           }
 
           var newPoint = new BMap.Point(lat, long);
@@ -40,6 +47,12 @@
           var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
           map.openInfoWindow(infoWindow,newPoint); //开启信息窗口
         })
+    }
+
+    function openBaidu() {
+      console.log($scope.pos);
+      var uri = 'http://api.map.baidu.com/marker?location='+$scope.pos.long+','+$scope.pos.lat+'&title=我的位置&content='+$scope.pos.sContent+'&output=html&src=掌上商铺';
+      var ref = window.open(uri, '_blank', 'location=yes');
     }
   }
 })();

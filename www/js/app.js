@@ -14,7 +14,7 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
         // org.apache.cordova.statusbar required
         StatusBar.styleLightContent();
       }
-
+      //document.addEventListener("deviceready", onDeviceReady, false);
 
       //双击退出
       $ionicPlatform.registerBackButtonAction(function (e) {
