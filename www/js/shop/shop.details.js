@@ -5,10 +5,10 @@
     .module('shop.details', [])
     .controller('ShopDetailsCtrl', ShopDetailsCtrl);
 
-  ShopDetailsCtrl.$inject = ['$scope', '$state', '$yikeUtils', 'Cart'];
+  ShopDetailsCtrl.$inject = ['$scope', '$state', '$yikeUtils', '$ionicLoading', 'Cart'];
 
   /* @ngInject */
-  function ShopDetailsCtrl($scope, $state, $yikeUtils, Cart) {
+  function ShopDetailsCtrl($scope, $state, $yikeUtils, $ionicLoading, Cart) {
     var shopId = $state.params.shopId;
 
     $scope.init = init;
@@ -78,6 +78,7 @@
     }
 
     function query(shopId) {
+      $ionicLoading.show({template: '<ion-spinner></ion-spinner>', duration: 5000});
       D('Shop')
         .where({objectId: shopId})
         .find()
@@ -96,6 +97,7 @@
           }
           $scope.items = items;
           $scope.$digest();
+          $ionicLoading.hide();
         })
     }
   }

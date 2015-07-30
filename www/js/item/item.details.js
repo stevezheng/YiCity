@@ -5,10 +5,10 @@
     .module('item.details', [])
     .controller('ItemDetailsCtrl', ItemDetailsCtrl);
 
-  ItemDetailsCtrl.$inject = ['$scope', '$state', '$ionicModal', '$yikeUtils', 'Cart'];
+  ItemDetailsCtrl.$inject = ['$scope', '$state', '$ionicModal', '$ionicLoading', '$yikeUtils', 'Cart'];
 
   /* @ngInject */
-  function ItemDetailsCtrl($scope, $state, $ionicModal, $yikeUtils, Cart) {
+  function ItemDetailsCtrl($scope, $state, $ionicModal, $ionicLoading, $yikeUtils, Cart) {
     var itemId = $state.params.itemId;
     $scope.init = init;
     $scope.item = null;
@@ -98,6 +98,7 @@
     }
 
     function query() {
+      $ionicLoading.show({template: '<ion-spinner></ion-spinner>', duration: 5000});
       D('Item')
         .where({objectId: itemId})
         .find()
@@ -110,6 +111,7 @@
         .then(function(shop) {
             $scope.shop = shop;
             $scope.$digest();
+          $ionicLoading.hide();
         })
         .catch(function(err) {
           console.error(err);
