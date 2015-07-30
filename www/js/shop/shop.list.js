@@ -5,10 +5,10 @@
     .module('shop.list', [])
     .controller('ShopListCtrl', ShopListCtrl);
 
-  ShopListCtrl.$inject = ['$scope', '$state', 'Shop'];
+  ShopListCtrl.$inject = ['$scope', '$state', '$ionicLoading', 'Shop'];
 
   /* @ngInject */
-  function ShopListCtrl($scope, $state, Shop) {
+  function ShopListCtrl($scope, $state, $ionicLoading, Shop) {
     var categoryMap = {
       'meishi': '美食'
       , 'dianying': '电影'
@@ -55,6 +55,7 @@
     }
 
     function query(categoryName, order) {
+      $ionicLoading.show({template: '<ion-spinner></ion-spinner>', duration: 5000});
       var _shops = [];
       var condition = {};
       if (categoryName && categoryName != 'all') {
@@ -84,6 +85,7 @@
         .then(function() {
           $scope.shops = _shops;
           $scope.$digest();
+          $ionicLoading.hide();
         })
     }
   }
