@@ -15,6 +15,7 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
         StatusBar.styleLightContent();
       }
 
+
       //双击退出
       $ionicPlatform.registerBackButtonAction(function (e) {
         //判断处于哪个页面时双击退出
@@ -50,6 +51,7 @@ angular.module('starter', ['ionic', 'user', 'account', 'address', 'gps', 'item',
     $ionicConfigProvider.tabs.style('standard');
     $ionicConfigProvider.navBar.alignTitle('center');
     $ionicConfigProvider.backButton.icon('ion-ios-arrow-left');
+    $ionicConfigProvider.views.swipeBackEnabled(false);
 
     // Ionic uses AngularUI Router which uses the concept of states
     // Learn more here: https://github.com/angular-ui/ui-router
