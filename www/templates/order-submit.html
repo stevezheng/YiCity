@@ -1,8 +1,7 @@
 <ion-view view-title="提交订单" id="submit-orders">
-    <ion-nav-bar class="bar-energized">
-        <ion-nav-back-button>
-        </ion-nav-back-button>
-    </ion-nav-bar>
+    <ion-nav-buttons side="left">
+        <utils-back></utils-back>
+    </ion-nav-buttons>
     <ion-content>
         <div class="item" ng-show="currentAddress" ui-sref="address-select">
             <i class="ion-ios-location-outline"></i>{{currentAddress.get('name')}}&nbsp;&nbsp;{{currentAddress.get('city')}}{{currentAddress.get('address')}}
