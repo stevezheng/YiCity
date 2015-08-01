@@ -1,9 +1,7 @@
 <ion-view view-title="特卖汇">
-    <ion-nav-bar class="bar-energized">
-        <ion-nav-back-button>
-            返回
-        </ion-nav-back-button>
-    </ion-nav-bar>
+    <ion-nav-buttons side="left">
+        <utils-back></utils-back>
+    </ion-nav-buttons>
     <ion-content>
         <div class="list list-home">
             <div class="item item-thumbnail-left" ng-repeat="item in items" ui-sref="big-sell-details({id: item.id})">

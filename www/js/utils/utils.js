@@ -2,5 +2,5 @@
   'use strict';
 
   angular
-    .module('utils', ['utils.upload']);
+    .module('utils', ['utils.upload', 'utils.back']);
 })();
