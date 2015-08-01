@@ -1,9 +1,7 @@
 <ion-view view-title="返利" id="back-benefit" class="has-header" ng-init="data.type='xiaofei'">
-    <ion-nav-bar class="bar-energized">
         <ion-nav-buttons side="left">
-            <button class="button button-clear ion-chevron-left pull-left" ui-sref="account"></button>
+            <utils-back></utils-back>
         </ion-nav-buttons>
-    </ion-nav-bar>
     <div class="tabs-striped tabs-top tabs-background-light">
         <div class="tabs">
             <a ng-class="data.type=='xiaofei'?'tab-item active': 'tab-item'" ng-click="data.type='xiaofei'">

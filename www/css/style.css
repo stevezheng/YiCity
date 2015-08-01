@@ -1,12 +1,12 @@
-#home input::-webkit-input-placeholder {
+.nav-home::-webkit-input-placeholder {
     color: #fff;
 }
 
-#home input.black::-webkit-input-placeholder {
+input.black::-webkit-input-placeholder {
     color: #000;
 }
 
-#home input.grey::-webkit-input-placeholder {
+input.grey::-webkit-input-placeholder {
     color: #737373;
 }
 
@@ -1525,9 +1525,9 @@
     font-size: 16px;
 }
 
-#home .button-city:before {
-    font-size: 10px;
-    margin-top: 0;
+.bar .button.nav-home:before {
+    font-size: 10px; !important;
+    margin-top: 0; !important;
 }
 
 #home .item-divider {
@@ -1535,13 +1535,13 @@
     padding: 5px 0;
 }
 
-#home .button-share {
+.bar-energized .button.button-clear.button-share {
     height: 30px;
     width: 30px;
     margin-top: 5px;
 }
 
-#home .item-input-wrapper {
+.nav-home.item-input-wrapper {
     border-radius: 20px;
 }
 
