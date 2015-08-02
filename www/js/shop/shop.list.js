@@ -23,21 +23,51 @@
     };
 
     $scope.init = init;
-    $scope.shops = false;
+    $scope.shops = [];
     $scope.selectType = false;
     $scope.setSelectType = setSelectType;
     $scope.categoryName = '';
     $scope.sortType = 'new';
     $scope.sort = sort;
 
+    var page = 0;
+    var row = 10;
+    var count = 100;
+
     init();
 
     ////////////////
 
+    $scope.doRefresh = function() {
+      page = 0;
+      row = 7;
+      $scope.noMoreItemsAvailable = false;
+      $scope.items = undefined;
+
+      Shop.getFeeds(page, row).then(function(res) {
+        $scope.items = res;
+
+        $scope.$broadcast('scroll.refreshComplete');
+      })
+    };
+
+    $scope.noMoreItemsAvailable = false;
+
+    $scope.loadMore = function() {
+      if ( row * page > count) {
+        $scope.noMoreItemsAvailable = true;
+      } else {
+        var categoryName = $state.params.categoryName;
+        query(categoryName, null, page, row);
+        page++;
+        row++;
+      }
+    };
+
     function init() {
       var categoryName = $state.params.categoryName;
       $scope.categoryName = categoryName;
-      query(categoryName);
+      //query(categoryName, null, page, row);
     }
 
     function sort(type) {
@@ -54,15 +84,17 @@
       }
     }
 
-    function query(categoryName, order) {
+    function query(categoryName, order, page, row) {
+      page = page || 0;
+      row = row || 10;
       $ionicLoading.show({template: '<ion-spinner></ion-spinner>', duration: 5000});
       var _shops = [];
       var condition = {};
       if (categoryName && categoryName != 'all') {
         condition.categoryName = categoryMap[categoryName];
       }
-      D('Shop')
-        .limit(0, 10)
+      return D('Shop')
+        .limit(page, row)
         .order(order)
         .where(condition)
         .select()
@@ -71,21 +103,21 @@
           return Promise.all(_.each(_shops, function(shop) {
             return D('Item')
               .where({shopId: shop.id})
-              .limit(0, 2)
+              .limit(page, row)
               .select()
               .then(function(items) {
                 if (items.length > 0) {
                   shop.items = items;
-                  $scope.shops = _shops;
                   $scope.$digest();
                 }
               });
           }))
         })
         .then(function() {
-          $scope.shops = _shops;
+          $scope.shops = $scope.shops.concat(_shops);
           $scope.$digest();
           $ionicLoading.hide();
+          $scope.$broadcast('scroll.infiniteScrollComplete');
         })
     }
   }

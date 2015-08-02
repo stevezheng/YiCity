@@ -14,25 +14,29 @@
     <div class="row" ng-show="shops.length == 0">
       <div class="col text-center">暂无数据</div>
     </div>
-    <div ng-repeat="shop in shops" ng-show="shop.items">
+    <ion-list ng-repeat="shop in shops" ng-show="shop.items" class="shop-list">
       <div class="item-divider" style="min-height: 10px;"></div>
-      <div class="list shop-list">
+      <!--<ion-item>-->
+        <!--<div class="list shop-list">-->
 
-        <div class="item" ui-sref="homepage({shopId: shop.id})">
-          <img ng-src="img/tab-shop/shop-icon.png" alt="" height="24px"/>
-        <span class="shop-name">
-            {{shop.get('name')}}
-        </span>
-          <span class="pull-right enter">进入店铺 <i class="icon ion-ios-arrow-right"></i></span>
-        </div>
-        <div class="item item-thumbnail-left" ng-repeat="item in shop.items" ui-sref="commodity-details({itemId: item.id})">
-          <img ng-src="{{item.get('image')}}" alt="" height="24px"/>
-          <h2>{{item.get('name')}}</h2>
-          <p class="intro">{{item.get('spec')}}</p>
-          <p><span class="assertive price">￥{{item.get('price')}}</span><span class="origin-price">￥{{item.get('price') * 1.2 | number: 2}}</span><span class="pull-right">已售 {{item.get('salenum')}}</span></p>
-        </div>
-      </div>
-    </div>
+          <div class="item" ui-sref="homepage({shopId: shop.id})">
+            <img ng-src="img/tab-shop/shop-icon.png" alt="" height="24px"/>
+                <span class="shop-name">
+                    {{shop.get('name')}}
+                </span>
+            <span class="pull-right enter">进入店铺 <i class="icon ion-ios-arrow-right"></i></span>
+          </div>
+          <ion-item style="padding-left: 0" class="item-thumbnail-left" ng-repeat="item in shop.items" ui-sref="commodity-details({itemId: item.id})">
+            <img ng-src="{{item.get('image')}}" alt="" height="24px"/>
+            <h2>{{item.get('name')}}</h2>
+            <p class="intro">{{item.get('spec')}}</p>
+            <p><span class="assertive price">￥{{item.get('price')}}</span><span class="origin-price">￥{{item.get('price') * 1.2 | number: 2}}</span><span class="pull-right" style="margin-top: 5px;">已售 {{item.get('salenum')}}</span></p>
+          </ion-item>
+      <!--</ion-item>-->
+    </ion-list>
+    <h5 style="text-align: center; margin-top: 20px;" ng-hide="!noMoreItemsAvailable">已加载完全部数据</h5>
+    <ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="loadMore()"
+                         distance="1%"></ion-infinite-scroll>
   </ion-content>
 
   <ion-content scroll="false" class="all-list has-subheader" ng-show="selectType == 'category'">
