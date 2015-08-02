@@ -32,9 +32,11 @@
             <p class="intro">{{item.get('spec')}}</p>
             <p><span class="assertive price">￥{{item.get('price')}}</span><span class="origin-price">￥{{item.get('price') * 1.2 | number: 2}}</span><span class="pull-right" style="margin-top: 5px;">已售 {{item.get('salenum')}}</span></p>
           </ion-item>
-        </div>
       <!--</ion-item>-->
     </ion-list>
+    <h5 style="text-align: center; margin-top: 20px;" ng-hide="!noMoreItemsAvailable">已加载完全部数据</h5>
+    <ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="loadMore()"
+                         distance="1%"></ion-infinite-scroll>
   </ion-content>
 
   <ion-content scroll="false" class="all-list has-subheader" ng-show="selectType == 'category'">
